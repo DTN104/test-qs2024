@@ -20907,12 +20907,15 @@
 
     window.addEventListener("DOMContentLoaded",function (){
         //handler for input acc id and event id
-        inputTestAccId.addEventListener('change', accInputHandler);
-        inputTestAccId.addEventListener('copy', accInputHandler);
-        inputTestAccId.addEventListener('input', accInputHandler);
-        inputTestEventId.addEventListener('change', eventInputHandler);
-        inputTestEventId.addEventListener('copy', eventInputHandler);
-        inputTestEventId.addEventListener('input', eventInputHandler);
+        // You can get url_string from window.location.href if you want to work with
+        // the URL of the current page
+        //https://dtn104.github.io/test-qs2024?sessionID=UAT2QSTT2024&accountID=006C101072
+        var url_string = "https://dtn104.github.io/test-qs2024?sessionID=UAT2QSTT2024&accountID=006C101072";
+        var url = new URL(window.location.href);
+        var sessionID = url.searchParams.get("sessionID");
+        var accountID = url.searchParams.get("accountID");
+        console.log(sessionID);
+        console.log(accountID);
         if(currentPage === "home"){
             canStartEvent();
         }
