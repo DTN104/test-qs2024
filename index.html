@@ -20937,8 +20937,8 @@
         authen(sessionAuthen,accountID).then(
             (res) => {
                 console.log(res)
-                eventID = res.event_id;
-                sessionAPI = res.session_id;
+                eventID = res.data.event_id;
+                sessionAPI = res.data.session_id;
             }
         )
         if(currentPage === "home"){
