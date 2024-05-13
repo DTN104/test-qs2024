@@ -20936,6 +20936,7 @@
         accountID = url.searchParams.get("accountID");
         authen(sessionAuthen,accountID).then(
             (res) => {
+                console.log(res)
                 eventID = res.event_id;
                 sessionAPI = res.session_id;
             }
