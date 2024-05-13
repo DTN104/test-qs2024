@@ -20358,8 +20358,8 @@
 <script>
     //Api
     const baseUrl = "https://dapi-dev.acbs.tech/quay-so-trung-thuong";
-    const getTotalSpin = (accountId,eventId) => {
-        return axios.get(`${baseUrl}/event/client-info/?client_id=${accountId}&event_id=${eventId}`, {
+    const authen = (session_id,client_id) => {
+        return axios.get(`${baseUrl}/session/verify/?session_id=${session_id}&client_id=${client_id}&prefix=QS24`, {
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
             },
@@ -20372,11 +20372,27 @@
             popupError.innerHTML=err.message
         });
     }
+    const getTotalSpin = (accountId,eventId,sessionId) => {
+        return axios.get(`${baseUrl}/event/client-info/?client_id=${accountId}&event_id=${eventId}`, {
+            headers: {
+                "Content-type": "application/json; charset=UTF-8",
+                "session_id": sessionId
+            },
+            timeout: 30000
+        }).then((res) => {
+            return res.data
+        }).catch(err => {
+            $("#errorModal").modal("show");
+            console.log(err)
+            popupError.innerHTML=err.message
+        });
+    }
 
-    const gacha = (accountId,eventId,autospin) => {
+    const gacha = (accountId,eventId,autospin,sessionId) => {
         return axios.get(`${baseUrl}/event/draw-piece?event_id=${eventId}&client_id=${accountId}&auto_spin=${autospin}`, {
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
+                "session_id": sessionId
             },
             timeout: 30000
         }).then((res) => {
@@ -20405,10 +20421,11 @@
         });
     }
 
-    const getInventory = (accountId,eventId) => {
+    const getInventory = (accountId,eventId,sessionId) => {
         return axios.get(`${baseUrl}/event/inventory/?client_id=${accountId}&event_id=${eventId}`, {
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
+                "session_id": sessionId
             },
             timeout: 30000
         }).then((res) => {
@@ -20589,6 +20606,10 @@
     const umbrellaWinner = [
         "008C000500", "008C000100", "008C000101", "008C000102",
     ]
+    let sessionAuthen = "";
+    let accountID = "";
+    let sessionAPI = "";
+    let eventID = "";
     const inputTestAccId = document.getElementById("input-test-acc-id");
     const inputTestEventId = document.getElementById("input-test-event-id");
     const inputSpinDate = document.getElementById("input-spin-date");
@@ -20694,8 +20715,7 @@
     }
 
     function handleHitTheBox (){
-        // gacha(accountTest,eventIdTest,autoSpin).then(
-        gachaTest(accountTest,eventIdTest,autoSpin,inputSpinDate.value).then(
+        gacha(accountID,eventID,autoSpin,sessionAPI).then(
             (res) => {
                 if(res.result_code === 0 && !!res.data){
                     $("#giftModal").modal("show");
@@ -20711,7 +20731,7 @@
                             document.getElementById("total-piece").innerText = res.data.award[0].total_piece;
                             $('#infoModal').on('hidden.bs.modal', function (e) {
                                 resetState();
-                                getTotalSpin(accountTest,eventIdTest).then(
+                                getTotalSpin(accountID,eventID,sessionAPI).then(
                                     (res) => {
                                         playerSpinCountHome.innerHTML = res.data.spinCount;
                                         playerSpinCountEvent.innerHTML = res.data.spinCount;
@@ -20738,7 +20758,7 @@
                             })
                             $('#awardModal').on('hidden.bs.modal', function (e) {
                                 resetState();
-                                getTotalSpin(accountTest,eventIdTest).then(
+                                getTotalSpin(accountID,eventID,sessionAPI).then(
                                     (res) => {
                                         playerSpinCountHome.innerHTML = res.data.spinCount;
                                         playerSpinCountEvent.innerHTML = res.data.spinCount;
@@ -20753,7 +20773,7 @@
                             document.getElementById("popup-piece-list").innerHTML = arrayToTable(array.sort(sortByColumn('award_name')));
                             $('#infoModal').on('hidden.bs.modal', function (e) {
                                 resetState();
-                                getTotalSpin(accountTest,eventIdTest).then(
+                                getTotalSpin(accountID,eventID,sessionAPI).then(
                                     (res) => {
                                         playerSpinCountHome.innerHTML = res.data.spinCount;
                                         playerSpinCountEvent.innerHTML = res.data.spinCount;
@@ -20839,7 +20859,7 @@
         accountTest = inputTestAccId.value;
         eventIdTest = inputTestEventId.value;
         if(accountTest !== "" && eventIdTest !== ""){
-            getTotalSpin(accountTest,eventIdTest).then(
+            getTotalSpin(accountID,eventID,sessionAPI).then(
                 (res) => {
                     playerSpinCountHome.innerHTML = res.data.spinCount;
                     playerSpinCountEvent.innerHTML = res.data.spinCount;
@@ -20861,7 +20881,7 @@
         rulePage.style.display = "none";
         winnerPage.style.display = "none";
         inventoryPage.style.display = "block";
-        getInventory(accountTest,eventIdTest).then(
+        getInventory(accountID,eventID,sessionAPI).then(
             (res) => {
                 console.log(res)
 
@@ -20873,7 +20893,7 @@
         rulePage.style.display = "none";
         winnerPage.style.display = "block";
         inventoryPage.style.display = "none";
-        getListWinner(eventIdTest).then(
+        getListWinner(eventID).then(
             (res) => {
                 console.log(res)
             }
@@ -20912,10 +20932,14 @@
         //https://dtn104.github.io/test-qs2024?sessionID=UAT2QSTT2024&accountID=006C101072
         var url_string = "https://dtn104.github.io/test-qs2024?sessionID=UAT2QSTT2024&accountID=006C101072";
         var url = new URL(window.location.href);
-        var sessionID = url.searchParams.get("sessionID");
-        var accountID = url.searchParams.get("accountID");
-        console.log(sessionID);
-        console.log(accountID);
+        sessionAuthen = url.searchParams.get("sessionID");
+        accountID = url.searchParams.get("accountID");
+        authen(sessionAuthen,accountID).then(
+            (res) => {
+                eventID = res.event_id;
+                sessionAPI = res.session_id;
+            }
+        )
         if(currentPage === "home"){
             canStartEvent();
         }
