@@ -20930,7 +20930,6 @@
         // You can get url_string from window.location.href if you want to work with
         // the URL of the current page
         //https://dtn104.github.io/test-qs2024?sessionID=UAT2QSTT2024&accountID=006C101072
-        var url_string = "https://dtn104.github.io/test-qs2024?sessionID=UAT2QSTT2024&accountID=006C101072";
         var url = new URL(window.location.href);
         sessionAuthen = url.searchParams.get("sessionID");
         accountID = url.searchParams.get("accountID");
@@ -20939,6 +20938,13 @@
                 console.log(res)
                 eventID = res.data.event_id;
                 sessionAPI = res.data.session_id;
+                getTotalSpin(res.data.client_id,res.data.event_id,res.data.session_id).then(
+                    (res) => {
+                        playerSpinCountHome.innerHTML = res.data.spinCount;
+                        playerSpinCountEvent.innerHTML = res.data.spinCount;
+                        currentPage = "home";
+                    }
+                )
             }
         )
         if(currentPage === "home"){
