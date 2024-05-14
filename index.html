@@ -896,12 +896,23 @@
         width: 100px;
         height: 100px;
         position: relative;
+        margin: 0 auto;
     }
     .voucher-wrapper img{
-        width:100px;
+        width: 100px;
         position: absolute;
-        top:0;
-        left:0;
+        top: 0px;
+        left: 0;
+    }
+    .bottom-center-count{
+        position: absolute;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .prize-wrapper img:nth-child(1){
         height:50px;
@@ -975,7 +986,7 @@
         justify-content: center;
         align-items: center;
     }
-    .top-left-count div,.top-right-count div,.bottom-left-count div,.bottom-right-count div{
+    .top-left-count div,.top-right-count div,.bottom-left-count div,.bottom-right-count div,.bottom-center-count div{
         position: absolute;
     }
     .top-left-count{
