@@ -270,3 +270,76 @@ const resWinner = {
     ]
   }
 }
+
+const fakePopPiece = [
+  {
+    "award_name": "Giải nhì",
+    "count": 8,
+    "name": "Mảnh dưới phải giải nhì"
+  },
+  {
+    "award_name": "Giải nhất",
+    "count": 8,
+    "name": "Mảnh trên trái giải nhất"
+  },
+  {
+    "award_name": "Giải ba",
+    "count": 8,
+    "name": "Mảnh trên trái giải ba"
+  },
+  {
+    "award_name": "Giải ba",
+    "count": 9,
+    "name": "Mảnh dưới trái giải ba"
+  },
+  {
+    "award_name": "Giải nhất",
+    "count": 9,
+    "name": "Mảnh dưới trái giải nhất"
+  },
+  {
+    "award_name": "Giải ba",
+    "count": 9,
+    "name": "Mảnh trên phải giải ba"
+  },
+  {
+    "award_name": "Giải nhất",
+    "count": 9,
+    "name": "Mảnh dưới phải giải nhất"
+  },
+  {
+    "award_name": "Giải đặc biệt",
+    "count": 8,
+    "name": "Mảnh dưới trái đặc biệt"
+  },
+  {
+    "award_name": "Giải đặc biệt",
+    "count": 8,
+    "name": "Mảnh trên phải đặc biệt"
+  },
+  {
+    "award_name": "Giải nhì",
+    "count": 7,
+    "name": "Mảnh trên trái giải nhì"
+  },
+  {
+    "award_name": "Giải nhì",
+    "count": 8,
+    "name": "Mảnh trên phải giải nhì"
+  },
+  {
+    "award_name": "Giải đặc biệt",
+    "count": 7,
+    "name": "Mảnh dưới phải đặc biệt"
+  },
+  {
+    "award_name": "Giải 4",
+    "count": 1,
+    "name": "Mảnh dưới trái giải 4"
+  },
+  {
+    "award_name": "Giải 4",
+    "count": 1,
+    "name": "Mảnh trên phải giải 4"
+  }
+]
