@@ -19370,11 +19370,11 @@
             </div>
             <div class="prize-card">
                 <div class="prize-box">
-                    <div class="prize-wrapper">
-                        <img class="missing" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png" alt=""/>
+                    <div class="prize-wrapper" id="prize-third-wrapper">
+                        <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png" alt=""/>
                         <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-14.png" alt=""/>
                         <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png" alt=""/>
-                        <img class="missing" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/key-manh-ghep-giai-ba-16.png" alt=""/>
+                        <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/key-manh-ghep-giai-ba-16.png" alt=""/>
                     </div>
                     <div class="top-left-count">
                         <svg width="39" height="13" viewBox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20878,31 +20878,31 @@
                         if(FormatText(item.award_name) === "giải 3" || FormatText(item.award_name) === "giải ba"){
                             //check if array contains that piece position or not to change UI
                             if (item.pieces.every(piece => piece.piece_position !== "TopLeft")) {
-                                const elements = document.getElementById("prize-special-wrapper").children;
+                                const elements = document.getElementById("prize-third-wrapper").children;
                                 elements[0].classList.add("missing")
                             } else {
-                                const elements = document.getElementById("prize-special-wrapper").children;
+                                const elements = document.getElementById("prize-third-wrapper").children;
                                 elements[0].classList.contains("missing") && elements[0].classList.remove("missing")
                             }
                             if (item.pieces.every(piece => piece.piece_position !== "TopRight")) {
-                                const elements = document.getElementById("prize-special-wrapper").children;
+                                const elements = document.getElementById("prize-third-wrapper").children;
                                 elements[1].classList.add("missing")
                             } else {
-                                const elements = document.getElementById("prize-special-wrapper").children;
+                                const elements = document.getElementById("prize-third-wrapper").children;
                                 elements[1].classList.contains("missing") && elements[1].classList.remove("missing")
                             }
                             if (item.pieces.every(piece => piece.piece_position !== "BottomLeft")) {
-                                const elements = document.getElementById("prize-special-wrapper").children;
+                                const elements = document.getElementById("prize-third-wrapper").children;
                                 elements[2].classList.add("missing")
                             } else {
-                                const elements = document.getElementById("prize-special-wrapper").children;
+                                const elements = document.getElementById("prize-third-wrapper").children;
                                 elements[2].classList.contains("missing") && elements[2].classList.remove("missing")
                             }
                             if (item.pieces.every(piece => piece.piece_position !== "BottomRight")) {
-                                const elements = document.getElementById("prize-special-wrapper").children;
+                                const elements = document.getElementById("prize-third-wrapper").children;
                                 elements[3].classList.add("missing")
                             } else {
-                                const elements = document.getElementById("prize-special-wrapper").children;
+                                const elements = document.getElementById("prize-third-wrapper").children;
                                 elements[3].classList.contains("missing") && elements[3].classList.remove("missing")
                             }
                             //update quantity of piece potition
