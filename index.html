@@ -20864,6 +20864,7 @@
         inventoryPage.style.display = "block";
         getInventory(accountID,eventID,sessionAPI).then(
             (res) => {
+                console.log("success call inventory")
                 res.data.awards.map(
                     (item)=>{
                         if(FormatText(item.award_name) === "giải khuyến khích"){
