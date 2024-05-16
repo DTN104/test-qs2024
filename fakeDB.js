@@ -214,3 +214,59 @@ const inventoryFake = {
     ]
   }
 }
+
+const resWinner = {
+  "result_code": 0,
+  "data": {
+    "limit": 10,
+    "offset": 0,
+    "max": 5,
+    "data": [
+      {
+        "event_id": "ev_59f22-dcaf-44",
+        "client_id": "006C000258",
+        "client_name": "BÙI  LỆ THU",
+        "award_name": "Giải ba",
+        "award_info": "Apple Watch Ultra 2",
+        "notification_status": "EMAIL",
+        "won_date": "21:14:56 15/05/2024"
+      },
+      {
+        "event_id": "ev_59f22-dcaf-44",
+        "client_id": "006C000258",
+        "client_name": "BÙI  LỆ THU",
+        "award_name": "Giải nhì",
+        "award_info": "iPhone 15 Pro Max 256GB",
+        "notification_status": "EMAIL",
+        "won_date": "21:14:56 15/05/2024"
+      },
+      {
+        "event_id": "ev_59f22-dcaf-44",
+        "client_id": "006C000258",
+        "client_name": "BÙI  LỆ THU",
+        "award_name": "Giải 4",
+        "award_info": "Vali Traveler's choice",
+        "notification_status": "EMAIL",
+        "won_date": "21:14:56 15/05/2024"
+      },
+      {
+        "event_id": "ev_59f22-dcaf-44",
+        "client_id": "006C000258",
+        "client_name": "BÙI  LỆ THU",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "21:14:56 15/05/2024"
+      },
+      {
+        "event_id": "ev_59f22-dcaf-44",
+        "client_id": "006C120777",
+        "client_name": "Tran thi cam van",
+        "award_name": "Giải đặc biệt",
+        "award_info": "MacBook Pro 14 inch M3",
+        "notification_status": "EMAIL",
+        "won_date": "17:34:33 15/05/2024"
+      }
+    ]
+  }
+}

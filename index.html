@@ -18295,7 +18295,7 @@
     </div>
 </section>
 <section id="rule-page" class="container">
-    <img class="sky-bg" style="height:100%" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/sky.png" width="100%" alt=""/>
+    <img class="sky-bg" style="height:100%" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/bg_inventory.png" width="100%" alt=""/>
     <div class="top-layer">
         <div class="btn-back-rule" onclick="handleGoBackFromRuleToHome()">
             <svg width="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18794,7 +18794,7 @@
     </div>
 </section>
 <section id="inventory-page" class="container">
-    <img class="sky-bg" style="height:100%" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/sky.png" width="100%" alt=""/>
+    <img class="sky-bg" style="height:100%" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/bg_inventory.png" width="100%" alt=""/>
     <div class="top-layer">
         <div class="btn-back-rule" onclick="handleGoBackFromInventoryToHome()">
             <svg width="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19790,7 +19790,7 @@
     </div>
 </section>
 <section id="winner-page" class="container">
-    <img class="sky-bg" style="height:100%" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/sky.png" width="100%" alt=""/>
+    <img class="sky-bg" style="height:100%" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/bg_inventory.png" width="100%" alt=""/>
     <div class="top-layer">
         <div class="btn-back-rule" onclick="handleGoBackFromWinnerToHome()">
             <svg width="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20085,7 +20085,7 @@
             </g>
         </svg>
         <div class="winner-content">
-
+            <div class="data-container"></div>
         </div>
     </div>
     <div class="rule-menu">
@@ -20867,17 +20867,17 @@
                 console.log(res)
                 res.data.awards.map(
                     (item)=>{
+                        console.log(FormatText(item.award_name))
                         if(FormatText(item.award_name) === "giải khuyến khích"){
                             console.log(item.award_name)
                         }
-                        if(FormatText(item.award_name) === "giải 1" || FormatText(item.award_name) === "giải nhất"){
+                        if(FormatText(item.award_name) === "giải 1" || FormatText(item.award_name) === "giải nhất"){
                             console.log(item.award_name)
                         }
-                        if(FormatText(item.award_name) === "giải 2" || FormatText(item.award_name) === "giải nhì"){
+                        if(FormatText(item.award_name) === "giải 2" || FormatText(item.award_name) === "giải nhì"){
                             console.log(item.award_name)
                         }
-                        if(FormatText(item.award_name) === "giải 3" || FormatText(item.award_name) === "giải ba"){
-                            console.log(item.award_name)
+                        if((FormatText(item.award_name) === "giải 3") || (FormatText(item.award_name) === "giải ba")){
                             //check if array contains that piece position or not to change UI
                             if (item.pieces.every(piece => piece.piece_position !== "TopLeft")) {
                                 const elements = document.getElementById("prize-third-wrapper").children;
@@ -20943,7 +20943,47 @@
         inventoryPage.style.display = "none";
         getListWinner(eventID).then(
             (res) => {
-                console.log(res)
+                const newTable = arrayToTable(res.data.data);
+                document.querySelector(".winner-content").innerHTML = newTable
+                $(function () {
+                    (function (name) {
+                        var container = $('#pagination-' + name);
+                        if (!container.length) return;
+                        var options = {
+                            dataSource: allCode,
+                            pageSize: 20,
+                            showNavigator: true,
+                            showSizeChanger: true,
+                            formatNavigator: '',
+                            callback: function (response, pagination) {
+                                // window.console && console.log(response, pagination);
+                                var dataHtml = '<ul>';
+
+                                $.each(response, function (index, item) {
+                                    dataHtml += '<li>' + item + '</li>';
+                                });
+
+
+                                dataHtml += '</ul>';
+
+                                container.prev().html(dataHtml);
+                            }
+                        };
+
+                        //$.pagination(container, options);
+
+                        // container.addHook('beforeInit', function () {
+                        //     window.console && console.log('beforeInit...');
+                        // });
+                        container.pagination(options);
+
+                        // container.addHook('beforePageOnClick', function () {
+                        //     window.console && console.log('beforePageOnClick...');
+                        //     //return false
+                        // });
+                    })('search');
+
+                })
             }
         )
     }
@@ -20999,9 +21039,6 @@
             canStartEvent();
         }
     })
-</script>
-<script>
-
 </script>
 
 </html>
