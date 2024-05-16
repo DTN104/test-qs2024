@@ -103,7 +103,7 @@ const resultFake = {
   }
 }
 
-const inventoryFake = {
+const resInventory = {
   "result_code": 0,
   "data": {
     "awards": [
