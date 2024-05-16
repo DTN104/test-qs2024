@@ -19178,7 +19178,7 @@
             </div>
             <div class="prize-card">
                 <div class="prize-box">
-                    <div class="prize-wrapper">
+                    <div class="prize-wrapper" id="prize-first-wrapper">
                         <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-05.png" alt=""/>
                         <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/key-manh-ghep-giai-nhat-06.png" alt=""/>
                         <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-07.png" alt=""/>
@@ -20867,11 +20867,61 @@
                 console.log(res)
                 res.data.awards.map(
                     (item)=>{
+                        console.log(FormatText(item.award_name))
                         if(FormatText(item.award_name) === "giải khuyến khích"){
                             console.log(item.award_name)
                         }
-                        if(FormatText(item.award_name) === "giải 1" || FormatText(item.award_name) === "giải nhất"){
-                            console.log(item.award_name)
+                        if(FormatText(item.award_name) === "giải 1" || FormatText(item.award_name) === "giải nhất"){
+                            //check if array contains that piece position or not to change UI
+                            if (item.pieces.every(piece => piece.piece_position !== "TopLeft")) {
+                                const elements = document.getElementById("prize-first-wrapper").children;
+                                elements[0].classList.add("missing");
+                                prizeFirstTopLeftCount.innerText = "x0"
+                            } else {
+                                const elements = document.getElementById("prize-first-wrapper").children;
+                                elements[0].classList.contains("missing") && elements[0].classList.remove("missing")
+                            }
+                            if (item.pieces.every(piece => piece.piece_position !== "TopRight")) {
+                                const elements = document.getElementById("prize-first-wrapper").children;
+                                elements[1].classList.add("missing");
+                                prizeFirstTopRightCount.innerText = "x0"
+                            } else {
+                                const elements = document.getElementById("prize-first-wrapper").children;
+                                elements[1].classList.contains("missing") && elements[1].classList.remove("missing")
+                            }
+                            if (item.pieces.every(piece => piece.piece_position !== "BottomLeft")) {
+                                const elements = document.getElementById("prize-first-wrapper").children;
+                                elements[2].classList.add("missing");
+                                prizeFirstBottomLeftCount.innerText = "x0"
+                            } else {
+                                const elements = document.getElementById("prize-first-wrapper").children;
+                                elements[2].classList.contains("missing") && elements[2].classList.remove("missing")
+                            }
+                            if (item.pieces.every(piece => piece.piece_position !== "BottomRight")) {
+                                const elements = document.getElementById("prize-first-wrapper").children;
+                                elements[3].classList.add("missing");
+                                prizeFirstBottomRightCount.innerText = "x0"
+                            } else {
+                                const elements = document.getElementById("prize-first-wrapper").children;
+                                elements[3].classList.contains("missing") && elements[3].classList.remove("missing")
+                            }
+                            //update quantity of piece potition
+                            item.pieces.map(
+                                (piece) => {
+                                    if(piece.piece_position === "TopLeft"){
+                                        prizeFirstTopLeftCount.innerText = "x"+piece.piece_amount
+                                    }
+                                    if(piece.piece_position === "TopRight"){
+                                        prizeFirstTopRightCount.innerText = "x"+piece.piece_amount
+                                    }
+                                    if(piece.piece_position === "BottomLeft"){
+                                        prizeFirstBottomLeftCount.innerText = "x"+piece.piece_amount
+                                    }
+                                    if(piece.piece_position === "BottomRight"){
+                                        prizeFirstBottomRightCount.innerText = "x"+piece.piece_amount
+                                    }
+                                }
+                            )
                         }
                         if(FormatText(item.award_name) === "giải 2" || FormatText(item.award_name) === "giải nhì"){
                             console.log(item.award_name)
@@ -20928,7 +20978,7 @@
                                 }
                             )
                         }
-                        if(FormatText(item.award_name) === "giải 4" || FormatText(item.award_name) === "giải tư"){
+                        if((FormatText(item.award_name) === "giải 4") || (FormatText(item.award_name) === "giải tư")){
                             //check if array contains that piece position or not to change UI
                             if (item.pieces.every(piece => piece.piece_position !== "TopLeft")) {
                                 const elements = document.getElementById("prize-fourth-wrapper").children;
