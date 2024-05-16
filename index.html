@@ -20868,15 +20868,16 @@
                 res.data.awards.map(
                     (item)=>{
                         if(FormatText(item.award_name) === "giải khuyến khích"){
-
+                            console.log(item.award_name)
                         }
                         if(FormatText(item.award_name) === "giải 1" || FormatText(item.award_name) === "giải nhất"){
-
+                            console.log(item.award_name)
                         }
                         if(FormatText(item.award_name) === "giải 2" || FormatText(item.award_name) === "giải nhì"){
-
+                            console.log(item.award_name)
                         }
                         if(FormatText(item.award_name) === "giải 3" || FormatText(item.award_name) === "giải ba"){
+                            console.log(item.award_name)
                             //check if array contains that piece position or not to change UI
                             if (item.pieces.every(piece => piece.piece_position !== "TopLeft")) {
                                 const elements = document.getElementById("prize-third-wrapper").children;
@@ -20925,10 +20926,10 @@
                             )
                         }
                         if(FormatText(item.award_name) === "giải 4" || FormatText(item.award_name) === "giải tư"){
-
+                            console.log(item.award_name)
                         }
                         if(FormatText(item.award_name) === "giải đặc biệt"){
-
+                            console.log(item.award_name)
                         }
                     }
                 )
