@@ -782,6 +782,7 @@
         font-weight: 700;
         font-size:7px;
         line-height: 9px;
+        text-align:center;
     }
     .card-popup-list__detail{
         color: #1E458C;
@@ -17979,10 +17980,10 @@
                             aria-label="Close">
                         X
                     </button>
-                    <img src="" id="img-popup-award" alt=""/>
-                    <div class="congrats-text">Chúc mừng bạn đã nhận được </div>
+                    <img src="" id="img-popup-award" alt="" style="width:150px"/>
+                    <div class="congrats-text">Chúc mừng bạn đã thu thập đủ mảnh và trúng thưởng</div>
                     <div id="popup-award-name"></div>
-                    <div class="popup-rule" onclick="startRulePage()">Xem thể lệ tại <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="popup-rule" onclick="openInventory()">Xem thể lệ tại <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.49808 0H2.99872V1.49936H4.49808V0Z" fill="#262168"/>
                         <path d="M5.99741 0H4.49805V1.49936H5.99741V0Z" fill="#262168"/>
                         <path d="M7.49679 0H5.99744V1.49936H7.49679V0Z" fill="#262168"/>
@@ -21114,6 +21115,7 @@
                             document.querySelector(".popup-group").style.display = "none";
                             document.getElementById("popup-award-name").innerHTML = res.data.piece[0].name;
                             document.getElementById("img-popup-award").setAttribute("src",res.data.piece[0].image);
+
                         }
                     } else {
                         //handle gacha 10 and 100
@@ -21160,7 +21162,7 @@
                             )
                             document.getElementById("popup-piece-list").innerHTML = `
                                 <div class="card-popup-piece-list-holder">
-                                    ${newList.toString()}
+                                    ${newList.join().replaceAll(",","")}
                                 </div>
                             `;
                             $('#infoModal').on('hidden.bs.modal', function (e) {
@@ -21228,7 +21230,7 @@
                             )
                             document.getElementById("popup-piece-list").innerHTML = `
                                 <div class="card-popup-piece-list-holder">
-                                    ${newList.toString()}
+                                    ${newList.join().replaceAll(",","")}
                                 </div>
                             `;
                             $('#infoModal').on('hidden.bs.modal', function (e) {
@@ -21348,6 +21350,11 @@
                 }
             )
         }
+    }
+
+    const openInventory = () => {
+        startRulePage();
+        openInventoryTab;
     }
 
     const openRuleTab = () => {
