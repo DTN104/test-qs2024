@@ -355,6 +355,7 @@
 
     #start-disable {
         display: none;
+        opacity: 0.4;
     }
     #start-enable {
         display: block;
@@ -1018,7 +1019,7 @@
         right:0;
     }
     .missing {
-        opacity: 0.3;
+        opacity: 0.4;
     }
     .inventory-content{
         display: flex;
@@ -14123,7 +14124,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="top-layer">
-                <div class="btn-back-rule" onclick="handleCloseApp()">
+                <div class="btn-back-rule" style="top:12px" onclick="handleCloseApp()">
                     <svg width="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M35.01 0H32.51V2.5H35.01V0Z" fill="#620E27"/>
                         <path d="M32.51 0H30.01V2.5H32.51V0Z" fill="#620E27"/>
@@ -14744,8 +14745,8 @@
         </div>
     </div>
     <div class="row mt-3 text-center">
-        <div class="col-sm-12 start-btn" onclick="handleStart()">
-            <svg id="start-enable" width="122" height="36" viewBox="0 0 122 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="col-sm-12 start-btn" id="start-enable" onclick="handleStart()">
+            <svg width="122" height="36" viewBox="0 0 122 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_7_94743)">
                     <path d="M7.62389 3.99896H3.81195V7.99792H7.62389V3.99896Z" fill="#1E458F"/>
                     <path d="M114.376 0H7.62387V3.99896H114.376V0Z" fill="#1E458F"/>
@@ -14797,96 +14798,59 @@
                     </clipPath>
                 </defs>
             </svg>
-            <svg id="start-disable" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213.04 59.92">
-                <defs>
-                    <style>
-                        .cls-1 {
-                            fill: #1e458d;
-                        }
-
-                        .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
-                            stroke-width: 0px;
-                        }
-
-                        .cls-2 {
-                            fill: #deffaa;
-                        }
-
-                        .cls-3 {
-                            fill: #9fb93d;
-                        }
-
-                        .cls-4 {
-                            fill: #bcff37;
-                        }
-
-                        .cls-6 {
-                            opacity: .5;
-                        }
-
-                        .cls-5 {
-                            fill: #fff;
-                        }
-                    </style>
-                </defs>
-                <path class="cls-5" d="M206.38,13.32v-6.66h-6.66V0H13.32v6.66h-6.66v6.66H0v33.29h6.66v6.66h6.66v6.66h186.41v-6.66h6.66v-6.66h6.66V13.32h-6.66ZM106.52,46.6h-19.97,6.66s6.66,0,6.66,0h6.66s6.66,0,6.66,0h26.63s-33.29,0-33.29,0Z"/>
-                <g class="cls-6">
-                    <g>
-                        <g>
-                            <g>
-                                <rect class="cls-1" x="6.66" y="6.66" width="6.66" height="6.66"/>
-                                <rect class="cls-1" x="13.32" width="186.41" height="6.66"/>
-                                <rect class="cls-1" x="6.66" y="46.6" width="6.66" height="6.66" transform="translate(19.97 99.86) rotate(180)"/>
-                                <rect class="cls-1" x="13.32" y="53.26" width="186.41" height="6.66"/>
-                                <rect class="cls-1" y="13.32" width="6.66" height="33.29"/>
-                                <rect class="cls-1" x="199.73" y="46.6" width="6.66" height="6.66"/>
-                                <rect class="cls-1" x="199.73" y="6.66" width="6.66" height="6.66"/>
-                                <rect class="cls-1" x="206.38" y="13.32" width="6.66" height="33.29"/>
-                            </g>
-                            <rect class="cls-4" x="13.32" y="13.32" width="6.66" height="33.29"/>
-                            <rect class="cls-4" x="193.07" y="13.32" width="6.66" height="33.29"/>
-                            <rect class="cls-4" x="19.97" y="13.32" width="6.66" height="33.29"/>
-                            <rect class="cls-4" x="26.63" y="6.66" width="6.66" height="39.95"/>
-                            <rect class="cls-4" x="33.29" y="6.66" width="6.66" height="39.95"/>
-                            <rect class="cls-4" x="39.95" y="6.66" width="6.66" height="39.95"/>
-                            <rect class="cls-4" x="46.6" y="6.66" width="6.66" height="39.95"/>
-                            <rect class="cls-4" x="53.26" y="6.66" width="6.66" height="39.95"/>
-                            <rect class="cls-4" x="59.92" y="6.66" width="6.66" height="39.95"/>
-                            <rect class="cls-4" x="66.58" y="6.66" width="6.66" height="39.95"/>
-                            <rect class="cls-4" x="73.23" y="6.66" width="6.66" height="39.95"/>
-                            <rect class="cls-4" x="79.89" y="6.66" width="6.66" height="39.95"/>
-                            <rect class="cls-4" x="86.55" y="6.66" width="6.66" height="39.94"/>
-                            <rect class="cls-4" x="93.21" y="6.66" width="6.66" height="39.94"/>
-                            <rect class="cls-4" x="99.86" y="6.66" width="6.66" height="39.94"/>
-                            <rect class="cls-4" x="106.52" y="6.66" width="6.66" height="39.94"/>
-                            <rect class="cls-4" x="113.18" y="6.66" width="6.66" height="39.94"/>
-                            <rect class="cls-4" x="119.84" y="6.66" width="6.66" height="39.94"/>
-                            <rect class="cls-4" x="126.49" y="6.66" width="6.66" height="39.94"/>
-                            <rect class="cls-4" x="133.15" y="6.66" width="6.66" height="39.94"/>
-                            <rect class="cls-4" x="139.81" y="6.66" width="6.66" height="39.95"/>
-                            <rect class="cls-4" x="146.47" y="6.66" width="39.95" height="39.95"/>
-                            <rect class="cls-4" x="186.41" y="13.32" width="6.66" height="33.29"/>
-                            <rect class="cls-4" x="6.66" y="19.97" width="6.66" height="19.97"/>
-                            <rect class="cls-4" x="199.73" y="19.97" width="6.66" height="19.97"/>
-                        </g>
-                        <rect class="cls-3" x="13.32" y="46.6" width="186.41" height="6.66"/>
-                        <rect class="cls-3" x="6.66" y="39.95" width="6.66" height="6.66" transform="translate(19.97 86.55) rotate(180)"/>
-                        <rect class="cls-3" x="199.73" y="39.95" width="6.66" height="6.66" transform="translate(406.11 86.55) rotate(180)"/>
-                        <rect class="cls-5" x="6.66" y="13.32" width="6.66" height="6.66" transform="translate(19.97 33.29) rotate(180)"/>
-                        <rect class="cls-2" x="199.73" y="13.32" width="6.66" height="6.66" transform="translate(406.11 33.29) rotate(180)"/>
-                        <rect class="cls-2" x="199.73" y="33.2" width="6.66" height="6.66" transform="translate(406.11 73.05) rotate(180)"/>
-                        <rect class="cls-2" x="193.07" y="39.95" width="6.66" height="6.66" transform="translate(392.79 86.55) rotate(180)"/>
-                        <rect class="cls-2" x="13.32" y="6.66" width="186.41" height="6.66"/>
-                        <rect class="cls-5" x="13.32" y="6.66" width="13.31" height="6.66" transform="translate(39.95 19.97) rotate(180)"/>
-                    </g>
-                    <g>
-                        <path class="cls-1" d="M58.5,42.03h-4.1v4.45h-21.57v-4.21h-4.34v-4.45h8.62v4.21h12.77v-8.6h-17.05v-4.45h-4.34v-8.84h4.1v-4.45h17.29v4.2h4.34v4.45h-8.5v-4.2h-8.62v8.53h17.11v4.51h4.28v8.84Z"/>
-                        <path class="cls-1" d="M86.7,19.95h-8.44v26.53h-8.62v-26.34h-8.68v-4.45h25.73v4.27Z"/>
-                        <path class="cls-1" d="M116.95,46.48h-8.62v-8.78h-12.77v8.78h-8.62v-21.95h4.1v-4.39h4.4v-4.45h12.9v4.2h4.34v4.39h4.28v22.2ZM108.33,33.24v-8.97h-4.28v-4.14h-4.4v4.39h-4.1v8.72h12.77Z"/>
-                        <path class="cls-1" d="M154,33.24h-8.62v4.27h4.34v4.51h4.28v4.45h-12.77v-4.14h-4.28v-4.64h-4.34v8.78h-8.62V15.68h25.73v4.27h4.28v13.3ZM145.39,28.79v-8.66h-12.77v13.11h8.62v-4.45h4.16Z"/>
-                        <path class="cls-1" d="M185.82,19.95h-8.44v26.53h-8.62v-26.34h-8.68v-4.45h25.73v4.27Z"/>
-                    </g>
+        </div>
+        <div class="col-sm-12 start-btn" id="start-disable" >
+            <svg width="122" height="36" viewBox="0 0 122 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_7_94743)">
+                    <path d="M7.62389 3.99896H3.81195V7.99792H7.62389V3.99896Z" fill="#1E458F"/>
+                    <path d="M114.376 0H7.62387V3.99896H114.376V0Z" fill="#1E458F"/>
+                    <path d="M3.81193 32.001H7.62387L7.62387 28.0021H3.81193L3.81193 32.001Z" fill="#1E458F"/>
+                    <path d="M114.376 31.9916H7.62387V35.9906H114.376V31.9916Z" fill="#1E458F"/>
+                    <path d="M3.81194 7.99792H0V27.9927H3.81194V7.99792Z" fill="#1E458F"/>
+                    <path d="M118.188 27.9927H114.376V31.9916H118.188V27.9927Z" fill="#1E458F"/>
+                    <path d="M118.188 3.99896H114.376V7.99792H118.188V3.99896Z" fill="#1E458F"/>
+                    <path d="M122 7.99792H118.188V27.9927H122V7.99792Z" fill="#1E458F"/>
+                    <path d="M11.4358 7.99792H7.62387V27.9927H11.4358V7.99792Z" fill="#BEFF37"/>
+                    <path d="M114.376 7.99792H110.564V27.9927H114.376V7.99792Z" fill="#BEFF37"/>
+                    <path d="M15.2478 7.99792H11.4358V27.9927H15.2478V7.99792Z" fill="#BEFF37"/>
+                    <path d="M19.0597 3.99896H15.2478V27.9927H19.0597V3.99896Z" fill="#BEFF37"/>
+                    <path d="M22.8716 3.99896H19.0597V27.9927H22.8716V3.99896Z" fill="#BEFF37"/>
+                    <path d="M26.6836 3.99896H22.8716V27.9927H26.6836V3.99896Z" fill="#BEFF37"/>
+                    <path d="M30.4955 3.99896H26.6836V27.9927H30.4955V3.99896Z" fill="#BEFF37"/>
+                    <path d="M34.3075 3.99896H30.4955V27.9927H34.3075V3.99896Z" fill="#BEFF37"/>
+                    <path d="M38.1283 3.99896H34.3164V27.9927H38.1283V3.99896Z" fill="#BEFF37"/>
+                    <path d="M41.9403 3.99896H38.1284V27.9927H41.9403V3.99896Z" fill="#BEFF37"/>
+                    <path d="M45.7523 3.99896H41.9403V27.9927H45.7523V3.99896Z" fill="#BEFF37"/>
+                    <path d="M49.5642 3.99896H45.7522V27.9927H49.5642V3.99896Z" fill="#BEFF37"/>
+                    <path d="M53.3761 3.99896H49.5642V27.9927H53.3761V3.99896Z" fill="#BEFF37"/>
+                    <path d="M57.1881 3.99896H53.3761V27.9927H57.1881V3.99896Z" fill="#BEFF37"/>
+                    <path d="M61 3.99896H57.188V27.9927H61V3.99896Z" fill="#BEFF37"/>
+                    <path d="M64.8119 3.99896H61V27.9927H64.8119V3.99896Z" fill="#BEFF37"/>
+                    <path d="M68.6239 3.99896H64.812V27.9927H68.6239V3.99896Z" fill="#BEFF37"/>
+                    <path d="M72.4358 3.99896H68.6239V27.9927H72.4358V3.99896Z" fill="#BEFF37"/>
+                    <path d="M76.2478 3.99896H72.4358V27.9927H76.2478V3.99896Z" fill="#BEFF37"/>
+                    <path d="M80.0597 3.99896H76.2478V27.9927H80.0597V3.99896Z" fill="#BEFF37"/>
+                    <path d="M83.8716 3.99896H80.0597V27.9927H83.8716V3.99896Z" fill="#BEFF37"/>
+                    <path d="M106.743 3.99896H83.8716V27.9927H106.743V3.99896Z" fill="#BEFF37"/>
+                    <path d="M110.564 7.99792H106.752V27.9927H110.564V7.99792Z" fill="#BEFF37"/>
+                    <path d="M7.62389 11.9969H3.81195V23.9938H7.62389V11.9969Z" fill="#BEFF37"/>
+                    <path d="M118.188 11.9969H114.376V23.9938H118.188V11.9969Z" fill="#BEFF37"/>
+                    <path d="M114.376 27.9927H7.62387V31.9916H114.376V27.9927Z" fill="#A1BB3D"/>
+                    <path d="M3.81193 28.0021H7.62387L7.62387 24.0031H3.81193L3.81193 28.0021Z" fill="#A1BB3D"/>
+                    <path d="M114.367 28.0021H118.179V24.0031H114.367V28.0021Z" fill="#A1BB3D"/>
+                    <path d="M3.81193 11.9969H7.62387L7.62387 7.99793H3.81193L3.81193 11.9969Z" fill="white"/>
+                    <path d="M114.367 11.9969H118.179V7.99793H114.367V11.9969Z" fill="#E0FFAC"/>
+                    <path d="M114.367 23.9468H118.179V19.9478H114.367V23.9468Z" fill="#E0FFAC"/>
+                    <path d="M110.555 28.0021H114.367V24.0031H110.555V28.0021Z" fill="#E0FFAC"/>
+                    <path d="M114.376 3.99896H7.62387V7.99792H114.376V3.99896Z" fill="#E0FFAC"/>
+                    <path d="M7.62389 7.99792L15.2478 7.99792V3.99897L7.62389 3.99897L7.62389 7.99792Z" fill="white"/>
+                    <path d="M32.964 24.068H30.516V26.66H17.628V24.212H15.036V21.584H20.112V24.068H27.852V19.064H17.628V16.472H15.036V11.288H17.484V8.732H27.816V11.18H30.408V13.772H25.332V11.288H20.184V16.292H30.408V18.884H32.964V24.068ZM48.905 11.216H43.865V26.66H38.681V11.36H33.533V8.732H48.905V11.216ZM72.5499 26.66H67.4739V21.548H59.8419V26.66H54.6219V13.844H57.0699V11.288H59.6619V8.732H67.4019V11.18H69.9939V13.736H72.5499V26.66ZM67.4019 18.92V13.736H64.8459V11.288H62.2179V13.88H59.7699V18.92H67.4019ZM92.3429 18.92H87.2669V21.44H89.7869V24.032H92.3429V26.66H84.7109V24.212H82.1549V21.548H79.6349V26.66H74.4149V8.732H89.7869V11.18H92.3429V18.92ZM87.1949 16.364V11.288H79.5629V18.92H84.7469V16.364H87.1949ZM108.284 11.216H103.244V26.66H98.0599V11.36H92.9119V8.732H108.284V11.216Z" fill="#1E458F"/>
                 </g>
+                <defs>
+                    <clipPath id="clip0_7_94743">
+                        <rect width="122" height="36" fill="white"/>
+                    </clipPath>
+                </defs>
             </svg>
         </div>
     </div>
@@ -20781,7 +20745,7 @@
         });
     }
     const getTotalSpin = (accountId,eventId,sessionId) => {
-        return axios.get(`${baseUrl}/event/client-infor/?client_id=${accountId}&event_id=${eventId}`, {
+        return axios.get(`${baseUrl}/event/client-info/?client_id=${accountId}&event_id=${eventId}`, {
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
                 "session_id": sessionId
@@ -21131,11 +21095,13 @@
                                 getTotalSpin(accountID,eventID,sessionAPI).then(
                                     (res) => {
                                         if(res.data.spinCount === 0){
-                                            startDisable.style.display === "block";
-                                            startEnable.style.display === "none";
+                                            startDisable.style.display = "block";
+                                            startEnable.style.display = "none";
+                                            playerSpinCountHome.innerHTML = res.data.spinCount;
+                                            playerSpinCountEvent.innerHTML = res.data.spinCount;
                                         } else {
-                                            startDisable.style.display === "none";
-                                            startEnable.style.display === "block";
+                                            startDisable.style.display = "none";
+                                            startEnable.style.display = "block";
                                             playerSpinCountHome.innerHTML = res.data.spinCount;
                                             playerSpinCountEvent.innerHTML = res.data.spinCount;
                                         }
@@ -21206,11 +21172,13 @@
                                 getTotalSpin(accountID,eventID,sessionAPI).then(
                                     (res) => {
                                         if(res.data.spinCount === 0){
-                                            startDisable.style.display === "block";
-                                            startEnable.style.display === "none";
+                                            startDisable.style.display = "block";
+                                            startEnable.style.display = "none";
+                                            playerSpinCountHome.innerHTML = res.data.spinCount;
+                                            playerSpinCountEvent.innerHTML = res.data.spinCount;
                                         } else {
-                                            startDisable.style.display === "none";
-                                            startEnable.style.display === "block";
+                                            startDisable.style.display = "none";
+                                            startEnable.style.display = "block";
                                             playerSpinCountHome.innerHTML = res.data.spinCount;
                                             playerSpinCountEvent.innerHTML = res.data.spinCount;
                                         }
@@ -21268,11 +21236,13 @@
                                 getTotalSpin(accountID,eventID,sessionAPI).then(
                                     (res) => {
                                         if(res.data.spinCount === 0){
-                                            startDisable.style.display === "block";
-                                            startEnable.style.display === "none";
+                                            startDisable.style.display = "block";
+                                            startEnable.style.display = "none";
+                                            playerSpinCountHome.innerHTML = res.data.spinCount;
+                                            playerSpinCountEvent.innerHTML = res.data.spinCount;
                                         } else {
-                                            startDisable.style.display === "none";
-                                            startEnable.style.display === "block";
+                                            startDisable.style.display = "none";
+                                            startEnable.style.display = "block";
                                             playerSpinCountHome.innerHTML = res.data.spinCount;
                                             playerSpinCountEvent.innerHTML = res.data.spinCount;
                                         }
@@ -21343,7 +21313,8 @@
         } else {
             startDisable.style.display = "none";
             startEnable.style.display = "block";
-            return true;        }
+            return true;
+        }
     }
 
     const accInputHandler = function(e) {
@@ -21361,11 +21332,13 @@
             getTotalSpin(accountID,eventID,sessionAPI).then(
                 (res) => {
                     if(res.data.spinCount === 0){
-                        startDisable.style.display === "block";
-                        startEnable.style.display === "none";
+                        startDisable.style.display = "block";
+                        startEnable.style.display = "none";
+                        playerSpinCountHome.innerHTML = res.data.spinCount;
+                        playerSpinCountEvent.innerHTML = res.data.spinCount;
                     } else {
-                        startDisable.style.display === "none";
-                        startEnable.style.display === "block";
+                        startDisable.style.display = "none";
+                        startEnable.style.display = "block";
                         playerSpinCountHome.innerHTML = res.data.spinCount;
                         playerSpinCountEvent.innerHTML = res.data.spinCount;
                         document.getElementById("test-page").style.display = "none";
@@ -21768,12 +21741,14 @@
                 sessionAPI = res.data.session_id;
                 getTotalSpin(res.data.client_id,res.data.event_id,res.data.session_id).then(
                     (res) => {
-                        if(res.data.spinCount === 0){
-                            startDisable.style.display === "block";
-                            startEnable.style.display === "none";
+                        if(Number(res.data.spinCount) === 0){
+                            startEnable.style.display = "none";
+                            startDisable.style.display = "block";
+                            playerSpinCountHome.innerHTML = res.data.spinCount;
+                            playerSpinCountEvent.innerHTML = res.data.spinCount;
                         } else {
-                            startDisable.style.display === "none";
-                            startEnable.style.display === "block";
+                            startEnable.style.display = "block";
+                            startDisable.style.display = "none";
                             playerSpinCountHome.innerHTML = res.data.spinCount;
                             playerSpinCountEvent.innerHTML = res.data.spinCount;
                             currentPage = "home";
