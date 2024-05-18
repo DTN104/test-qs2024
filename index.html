@@ -817,6 +817,12 @@
         text-align: center;
         white-space: nowrap;
     }
+    .popup-award__button {
+        position: absolute;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     /***********************Popup Group*****************/
     #popup-piece-list {
@@ -17968,7 +17974,7 @@
                         X
                     </button>
                     <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-ba.png" id="img-popup-award" alt="" style="width:150px"/>
-                    <div class="congrats-text">Chúc mừng bạn đã thu thập đủ mảnh và trúng thưởng</div>
+                    <div class="congrats-text">Chúc mừng bạn đã thu thập<br/>đủ mảnh và trúng thưởng</div>
                     <div>
                         <div id="popup-award-name"></div>
                         <div id="popup-award-info"></div>
@@ -18004,6 +18010,9 @@
                                 <path d="M10.2256 7.30676H7.69824V12.3662H10.2256V7.30676Z" fill="#90D5DC"/>
                             </svg>
                         </div>
+                    </div>
+                    <div class="popup-award__button" data-bs-dismiss="modal"
+                         aria-label="Close">
                         <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.63988 4.06274H4.24988V7.45274H7.63988V4.06274Z" fill="#1E458E"/>
                             <path d="M102.41 0.682739H7.62988V4.07274H102.41V0.682739Z" fill="#1E458E"/>
@@ -18037,7 +18046,6 @@
                             <path d="M91.5699 6.94275H89.3699V9.14275H91.5699V6.94275Z" fill="#1E458E"/>
                             <path d="M42.2499 22.4127H40.0499V24.6127H42.2499V22.4127Z" fill="#1E458E"/>
                         </svg>
-
                     </div>
                 </div>
                 <div class="popup-group-award">
@@ -18061,37 +18069,11 @@
                         X
                     </button>
                     <div class="popup-group-award__congrats-text">Chúc mừng bạn đã thu thập<br/> đủ mảnh và trúng thưởng</div>
-                    <div class="popup-group-award__card-popup-award-list-holder">
-                        <div class="card-popup-award-list">
-                            <div class="card-popup-award-list__award-img">
-                                <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-ba.png" alt="" />
-                            </div>
-                            <div class="card-popup-award-list__award-title">Giải Đặc Biệt</div>
-                            <div class="card-popup-award-list__award-info">MACBOOK PRO M3</div>
-                        </div>
-                        <div class="card-popup-award-list">
-                            <div class="card-popup-award-list__award-img">
-                                <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-ba.png" alt="" />
-                            </div>
-                            <div class="card-popup-award-list__award-title">Giải Đặc Biệt</div>
-                            <div class="card-popup-award-list__award-info">MACBOOK PRO M3</div>
-                        </div>
-                        <div class="card-popup-award-list">
-                            <div class="card-popup-award-list__award-img">
-                                <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-ba.png" alt="" />
-                            </div>
-                            <div class="card-popup-award-list__award-title">Giải Đặc Biệt</div>
-                            <div class="card-popup-award-list__award-info">MACBOOK PRO M3</div>
-                        </div>
-                        <div class="card-popup-award-list">
-                            <div class="card-popup-award-list__award-img">
-                                <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-ba.png" alt="" />
-                            </div>
-                            <div class="card-popup-award-list__award-title">Giải Đặc Biệt</div>
-                            <div class="card-popup-award-list__award-info">MACBOOK PRO M3</div>
-                        </div>
+                    <div id="popup-group-award__award-list">
+
                     </div>
-                    <div class="popup-group-award__button">
+                    <div class="popup-group-award__button" data-bs-dismiss="modal"
+                         aria-label="Close">
                         <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.63988 4.06274H4.24988V7.45274H7.63988V4.06274Z" fill="#1E458E"/>
                             <path d="M102.41 0.682739H7.62988V4.07274H102.41V0.682739Z" fill="#1E458E"/>
@@ -20956,7 +20938,7 @@
                             //not receive award
                             setTimeout(()=> {
                                 $("#infoModal").modal("show")
-                            }, 800);
+                            }, 2000);
                             document.querySelector(".popup-piece").style.display = "flex";
                             document.querySelector(".popup-group").style.display = "none";
                             document.getElementById("popup-piece-prize").innerHTML = "Mảnh ghép <br/>"+res.data.award[0].award_info;
@@ -20964,7 +20946,10 @@
                             document.getElementById("popup-piece-image").setAttribute("src",res.data.piece[0].image);
                             document.getElementById("spin-end-date").innerText = res.data.event_end_date;
                             document.getElementById("total-piece").innerText = res.data.award[0].total_piece;
-                            $('#infoModal').on('hidden.bs.modal', function (e) {
+                            $('#infoModal').on('hide.bs.modal', function () {
+                                alert("asas")
+                            });
+                            $('#infoModal').on('hidden.bs.modal', function () {
                                 resetState();
                                 getTotalSpin(accountID,eventID,sessionAPI).then(
                                     (res) => {
@@ -20981,12 +20966,12 @@
                                         }
                                     }
                                 );
-                            })
+                            });
                         } else {
                             //receive 1 award
                             setTimeout(()=> {
                                 $("#awardModal").modal("show")
-                            }, 800);
+                            }, 2000);
                             document.querySelector(".popup-piece").style.display = "none";
                             document.querySelector(".popup-group").style.display = "none";
                             document.querySelector(".popup-award").style.display = "flex";
@@ -21019,7 +21004,7 @@
                             //handle client receive multi award
                             setTimeout(()=> {
                                 $("#infoModal").modal("show")
-                            }, 800);
+                            }, 2000);
                             document.querySelector(".popup-piece").style.display = "none";
                             document.querySelector(".popup-group").style.display = "flex";
                             let array = formatMultipleSpinResult(res);
@@ -21071,13 +21056,32 @@
                                 $("#awardModal").modal("show");
                                 document.querySelector(".popup-award").style.display = "none";
                                 document.querySelector(".popup-group-award").style.display = "flex";
-
+                                let awardArr = formatMultipleSpinResult(res);
+                                const awardList = awardArr.map(
+                                    item =>
+                                        (`<div className="popup-group-award__card-popup-award-list-holder">
+                                    <div className="card-popup-award-list">
+                                        <div className="card-popup-award-list__award-img">
+                                            <img
+                                                src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-ba.png"
+                                                alt=""/>
+                                        </div>
+                                        <div className="card-popup-award-list__award-title">Giải Đặc Biệt</div>
+                                        <div className="card-popup-award-list__award-info">MACBOOK PRO M3</div>
+                                    </div>
+                                </div>`)
+                                )
+                                document.getElementById("popup-group-ward__award-list").innerHTML = `
+                                <div className="popup-group-award__card-popup-award-list-holder">
+                                    ${newList.join().replaceAll(",","")}
+                                </div>
+                                `;
                             })
                             $('#awardModal').on('hidden.bs.modal', function (e) {
                                 resetState();
-                                getTotalSpin(accountID,eventID,sessionAPI).then(
+                                getTotalSpin(accountID, eventID, sessionAPI).then(
                                     (res) => {
-                                        if(res.data.spinCount === 0){
+                                        if (res.data.spinCount === 0) {
                                             startDisable.style.display = "block";
                                             startEnable.style.display = "none";
                                             playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount);
@@ -21093,9 +21097,9 @@
                             })
                         } else {
                             //handle not receive multi award
-                            setTimeout(()=> {
+                            setTimeout(() => {
                                 $("#infoModal").modal("show")
-                            }, 800);
+                            }, 2000);
                             document.querySelector(".popup-piece").style.display = "none";
                             document.querySelector(".popup-group").style.display = "flex";
                             let array = formatMultipleSpinResult(res);
@@ -21141,7 +21145,7 @@
                                     ${newList.join().replaceAll(",","")}
                                 </div>
                             `;
-                            $('#infoModal').on('hidden.bs.modal', function (e) {
+                            $('#infoModal').on('hidden.bs.modal', function () {
                                 resetState();
                                 getTotalSpin(accountID,eventID,sessionAPI).then(
                                     (res) => {

@@ -25,13 +25,6 @@ const resultFake = {
         "total_piece": "4"
       },
       {
-        "award_id": "award_d0-3277-4b26-b2ff-b8bd147ff80c",
-        "award_name": "Giải 4",
-        "award_info": "Vali Traveler's choice",
-        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-tu.png",
-        "total_piece": "4"
-      },
-      {
         "award_id": "award_e0-67c9-4342-8d49-0565d5f76d9a",
         "award_name": "Giải nhất",
         "award_info": "iPad Pro m2 12.9 inch 256GB",
@@ -41,46 +34,25 @@ const resultFake = {
     ],
     "piece": [
       {
-        "piece_id": "award_piece_a-4aca-a9fd-d5de7683d5ca",
+        "piece_id": "award_piece_4-4337-baa5-ed127c0aa100",
+        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
+        "name": "Mảnh trên trái giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
+      },
+      {
+        "piece_id": "award_piece_5-4ea8-b8b3-48515266f24f",
         "award_id": "award_91-871d-4b61-9072-23727a37cf16",
-        "name": "Mảnh trên trái giải ba",
+        "name": "Mảnh dưới trái giải ba",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
       },
       {
-        "piece_id": "award_piece_e-40f8-8da3-78d0f427f2f1",
-        "award_id": "award_c5-c236-436f-bde8-03fbe25b8998",
-        "name": "Mảnh trên phải đặc biệt",
+        "piece_id": "award_piece_5-4ea8-b8b3-48515266f24f",
+        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
+        "name": "Mảnh dưới trái giải ba",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-02.png"
-      },
-      {
-        "piece_id": "award_piece_4-4ffa-8ca6-4ed2bb259f9e",
-        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
-        "name": "Mảnh trên phải giải nhì",
-        "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-10.png"
-      },
-      {
-        "piece_id": "award_piece_a-41f2-914c-ddca022ca798",
-        "award_id": "award_e0-67c9-4342-8d49-0565d5f76d9a",
-        "name": "Mảnh trên trái giải nhất",
-        "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-05.png"
-      },
-      {
-        "piece_id": "award_piece_4-4ffa-8ca6-4ed2bb259f9e",
-        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
-        "name": "Mảnh trên phải giải nhì",
-        "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-10.png"
-      },
-      {
-        "piece_id": "award_piece_d-497c-97c4-919507d2b0ed",
-        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
-        "name": "Mảnh dưới phải giải nhì",
-        "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-12.png"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
       },
       {
         "piece_id": "award_piece_a-41a8-8255-e264fd914f5e",
@@ -90,18 +62,25 @@ const resultFake = {
         "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-04.png"
       },
       {
-        "piece_id": "award_piece_f-4a4f-a89f-9422ae234233",
-        "award_id": "award_d0-3277-4b26-b2ff-b8bd147ff80c",
-        "name": "Mảnh dưới trái giải 4",
+        "piece_id": "award_piece_2-4c46-9713-16348d7ef276",
+        "award_id": "award_e0-67c9-4342-8d49-0565d5f76d9a",
+        "name": "Mảnh dưới phải giải nhất",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-19.png"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
       },
       {
-        "piece_id": "award_piece_a-41f2-914c-ddca022ca798",
-        "award_id": "award_e0-67c9-4342-8d49-0565d5f76d9a",
-        "name": "Mảnh trên trái giải nhất",
+        "piece_id": "award_piece_4-4337-baa5-ed127c0aa100",
+        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
+        "name": "Mảnh trên trái giải nhì",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-05.png"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
+      },
+      {
+        "piece_id": "award_piece_b-4805-a54a-f8b7cd48b139",
+        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
+        "name": "Mảnh trên phải giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-14.png"
       },
       {
         "piece_id": "award_piece_a-4aca-a9fd-d5de7683d5ca",
@@ -109,6 +88,20 @@ const resultFake = {
         "name": "Mảnh trên trái giải ba",
         "key": "false",
         "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png"
+      },
+      {
+        "piece_id": "award_piece_5-4ea8-b8b3-48515266f24f",
+        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
+        "name": "Mảnh dưới trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
+      },
+      {
+        "piece_id": "award_piece_d-497c-97c4-919507d2b0ed",
+        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
+        "name": "Mảnh dưới phải giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-12.png"
       }
     ]
   }
