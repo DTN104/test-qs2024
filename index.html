@@ -20735,7 +20735,10 @@
             $("#errorModal").modal("show");
             popupErrorTitle.innerHTML="TRUY CẬP \n" +
                 "KHÔNG THÀNH CÔNG"
-            popupError.innerHTML=err.message
+            popupError.innerHTML="Số lượt quay hiện tại không đủ, vui lòng chọn số lần quay khác"
+            $('#errorModal').on('hidden.bs.modal', function (e) {
+                window.location.href="https://www.acbs.com.vn";
+            })
         });
     }
 
@@ -21068,9 +21071,6 @@
                             document.getElementById("popup-piece-image").setAttribute("src",res.data.piece[0].image);
                             document.getElementById("spin-end-date").innerText = res.data.event_end_date;
                             document.getElementById("total-piece").innerText = res.data.award[0].total_piece;
-                            $('#infoModal').on('hide.bs.modal', function () {
-                                alert("asas")
-                            });
                             $('#infoModal').on('hidden.bs.modal', function () {
                                 resetState();
                                 getTotalSpin(accountID,eventID,sessionAPI).then(
@@ -21291,7 +21291,7 @@
         ).catch(
             (err) => {
                 isHitTheBox = false;
-                // showNotEnoughSpin();
+                showNotEnoughSpin();
             }
         )
         // $("#infoModal").modal("show");
