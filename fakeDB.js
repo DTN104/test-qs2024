@@ -275,75 +275,67 @@ const resWinner = {
   }
 }
 
-const fakePopPiece = [
-  {
-    "award_name": "Giải nhì",
-    "count": 8,
-    "name": "Mảnh dưới phải giải nhì"
-  },
-  {
-    "award_name": "Giải nhất",
-    "count": 8,
-    "name": "Mảnh trên trái giải nhất"
-  },
-  {
-    "award_name": "Giải ba",
-    "count": 8,
-    "name": "Mảnh trên trái giải ba"
-  },
-  {
-    "award_name": "Giải ba",
-    "count": 9,
-    "name": "Mảnh dưới trái giải ba"
-  },
-  {
-    "award_name": "Giải nhất",
-    "count": 9,
-    "name": "Mảnh dưới trái giải nhất"
-  },
-  {
-    "award_name": "Giải ba",
-    "count": 9,
-    "name": "Mảnh trên phải giải ba"
-  },
-  {
-    "award_name": "Giải nhất",
-    "count": 9,
-    "name": "Mảnh dưới phải giải nhất"
-  },
-  {
-    "award_name": "Giải đặc biệt",
-    "count": 8,
-    "name": "Mảnh dưới trái đặc biệt"
-  },
-  {
-    "award_name": "Giải đặc biệt",
-    "count": 8,
-    "name": "Mảnh trên phải đặc biệt"
-  },
-  {
-    "award_name": "Giải nhì",
-    "count": 7,
-    "name": "Mảnh trên trái giải nhì"
-  },
-  {
-    "award_name": "Giải nhì",
-    "count": 8,
-    "name": "Mảnh trên phải giải nhì"
-  },
-  {
-    "award_name": "Giải đặc biệt",
-    "count": 7,
-    "name": "Mảnh dưới phải đặc biệt"
-  },
-  {
-    "award_name": "Giải 4",
-    "count": 1,
-    "name": "Mảnh dưới trái giải 4"
-  },
-  {
-    "award_name": "Giải 4",
-    "count": 1,
-    "name": "Mảnh trên phải giải 4"
+const fakeWinner = {
+  "result_code": 0,
+  "data": {
+    "limit": 10,
+    "offset": 0,
+    "max": 6,
+    "data": [
+      {
+        "event_id": "ev_eb702-0c90-45",
+        "client_id": "006C101072",
+        "client_name": "Nguyễn Hữu Sang",
+        "award_name": "Giải 4",
+        "award_info": "Vali Traveler's choice",
+        "notification_status": null,
+        "won_date": "14:13:25 18/05/2024"
+      },
+      {
+        "event_id": "ev_eb702-0c90-45",
+        "client_id": "006C101072",
+        "client_name": "Nguyễn Hữu Sang",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": null,
+        "won_date": "13:52:29 18/05/2024"
+      },
+      {
+        "event_id": "ev_eb702-0c90-45",
+        "client_id": "006C000122",
+        "client_name": "NGUYỄN GIA HÙNG",
+        "award_name": "Giải 4",
+        "award_info": "Vali Traveler's choice",
+        "notification_status": null,
+        "won_date": "12:22:37 18/05/2024"
+      },
+      {
+        "event_id": "ev_eb702-0c90-45",
+        "client_id": "006C000122",
+        "client_name": "NGUYỄN GIA HÙNG",
+        "award_name": "Giải nhất",
+        "award_info": "iPad Pro m2 12.9 inch 256GB",
+        "notification_status": null,
+        "won_date": "12:22:37 18/05/2024"
+      },
+      {
+        "event_id": "ev_eb702-0c90-45",
+        "client_id": "006C000122",
+        "client_name": "NGUYỄN GIA HÙNG",
+        "award_name": "Giải đặc biệt",
+        "award_info": "MacBook Pro 14 inch M3",
+        "notification_status": null,
+        "won_date": "12:22:36 18/05/2024"
+      },
+      {
+        "event_id": "ev_eb702-0c90-45",
+        "client_id": "006C000122",
+        "client_name": "NGUYỄN GIA HÙNG",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": null,
+        "won_date": "12:22:35 18/05/2024"
+      }
+    ]
   }
-]
+}

@@ -2,6 +2,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.css">
 </head>
 <style>
     @import url('./assets/fonts/quaysotrungthuong2024/Effra-Std-Bdn.ttf');
@@ -76,137 +77,343 @@
         font-weight: normal;
         font-style: normal;
     }
+    #winner-page {
+        display: block;
+        width: 100%;
+        max-width: 420px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        padding-top:12px;
+    }
+    .bg-rule {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+    }
+    .top-layer {
+        height: 24px;
+        margin: 16px auto;
+        position: relative;
+        display:flex;
+        align-items:center;
+    }
+    .sky-bg {
+        width: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: -100;
+    }
+    .winner-content{
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 24px;
+        width: 95%;
+        height: 100%;
+        max-height: 90%;
+    }
+    #winner-table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 300px;
+        margin:0 auto;
+        font-family: Effra,sans-serif;
+        font-size: 10px;
+        line-height: 11px;
+        text-align: center;
+        color: #1E458D;
+        font-weight: 400;
+    }
+    #winner-table tr td {
+        border-right: 1px solid #1E458D;
+        border-bottom: 1px solid #1E458D;
+        padding: 5px;
+    }
+    #winner-table tr th {
+        border-right: 1px solid #FFF;
+        border-bottom: 1px solid #1E458D;
+    }
+    #winner-table tr:first-child th:last-child {
+        border-right: 1px solid #1E458D;
+    }
+    #winner-table tr td:first-child {
+        border-left: 1px solid #1E458D;
+    }
+    #winner-table tr th {
+        background: #1E458D;
+        border-top: 1px solid #1E458D;
+        color: white;
+    }
 
+    #winner-table tr td:nth-child(3) {
+        font-weight: bold;
+    }
 
+    #winner-table tr td:nth-child(2) span:first-child {
+        font-weight: bold;
+    }
+
+    #winner-table tr td:first-child, #winner-table tr th:first-child {
+        padding: 0;
+        max-width: 45px;
+    }
+    #winner-table tr td:last-child {
+        padding: 0;
+        max-width: 70px;
+        white-space: break-spaces;
+    }
+    #winner-table .th-inner {
+        white-space: break-spaces;
+    }
+    #winner-table tr th {
+        vertical-align: middle;
+    }
+    #winner-table tr td:nth-child(3), #winner-table tr th:nth-child(3) {
+        padding: 0;
+        max-width: 80px;
+        white-space: break-spaces;
+    }
+
+    /* top-left border-radius */
+    #winner-table tr:first-child th:first-child {
+        border-top-left-radius: 6px;
+    }
+
+    /* top-right border-radius */
+    #winner-table tr:first-child th:last-child {
+        border-top-right-radius: 6px;
+    }
+
+    /* bottom-left border-radius */
+    #winner-table tr:last-child td:first-child {
+        border-bottom-left-radius: 6px;
+    }
+
+    /* bottom-right border-radius */
+    #winner-table tr:last-child td:last-child {
+        border-bottom-right-radius: 6px;
+    }
+    /* hide show select item per page */
+    .winner-content .pagination-detail {
+        display: none;
+    }
+    .winner-content .bootstrap-table {
+        width:300px;
+        margin:0 auto;
+    }
+    .winner-content .fixed-table-container .fixed-table-body {
+        height: fit-content;
+        overflow: hidden;
+    }
+    .page-link {
+        font-size: 10px;
+        line-height: 11px;
+    }
 </style>
 <body>
-
+<section id="winner-page" class="container">
+    <img class="sky-bg" style="height:100%" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/bg_inventory.png" width="100%" alt=""/>
+    <div class="top-layer">
+        <div class="winner-text">
+            <svg width="302" height="50" viewBox="0 0 302 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M28.58 33.34H26.04V36.06H23.39V38.82H9.96997V19.71H23.24V22.32H25.93V25.04H28.58V33.33V33.34ZM23.24 33.34V25.05H20.59V22.48H15.32V36.06H20.7V33.34H23.24Z" fill="#1E458C"/>
+                <path d="M50.08 38.83H44.7299V33.38H36.7999V38.83H31.45V25.21H33.99V22.49H36.72V19.73H44.72V22.34H47.41V25.06H50.06V38.83H50.08ZM44.7299 30.62V25.06H42.08V22.49H39.3499V25.21H36.81V30.62H44.74H44.7299Z" fill="#1E458C"/>
+                <path d="M71.58 38.83H66.31V36.22H63.66V33.46H60.97V30.66H58.39V38.83H52.97V19.72H58.24V22.33H60.97V25.05H63.66V27.85H66.24V19.72H71.59V38.83H71.58Z" fill="#1E458C"/>
+                <path d="M93.08 38.83H87.81V30.62H79.88V38.83H74.46V19.72H79.73V27.85H87.73V19.72H93.08V38.83Z" fill="#1E458C"/>
+                <path d="M120.29 36.07H117.75V38.83H104.37V36.22H101.68V33.46H107.03V36.07H114.96V30.74H104.38V27.98H101.69V22.49H104.23V19.73H114.96V22.34H117.65V25.1H112.38V22.49H107.03V27.78H117.65V30.58H120.3V36.07H120.29Z" fill="#1E458C"/>
+                <path d="M141.79 38.83H136.44V33.38H128.51V38.83H123.16V25.21H125.7V22.49H128.43V19.73H136.43V22.34H139.12V25.06H141.77V38.83H141.79ZM136.44 30.62V25.06H133.79V22.49H131.06V25.21H128.52V30.62H136.45H136.44Z" fill="#1E458C"/>
+                <path d="M163.29 25.09H158.02V22.48H152.75V25.09H150.02V33.26H152.64V36.06H157.95V33.41H163.3V36.06H160.76V38.82H150.03V36.21H147.38V33.41H144.69V25.08H147.23V22.47H149.92V19.71H160.65V22.32H163.3V25.08L163.29 25.09Z" fill="#1E458C"/>
+                <path d="M184.79 38.83H179.52V30.62H171.59V38.83H166.17V19.72H171.44V27.85H179.44V19.72H184.79V38.83Z" fill="#1E458C"/>
+                <path d="M208 22.37H202.77V38.83H197.42V22.48H192.04V19.72H208V22.37Z" fill="#1E458C"/>
+                <path d="M229.01 30.62H223.66V33.27H226.35V36.07H229V38.83H221.07V36.26H218.42V33.38H215.73V38.83H210.38V19.72H226.34V22.37H228.99V30.62H229.01ZM223.67 27.86V22.49H215.74V30.62H221.09V27.86H223.67Z" fill="#1E458C"/>
+                <path d="M250.51 36.07H247.97V38.83H234.59V36.22H231.9V19.72H237.17V36.07H245.17V19.72H250.52V36.07H250.51Z" fill="#1E458C"/>
+                <path d="M272.01 38.83H266.74V36.22H264.09V33.46H261.4V30.66H258.82V38.83H253.4V19.72H258.67V22.33H261.4V25.05H264.09V27.85H266.67V19.72H272.02V38.83H272.01Z" fill="#1E458C"/>
+                <path d="M293.51 38.83H280.24V36.22H277.59V33.46H274.9V25.1H277.44V22.38H280.13V19.73H293.51V22.38H282.97V25.1H280.24V33.27H282.86V36.07H288.17V30.74H285.59V27.98H293.52V38.84L293.51 38.83Z" fill="#1E458C"/>
+                <path d="M134.03 14H130.23V17.8H134.03V14Z" fill="#1E458C"/>
+                <path d="M137.83 10.2H134.03V14H137.83V10.2Z" fill="#1E458C"/>
+                <path d="M245.27 14H241.47V17.8H245.27V14Z" fill="#1E458C"/>
+                <path d="M249.07 10.2H245.27V14H249.07V10.2Z" fill="#1E458C"/>
+            </svg>
+        </div>
+    </div>
+    <div class="bg-rule">
+        <svg width="343" height="535" viewBox="0 0 343 535" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2007_787)">
+                <path opacity="0.85" d="M6.35645 25.4891H12.7128V15.2968H19.0162V10.1922H31.6654V5.09607H311.345V10.1922H323.984V15.2883H330.287V25.4891H336.644V509.511H330.287V519.703H323.984V524.808H311.335V529.904H31.6654V524.808H19.0162V519.712H12.7128V509.511H6.35645V25.4891Z" fill="#CBD946"/>
+                <path d="M311.345 0H31.6653V5.09613H311.345V0Z" fill="#1E458C"/>
+                <path d="M311.345 529.904H31.6653V535H311.345V529.904Z" fill="#1E458C"/>
+                <path d="M6.35636 25.3787H0V509.511H6.35636V25.3787Z" fill="#1E458C"/>
+                <path d="M343 25.3787H336.644V509.511H343V25.3787Z" fill="#1E458C"/>
+                <path d="M25.309 5.09607H18.9526V10.1922H25.309H31.6654V5.09607H25.309Z" fill="#1E458C"/>
+                <path d="M19.016 10.1923H12.6597V15.2884H19.016V10.1923Z" fill="#1E458C"/>
+                <path d="M6.35645 15.2969V20.393V25.4891H12.7128V20.393V15.2969H6.35645Z" fill="#1E458C"/>
+                <path d="M25.309 529.904H18.9526V524.808H25.309H31.6654V529.904H25.309Z" fill="#1E458C"/>
+                <path d="M19.016 519.712H12.6597V524.808H19.016V519.712Z" fill="#1E458C"/>
+                <path d="M6.35645 519.703V514.607V509.511H12.7128V514.607V519.703H6.35645Z" fill="#1E458C"/>
+                <path d="M317.691 529.904H324.047V524.808H317.691H311.335V529.904H317.691Z" fill="#1E458C"/>
+                <path d="M323.984 524.816H330.34V519.72H323.984V524.816Z" fill="#1E458C"/>
+                <path d="M336.644 519.703V514.607V509.511H330.287V514.607V519.703H336.644Z" fill="#1E458C"/>
+                <path d="M317.702 5.09607H324.058L324.047 10.1922H317.691H311.335L311.345 5.09607H317.702Z" fill="#1E458C"/>
+                <path d="M323.984 15.2884H330.34V10.1923H323.984V15.2884Z" fill="#1E458C"/>
+                <path d="M336.644 15.2969V20.393V25.4891H330.287V20.393V15.2969H336.644Z" fill="#1E458C"/>
+            </g>
+        </svg>
+        <div class="winner-content">
+            <table id="winner-table"></table>
+        </div>
+    </div>
+</section>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"></script>
-<script src="https://cdn-devtest.acbs.tech/assets/js/pagination.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.js"></script>
+<script src="fakeDB.js"></script>
 <script>
-    const resultFake = {
-        "result_code": 0,
-        "data": {
-            "event_end_date": "31/05/2024",
-            "award": [
-                {
-                    "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
-                    "award_name": "Giải nhì",
-                    "award_info": "iPhone 15 Pro Max 256GB",
-                    "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-nhi.png",
-                    "total_piece": "4"
-                },
-                {
-                    "award_id": "award_91-871d-4b61-9072-23727a37cf16",
-                    "award_name": "Giải ba",
-                    "award_info": "Apple Watch Ultra 2",
-                    "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-ba.png",
-                    "total_piece": "4"
-                },
-                {
-                    "award_id": "award_c5-c236-436f-bde8-03fbe25b8998",
-                    "award_name": "Giải đặc biệt",
-                    "award_info": "MacBook Pro 14 inch M3",
-                    "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-dac-biet.png",
-                    "total_piece": "4"
-                },
-                {
-                    "award_id": "award_e0-67c9-4342-8d49-0565d5f76d9a",
-                    "award_name": "Giải nhất",
-                    "award_info": "iPad Pro m2 12.9 inch 256GB",
-                    "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-nhat.png",
-                    "total_piece": "4"
-                }
-            ],
-            "piece": [
-                {
-                    "piece_id": "award_piece_4-4337-baa5-ed127c0aa100",
-                    "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
-                    "name": "Mảnh trên trái giải nhì",
-                    "key": "false",
-                    "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
-                },
-                {
-                    "piece_id": "award_piece_5-4ea8-b8b3-48515266f24f",
-                    "award_id": "award_91-871d-4b61-9072-23727a37cf16",
-                    "name": "Mảnh dưới trái giải ba",
-                    "key": "false",
-                    "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
-                },
-                {
-                    "piece_id": "award_piece_5-4ea8-b8b3-48515266f24f",
-                    "award_id": "award_91-871d-4b61-9072-23727a37cf16",
-                    "name": "Mảnh dưới trái giải ba",
-                    "key": "false",
-                    "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
-                },
-                {
-                    "piece_id": "award_piece_a-41a8-8255-e264fd914f5e",
-                    "award_id": "award_c5-c236-436f-bde8-03fbe25b8998",
-                    "name": "Mảnh dưới phải đặc biệt",
-                    "key": "false",
-                    "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-04.png"
-                },
-                {
-                    "piece_id": "award_piece_2-4c46-9713-16348d7ef276",
-                    "award_id": "award_e0-67c9-4342-8d49-0565d5f76d9a",
-                    "name": "Mảnh dưới phải giải nhất",
-                    "key": "false",
-                    "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
-                },
-                {
-                    "piece_id": "award_piece_4-4337-baa5-ed127c0aa100",
-                    "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
-                    "name": "Mảnh trên trái giải nhì",
-                    "key": "false",
-                    "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
-                },
-                {
-                    "piece_id": "award_piece_b-4805-a54a-f8b7cd48b139",
-                    "award_id": "award_91-871d-4b61-9072-23727a37cf16",
-                    "name": "Mảnh trên phải giải ba",
-                    "key": "false",
-                    "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-14.png"
-                },
-                {
-                    "piece_id": "award_piece_a-4aca-a9fd-d5de7683d5ca",
-                    "award_id": "award_91-871d-4b61-9072-23727a37cf16",
-                    "name": "Mảnh trên trái giải ba",
-                    "key": "false",
-                    "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png"
-                },
-                {
-                    "piece_id": "award_piece_5-4ea8-b8b3-48515266f24f",
-                    "award_id": "award_91-871d-4b61-9072-23727a37cf16",
-                    "name": "Mảnh dưới trái giải ba",
-                    "key": "true",
-                    "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
-                },
-                {
-                    "piece_id": "award_piece_d-497c-97c4-91ddfdfsdfsd",
-                    "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
-                    "name": "Mảnh dưới trái giải nhì",
-                    "key": "true",
-                    "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-11.png"
-                }
-            ]
-        }
-    }
-    const GetAwardData = (resGacha) => {
-        const idAwardList = resGacha.data.piece.filter(
-            item => item.key === "true"
-        ).map(
-            item => item.award_id
-        )
-        console.log(idAwardList)
-        return resGacha.data.award.filter(
-            item => {
-                if(idAwardList.includes(item.award_id)) return item
-            }
+    const data = [
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+        {
+            "id":1,
+            "client_name":"Nguyễn Văn Nam Anh\n" +
+                "006C021943",
+            "award_name": "Giải khuyến khích",
+            "won_date": "14:13:25 18/05/2024"
+        },
+    ]
+    const formatWinnerList = (res) => {
+        return res.data.data.map(
+            (item,index) => ({
+                "id": index+1,
+                "client_name": item.client_name + "\n" + item.client_id,
+                "award_name": item.award_name,
+                "won_date":item.won_date
+            })
         )
     }
+    console.log(formatWinnerList(fakeWinner))
+    $('#winner-table').bootstrapTable({
+        pagination: true,
+        pageSize: 10,
+        pageList: [10, 20, 30, 40],
+        paginationLoop:false,
+        columns: [{
+            field: 'id',
+            title: 'STT'
+        }, {
+            field: 'client_name',
+            title: 'Khách hàng'
+        }, {
+            field: 'award_name',
+            title: 'Giải thưởng'
+        },{
+            field: 'won_date',
+            title: 'Thời gian trúng'
+        }],
+        data: formatWinnerList(fakeWinner)
+    })
+
 </script>
