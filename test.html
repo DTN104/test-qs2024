@@ -196,18 +196,17 @@
             ]
         }
     }
-    const GetAwardImage = (resGacha) => {
-        const winnerList = resGacha.data.piece.filter(
+    const GetAwardData = (resGacha) => {
+        const idAwardList = resGacha.data.piece.filter(
             item => item.key === "true"
         ).map(
             item => item.award_id
         )
-        resGacha.data.award.filter(
+        console.log(idAwardList)
+        return resGacha.data.award.filter(
             item => {
-
+                if(idAwardList.includes(item.award_id)) return item
             }
         )
-        return winnerList
     }
-    console.log(GetAwardImage(resultFake))
 </script>

@@ -20775,15 +20775,15 @@
     }
 
     const sortByColumn = (column) => (a, b) => a[column].toLowerCase() < b[column].toLowerCase() ? 1 : -1;
-    const GetAwardImage = (resGacha) => {
-        const winnerList = resGacha.data.piece.filter(
+    const GetAwardData = (resGacha) => {
+        const idAwardList = resGacha.data.piece.filter(
             item => item.key === "true"
         ).map(
             item => item.award_id
         )
-        resGacha.data.award.filter(
+        return resGacha.data.award.filter(
             item => {
-
+                if(idAwardList.includes(item.award_id)) return item
             }
         )
     }
@@ -21008,7 +21008,6 @@
                             document.querySelector(".popup-piece").style.display = "none";
                             document.querySelector(".popup-group").style.display = "flex";
                             let array = formatMultipleSpinResult(res);
-                            console.log(array)
                             const newList = array.map(
                                 item =>
                                     (`<div className="card-popup-piece-list">
@@ -21056,18 +21055,18 @@
                                 $("#awardModal").modal("show");
                                 document.querySelector(".popup-award").style.display = "none";
                                 document.querySelector(".popup-group-award").style.display = "flex";
-                                let awardArr = formatMultipleSpinResult(res);
+                                let awardArr = GetAwardData(res);
                                 const awardList = awardArr.map(
                                     item =>
                                         (`<div className="popup-group-award__card-popup-award-list-holder">
                                     <div className="card-popup-award-list">
                                         <div className="card-popup-award-list__award-img">
                                             <img
-                                                src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-ba.png"
+                                                src="${item.award_image}"
                                                 alt=""/>
                                         </div>
-                                        <div className="card-popup-award-list__award-title">Giải Đặc Biệt</div>
-                                        <div className="card-popup-award-list__award-info">MACBOOK PRO M3</div>
+                                        <div className="card-popup-award-list__award-title">${item.award_name}</div>
+                                        <div className="card-popup-award-list__award-info">${item.award_info}</div>
                                     </div>
                                 </div>`)
                                 )
