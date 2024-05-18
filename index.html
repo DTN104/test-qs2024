@@ -753,10 +753,20 @@
         align-items: center;
     }
 
-    #img-popup-piece {
-        width: 170px;
+    #popup-piece-image{
         height: 130px;
         margin-bottom: 16px;
+    }
+    #popup-piece-count {
+        text-align: center;
+        font-size: 12px;
+        color: #2E3187;
+    }
+    #popup-piece-prize{
+        font-size: 18px;
+        font-weight: bold;
+        color: #2E3187;
+        text-align: center;
     }
 
     #popup-prize {
@@ -781,18 +791,22 @@
         font-family: "Inter",sans-serif;
         font-size: 12px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 4px;
     }
+    .popup-rule svg{
+        margin: 0 2px;
+    }
     .congrats-text {
         font-family: "Inter",sans-serif;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 16px;
         line-height: 20px;
         text-align:center;
         color: #2E3187;
+        white-space: nowrap;
     }
     #popup-award-name, #popup-award-info{
         font-family: "Inter",sans-serif;
@@ -17865,7 +17879,7 @@
                             aria-label="Close">
                         X
                     </button>
-                    <img src="" id="popup-piece-prize" alt=""/>
+                    <img src="" id="popup-piece-image" alt=""/>
                     <div class="congrats-text">Chúc mừng bạn đã nhận được </div>
                     <div id="popup-piece-prize"></div>
                     <div id="popup-piece-count"></div>
@@ -20947,7 +20961,7 @@
                             document.querySelector(".popup-group").style.display = "none";
                             document.getElementById("popup-piece-prize").innerHTML = "Mảnh ghép <br/>"+res.data.award[0].award_info;
                             document.getElementById("popup-piece-count").innerHTML = "Thu thập đủ "+res.data.award[0].total_piece+" mảnh ghép để<br/>"+"nhận thưởng từ nay đến "+res.data.event_end_date;
-                            document.getElementById("img-popup-piece").setAttribute("src",res.data.piece[0].image);
+                            document.getElementById("popup-piece-image").setAttribute("src",res.data.piece[0].image);
                             document.getElementById("spin-end-date").innerText = res.data.event_end_date;
                             document.getElementById("total-piece").innerText = res.data.award[0].total_piece;
                             $('#infoModal').on('hidden.bs.modal', function (e) {
