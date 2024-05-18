@@ -20736,13 +20736,7 @@
         }).then((res) => {
             return res.data
         }).catch(err => {
-            $("#errorModal").modal("show");
-            popupErrorTitle.innerHTML="TRUY CẬP \n" +
-                "KHÔNG THÀNH CÔNG";
-            popupError.innerHTML=err.message;
-            $('#errorModal').on('hidden.bs.modal', function (e) {
-                handleCloseApp();
-            })
+            forceCrashApp();
         });
     }
     const getTotalSpin = (accountId,eventId,sessionId) => {
@@ -20755,10 +20749,7 @@
         }).then((res) => {
             return res.data
         }).catch(err => {
-            $("#errorModal").modal("show");
-            popupErrorTitle.innerHTML="TRUY CẬP \n" +
-                "KHÔNG THÀNH CÔNG"
-            popupError.innerHTML=err.message
+            forceCrashApp();
         });
     }
 
@@ -20780,22 +20771,6 @@
         });
     }
 
-    const gachaTest = (accountId,eventId,autospin,spindate) => {
-        return axios.get(`${baseUrl}/event/draw-piece?event_id=${eventId}&client_id=${accountId}&auto_spin=${autospin}&spin_date=${spindate}`, {
-            headers: {
-                "Content-type": "application/json; charset=UTF-8",
-            },
-            timeout: 30000
-        }).then((res) => {
-            return res.data
-        }).catch(err => {
-            console.log(err)
-            $("#errorModal").modal("show");
-            console.log(err)
-            popupError.innerHTML=err.message
-        });
-    }
-
     const getInventory = (accountId,eventId,sessionId) => {
         return axios.get(`${baseUrl}/event/inventory/?client_id=${accountId}&event_id=${eventId}`, {
             headers: {
@@ -20806,10 +20781,7 @@
         }).then((res) => {
             return res.data
         }).catch(err => {
-            $("#errorModal").modal("show");
-            popupErrorTitle.innerHTML="TRUY CẬP \n" +
-                "KHÔNG THÀNH CÔNG"
-            popupError.innerHTML=err.message
+            forceCrashApp();
         });
     }
 
@@ -20833,12 +20805,11 @@
         }).then((res) => {
             return res.data
         }).catch(err => {
-            $("#errorModal").modal("show");
-            popupErrorTitle.innerHTML="TRUY CẬP \n" +
-                "KHÔNG THÀNH CÔNG"
-            popupError.innerHTML=err.message
+            forceCrashApp();
         });
     }
+</script>
+<script>
     const isGetAward = (pieces) => {
         return pieces.some(
             piece => {
@@ -20962,6 +20933,19 @@
 
     const handleCloseApp = () => {
         window.location.href="https://www.acbs.com.vn";
+    }
+
+    const forceCrashApp = () => {
+        $("#errorModal").modal("show");
+        popupErrorTitle.innerHTML = `<div>TRUY CẬP<br/>
+                        KHÔNG THÀNH CÔNG</div>`
+        popupError.innerHTML = `<div>Vui lòng thử lại hoặc đảm bảo
+                        truy cập trang thông qua ứng dụng ACBS Smart</div><br/>
+                    <div> Liên hệ Tổng đài <span style="font-weight:700">1900 5555 33</span> nếu Quý khách cần hỗ trợ.</div>
+                    `;
+        $('#errorModal').on('hidden.bs.modal', function (e) {
+            window.location.href="https://www.acbs.com.vn";
+        })
     }
 
 </script>
@@ -21762,16 +21746,7 @@
                         }
                     }
                 ).catch(err => {
-                    $("#errorModal").modal("show");
-                    popupErrorTitle.innerHTML = `<div>TRUY CẬP<br/>
-                        KHÔNG THÀNH CÔNG</div>`
-                    popupError.innerHTML = `<div>Vui lòng thử lại hoặc đảm bảo
-                        truy cập trang thông qua ứng dụng ACBS Smart</div><br/>
-                    <div> Liên hệ Tổng đài <span style="font-weight:700">1900 5555 33</span> nếu Quý khách cần hỗ trợ.</div>
-                    `;
-                    $('#errorModal').on('hidden.bs.modal', function (e) {
-                        handleCloseApp();
-                    })
+                    forceCrashApp();
                 });
             }
         )
