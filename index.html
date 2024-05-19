@@ -1424,15 +1424,15 @@
         position: absolute;
         top: 0;
         left: 0;
-        -webkit-animation: shake 0.2s ease-in-out infinite alternate;
-        animation: shake 0.2s ease-in-out infinite alternate;
+        -webkit-animation: carshake 0.2s ease-in-out infinite alternate;
+        animation: carshake 0.2s ease-in-out infinite alternate;
     }
     .car__line {
         position: absolute;
         transform-origin: center right;
         stroke-dasharray: 22;
         -webkit-animation: line 0.8s ease-in-out infinite;
-        animation: line 0.8s ease-in-out infinite;
+        animation: smokeline 0.8s ease-in-out infinite;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
     }
@@ -1465,14 +1465,14 @@
         top: 16px;
         left: 0;
         z-index: 2;
-        animation: rotate 0.8s ease-in-out infinite;
+        animation: wheelrotate 0.8s ease-in-out infinite;
     }
     .car__wheel--right{
         position: absolute;
         top: 16px;
         right: 36px;
         z-index: 2;
-        animation: rotate 0.8s ease-in-out infinite;
+        animation: wheelrotate 0.8s ease-in-out infinite;
     }
     .loader__text {
         position: absolute;
@@ -1484,7 +1484,7 @@
         color:#e1e1e1
     }
 
-    @-webkit-keyframes shake {
+    @-webkit-keyframes carshake {
         0% {
             transform: translateY(-1%);
         }
@@ -1493,7 +1493,7 @@
         }
     }
 
-    @-webkit-keyframes rotate {
+    @-webkit-keyframes wheelrotate {
         0% {
             transform: rotateZ(0deg);
         }
@@ -1511,7 +1511,7 @@
         }
     }
 
-    @keyframes shake {
+    @keyframes carshake {
         0% {
             transform: translateY(-1%);
         }
@@ -1519,7 +1519,7 @@
             transform: translateY(3%);
         }
     }
-    @-webkit-keyframes line {
+    @-webkit-keyframes smokeline {
         0% {
             stroke-dashoffset: 22;
         }
@@ -1539,7 +1539,7 @@
             stroke-dashoffset: -22;
         }
     }
-    @keyframes line {
+    @keyframes smokeline {
         0% {
             stroke-dashoffset: 22;
         }
@@ -21218,7 +21218,7 @@
                             document.getElementById("popup-piece-image").setAttribute("src",res.data.piece[0].image);
                             document.getElementById("spin-end-date").innerText = res.data.event_end_date;
                             document.getElementById("total-piece").innerText = res.data.award[0].total_piece;
-                            $('#infoModal').on('hidden.bs.modal', function () {
+                            document.getElementById("infoModal").addEventListener('hidden.bs.modal',function () {
                                 resetState();
                                 getTotalSpin(accountID,eventID,sessionAPI).then(
                                     (res) => {
@@ -21235,7 +21235,25 @@
                                         }
                                     }
                                 );
-                            });
+                            })
+                            // $("#infoModal").on('hidden.bs.modal', function () {
+                            //     resetState();
+                            //     getTotalSpin(accountID,eventID,sessionAPI).then(
+                            //         (res) => {
+                            //             if(res.data.spinCount === 0){
+                            //                 startDisable.style.display = "block";
+                            //                 startEnable.style.display = "none";
+                            //                 playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount);
+                            //                 playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount);
+                            //             } else {
+                            //                 startDisable.style.display = "none";
+                            //                 startEnable.style.display = "block";
+                            //                 playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount);
+                            //                 playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount);
+                            //             }
+                            //         }
+                            //     );
+                            // });
                         } else {
                             //receive 1 award
                             setTimeout(()=> {
@@ -21341,7 +21359,7 @@
                                 )
                                 document.getElementById("popup-group-ward__award-list").innerHTML = `
                                 <div className="popup-group-award__card-popup-award-list-holder">
-                                    ${newList.join().replaceAll(",","")}
+                                    ${awardList.join().replaceAll(",","")}
                                 </div>
                                 `;
                             })
@@ -21445,6 +21463,25 @@
         //call api get prize
 
     }
+
+    $("#infoModal").on('hidden.bs.modal', function () {
+        resetState();
+        getTotalSpin(accountID,eventID,sessionAPI).then(
+            (res) => {
+                if(res.data.spinCount === 0){
+                    startDisable.style.display = "block";
+                    startEnable.style.display = "none";
+                    playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount);
+                    playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount);
+                } else {
+                    startDisable.style.display = "none";
+                    startEnable.style.display = "block";
+                    playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount);
+                    playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount);
+                }
+            }
+        );
+    });
 
     $('#infoModal').on('shown.bs.modal', function (e) {
         $("#giftModal").modal("hide");
