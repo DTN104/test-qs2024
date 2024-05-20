@@ -21306,7 +21306,7 @@
                             let array = formatMultipleSpinResult(res);
                             const newList = array.map(
                                 item =>
-                                    (`<div className="card-popup-piece-list">
+                                    (`<div class="card-popup-piece-list">
                                         <div class="card-popup-list__img-wrapper">
                                             <img src="${item.image}" alt=""/>
                                             <div class="card-popup-list__count-wrapper">
@@ -21354,20 +21354,20 @@
                                 let awardArr = GetAwardData(res);
                                 const awardList = awardArr.map(
                                     item =>
-                                        (`<div className="popup-group-award__card-popup-award-list-holder">
-                                    <div className="card-popup-award-list">
-                                        <div className="card-popup-award-list__award-img">
+                                        (`<div class="popup-group-award__card-popup-award-list-holder">
+                                    <div class="card-popup-award-list">
+                                        <div class="card-popup-award-list__award-img">
                                             <img
                                                 src="${item.award_image}"
                                                 alt=""/>
                                         </div>
-                                        <div className="card-popup-award-list__award-title">${item.award_name}</div>
-                                        <div className="card-popup-award-list__award-info">${item.award_info}</div>
+                                        <div class="card-popup-award-list__award-title">${item.award_name}</div>
+                                        <div class="card-popup-award-list__award-info">${item.award_info}</div>
                                     </div>
                                 </div>`)
                                 )
                                 document.getElementById("popup-group-ward__award-list").innerHTML = `
-                                <div className="popup-group-award__card-popup-award-list-holder">
+                                <div class="popup-group-award__card-popup-award-list-holder">
                                     ${awardList.join().replaceAll(",","")}
                                 </div>
                                 `;
