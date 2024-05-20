@@ -20900,7 +20900,15 @@
         }).then((res) => {
             return res.data
         }).catch(err => {
-            showNotEnoughSpin()
+            $("#errorModal").modal("show");
+            popupErrorTitle.innerHTML = `<div>ERROR</div>`
+            popupError.innerHTML = `<div>${err}</div><br/>
+                    `;
+            $('#errorModal').on('hidden.bs.modal', function (e) {
+                resetState();
+                homePage.style.display = "block";
+                eventPage.style.display = "none";
+            })
         });
     }
 
