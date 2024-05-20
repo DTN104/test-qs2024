@@ -21370,6 +21370,80 @@
         getInventory(accountID,eventID,sessionAPI).then(
             (res) => {
                 console.log(res)
+                //set all piece giai kk =0 if can not find
+                if(res.data.awards.every(
+                    award => FormatText(award.award_name) !== "giải khuyến khích"
+                )){
+                    const elements = document.getElementById("prize-consolation-wrapper").children;
+                    elements[0].classList.add("missing");
+                    prizeConsolationBottomCenterCount.innerText = "x0"
+                }
+                //set all piece giai nhat =0 if can not find
+                if(res.data.awards.every(
+                    award => FormatText(award.award_name) !== "giải 1" || FormatText(award.award_name) !== "giải nhất"
+                )){
+                    const elements = document.getElementById("prize-first-wrapper").children;
+                    elements[0].classList.add("missing");
+                    prizeFirstTopLeftCount.innerText = "x0"
+                    elements[1].classList.add("missing");
+                    prizeFirstTopRightCount.innerText = "x0"
+                    elements[2].classList.add("missing");
+                    prizeFirstBottomLeftCount.innerText = "x0"
+                    elements[3].classList.add("missing");
+                    prizeFirstBottomRightCount.innerText = "x0"
+                }
+                if(res.data.awards.every(
+                    award => FormatText(award.award_name) !== "giải 2" || FormatText(award.award_name) !== "giải nhì"
+                )){
+                    const elements = document.getElementById("prize-second-wrapper").children;
+                    elements[0].classList.add("missing");
+                    prizeSecondTopLeftCount.innerText = "x0"
+                    elements[1].classList.add("missing");
+                    prizeSecondTopRightCount.innerText = "x0"
+                    elements[2].classList.add("missing");
+                    prizeSecondBottomLeftCount.innerText = "x0"
+                    elements[3].classList.add("missing");
+                    prizeSecondBottomRightCount.innerText = "x0"
+                }
+                if(res.data.awards.every(
+                    award => FormatText(award.award_name) !== "giải 3") || (FormatText(award.award_name) !== "giải ba"
+                )){
+                    const elements = document.getElementById("prize-third-wrapper").children;
+                    elements[0].classList.add("missing");
+                    prizeThirdTopLeftCount.innerText = "x0"
+                    elements[1].classList.add("missing");
+                    prizeThirdTopRightCount.innerText = "x0"
+                    elements[2].classList.add("missing");
+                    prizeThirdBottomLeftCount.innerText = "x0"
+                    elements[3].classList.add("missing");
+                    prizeThirdBottomRightCount.innerText = "x0"
+                }
+                if(res.data.awards.every(
+                    award => FormatText(award.award_name) !== "giải 4") || (FormatText(award.award_name) !== "giải tư"
+                )){
+                    const elements = document.getElementById("prize-fourth-wrapper").children;
+                    elements[0].classList.add("missing");
+                    prizeFourthTopLeftCount.innerText = "x0"
+                    elements[1].classList.add("missing");
+                    prizeFourthTopRightCount.innerText = "x0"
+                    elements[2].classList.add("missing");
+                    prizeFourthBottomLeftCount.innerText = "x0"
+                    elements[3].classList.add("missing");
+                    prizeFourthBottomRightCount.innerText = "x0"
+                }
+                if(res.data.awards.every(
+                    award => FormatText(award.award_name) !== "giải đặc biệt"
+                )){
+                    const elements = document.getElementById("prize-special-wrapper").children;
+                    elements[0].classList.add("missing");
+                    prizeSpecialTopLeftCount.innerText = "x0"
+                    elements[1].classList.add("missing");
+                    prizeSpecialTopRightCount.innerText = "x0"
+                    elements[2].classList.add("missing");
+                    prizeSpecialBottomLeftCount.innerText = "x0"
+                    elements[3].classList.add("missing");
+                    prizeSpecialBottomRightCount.innerText = "x0"
+                }
                 res.data.awards.map(
                     (item)=>{
                         console.log(FormatText(item.award_name))
