@@ -1,103 +1,107 @@
 const resultFake = {
   "result_code": 0,
   "data": {
-    "event_end_date": "30/04/2024",
+    "event_end_date": "31/05/2024",
     "award": [
       {
-        "award_id": "award_af-5b47-4147-a95a-46bb3b8ed50d",
-        "total_piece": "7",
-        "award_name": "Ba",
-        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095083909_a7f5b11c49e17b05753ef455f5380cca.jpg"
+        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
+        "award_name": "Giải nhì",
+        "award_info": "iPhone 15 Pro Max 256GB",
+        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-nhi.png",
+        "total_piece": "4"
       },
       {
-        "award_id": "award_38-8bc1-48ff-9986-f7832c6431c2",
-        "total_piece": "24",
-        "award_name": "Đặc biệt",
-        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095083909_a7f5b11c49e17b05753ef455f5380cca.jpg"
+        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
+        "award_name": "Giải ba",
+        "award_info": "Apple Watch Ultra 2",
+        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-ba.png",
+        "total_piece": "4"
       },
       {
-        "award_id": "award_8f-d35c-4533-88c6-91abd322cc93",
-        "total_piece": "11",
-        "award_name": "Nhì",
-        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095083909_a7f5b11c49e17b05753ef455f5380cca.jpg"
+        "award_id": "award_c5-c236-436f-bde8-03fbe25b8998",
+        "award_name": "Giải đặc biệt",
+        "award_info": "MacBook Pro 14 inch M3",
+        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-dac-biet.png",
+        "total_piece": "4"
       },
       {
-        "award_id": "award_32-31b4-45bf-8957-a9b7fab35a2d",
-        "total_piece": "11",
-        "award_name": "Nhất",
-        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095083909_a7f5b11c49e17b05753ef455f5380cca.jpg"
+        "award_id": "award_e0-67c9-4342-8d49-0565d5f76d9a",
+        "award_name": "Giải nhất",
+        "award_info": "iPad Pro m2 12.9 inch 256GB",
+        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-nhat.png",
+        "total_piece": "4"
       }
     ],
     "piece": [
       {
-        "award_id": "award_38-8bc1-48ff-9986-f7832c6431c2",
-        "piece_id": "DB1",
-        "name": "db normal",
+        "piece_id": "award_piece_4-4337-baa5-ed127c0aa100",
+        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
+        "name": "Mảnh trên trái giải nhì",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095083909_a7f5b11c49e17b05753ef455f5380cca.jpg"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
       },
       {
-        "award_id": "award_32-31b4-45bf-8957-a9b7fab35a2d",
-        "piece_id": "Nhata",
-        "name": "normal 1",
+        "piece_id": "award_piece_5-4ea8-b8b3-48515266f24f",
+        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
+        "name": "Mảnh dưới trái giải ba",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095000776_257eca051aee0703c6cf6a0e0af90dd8.jpg"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
       },
       {
-        "award_id": "award_32-31b4-45bf-8957-a9b7fab35a2d",
-        "piece_id": "Nhatb",
-        "name": "normal 1",
+        "piece_id": "award_piece_5-4ea8-b8b3-48515266f24f",
+        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
+        "name": "Mảnh dưới trái giải ba",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095000776_257eca051aee0703c6cf6a0e0af90dd8.jpg"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
       },
       {
-        "award_id": "award_af-5b47-4147-a95a-46bb3b8ed50d",
-        "piece_id": "Ba2",
-        "name": "normal 5",
+        "piece_id": "award_piece_a-41a8-8255-e264fd914f5e",
+        "award_id": "award_c5-c236-436f-bde8-03fbe25b8998",
+        "name": "Mảnh dưới phải đặc biệt",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095000776_257eca051aee0703c6cf6a0e0af90dd8.jpg"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-04.png"
       },
       {
-        "award_id": "award_38-8bc1-48ff-9986-f7832c6431c2",
-        "piece_id": "DB2",
-        "name": "db normal",
+        "piece_id": "award_piece_2-4c46-9713-16348d7ef276",
+        "award_id": "award_e0-67c9-4342-8d49-0565d5f76d9a",
+        "name": "Mảnh dưới phải giải nhất",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095083909_a7f5b11c49e17b05753ef455f5380cca.jpg"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
       },
       {
-        "award_id": "award_af-5b47-4147-a95a-46bb3b8ed50d",
-        "piece_id": "Ba1",
-        "name": "normal 5",
+        "piece_id": "award_piece_4-4337-baa5-ed127c0aa100",
+        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
+        "name": "Mảnh trên trái giải nhì",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095000776_257eca051aee0703c6cf6a0e0af90dd8.jpg"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
       },
       {
-        "award_id": "award_8f-d35c-4533-88c6-91abd322cc93",
-        "piece_id": "Nhia",
-        "name": "normal 2",
+        "piece_id": "award_piece_b-4805-a54a-f8b7cd48b139",
+        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
+        "name": "Mảnh trên phải giải ba",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095083909_a7f5b11c49e17b05753ef455f5380cca.jpg"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-14.png"
       },
       {
-        "award_id": "award_38-8bc1-48ff-9986-f7832c6431c2",
-        "piece_id": "DB2",
-        "name": "db normal",
+        "piece_id": "award_piece_a-4aca-a9fd-d5de7683d5ca",
+        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
+        "name": "Mảnh trên trái giải ba",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095083909_a7f5b11c49e17b05753ef455f5380cca.jpg"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png"
       },
       {
-        "award_id": "award_38-8bc1-48ff-9986-f7832c6431c2",
-        "piece_id": "DB1",
-        "name": "db normal",
+        "piece_id": "award_piece_5-4ea8-b8b3-48515266f24f",
+        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
+        "name": "Mảnh dưới trái giải ba",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095083909_a7f5b11c49e17b05753ef455f5380cca.jpg"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
       },
       {
-        "award_id": "award_32-31b4-45bf-8957-a9b7fab35a2d",
-        "piece_id": "Nhata",
-        "name": "normal 1",
+        "piece_id": "award_piece_d-497c-97c4-919507d2b0ed",
+        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
+        "name": "Mảnh dưới phải giải nhì",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/z5322095083909_a7f5b11c49e17b05753ef455f5380cca.jpg"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-12.png"
       }
     ]
   }
@@ -271,75 +275,67 @@ const resWinner = {
   }
 }
 
-const fakePopPiece = [
-  {
-    "award_name": "Giải nhì",
-    "count": 8,
-    "name": "Mảnh dưới phải giải nhì"
-  },
-  {
-    "award_name": "Giải nhất",
-    "count": 8,
-    "name": "Mảnh trên trái giải nhất"
-  },
-  {
-    "award_name": "Giải ba",
-    "count": 8,
-    "name": "Mảnh trên trái giải ba"
-  },
-  {
-    "award_name": "Giải ba",
-    "count": 9,
-    "name": "Mảnh dưới trái giải ba"
-  },
-  {
-    "award_name": "Giải nhất",
-    "count": 9,
-    "name": "Mảnh dưới trái giải nhất"
-  },
-  {
-    "award_name": "Giải ba",
-    "count": 9,
-    "name": "Mảnh trên phải giải ba"
-  },
-  {
-    "award_name": "Giải nhất",
-    "count": 9,
-    "name": "Mảnh dưới phải giải nhất"
-  },
-  {
-    "award_name": "Giải đặc biệt",
-    "count": 8,
-    "name": "Mảnh dưới trái đặc biệt"
-  },
-  {
-    "award_name": "Giải đặc biệt",
-    "count": 8,
-    "name": "Mảnh trên phải đặc biệt"
-  },
-  {
-    "award_name": "Giải nhì",
-    "count": 7,
-    "name": "Mảnh trên trái giải nhì"
-  },
-  {
-    "award_name": "Giải nhì",
-    "count": 8,
-    "name": "Mảnh trên phải giải nhì"
-  },
-  {
-    "award_name": "Giải đặc biệt",
-    "count": 7,
-    "name": "Mảnh dưới phải đặc biệt"
-  },
-  {
-    "award_name": "Giải 4",
-    "count": 1,
-    "name": "Mảnh dưới trái giải 4"
-  },
-  {
-    "award_name": "Giải 4",
-    "count": 1,
-    "name": "Mảnh trên phải giải 4"
+const fakeWinner = {
+  "result_code": 0,
+  "data": {
+    "limit": 10,
+    "offset": 0,
+    "max": 6,
+    "data": [
+      {
+        "event_id": "ev_eb702-0c90-45",
+        "client_id": "006C101072",
+        "client_name": "Nguyễn Hữu Sang",
+        "award_name": "Giải 4",
+        "award_info": "Vali Traveler's choice",
+        "notification_status": null,
+        "won_date": "14:13:25 18/05/2024"
+      },
+      {
+        "event_id": "ev_eb702-0c90-45",
+        "client_id": "006C101072",
+        "client_name": "Nguyễn Hữu Sang",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": null,
+        "won_date": "13:52:29 18/05/2024"
+      },
+      {
+        "event_id": "ev_eb702-0c90-45",
+        "client_id": "006C000122",
+        "client_name": "NGUYỄN GIA HÙNG",
+        "award_name": "Giải 4",
+        "award_info": "Vali Traveler's choice",
+        "notification_status": null,
+        "won_date": "12:22:37 18/05/2024"
+      },
+      {
+        "event_id": "ev_eb702-0c90-45",
+        "client_id": "006C000122",
+        "client_name": "NGUYỄN GIA HÙNG",
+        "award_name": "Giải nhất",
+        "award_info": "iPad Pro m2 12.9 inch 256GB",
+        "notification_status": null,
+        "won_date": "12:22:37 18/05/2024"
+      },
+      {
+        "event_id": "ev_eb702-0c90-45",
+        "client_id": "006C000122",
+        "client_name": "NGUYỄN GIA HÙNG",
+        "award_name": "Giải đặc biệt",
+        "award_info": "MacBook Pro 14 inch M3",
+        "notification_status": null,
+        "won_date": "12:22:36 18/05/2024"
+      },
+      {
+        "event_id": "ev_eb702-0c90-45",
+        "client_id": "006C000122",
+        "client_name": "NGUYỄN GIA HÙNG",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": null,
+        "won_date": "12:22:35 18/05/2024"
+      }
+    ]
   }
-]
+}
