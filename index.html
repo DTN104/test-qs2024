@@ -715,6 +715,11 @@
         padding: 24px;
     }
 
+    .popup-award {
+        justify-content: flex-start;
+        gap:12px;
+    }
+
     .popup-group{
         width: 100%;
         max-width: 280px;
@@ -20069,7 +20074,7 @@
             </g>
         </svg>
         <div class="winner-content">
-            <table id="winner-table"></table>
+            <table id="winner-table" data-pagination="true"></table>
         </div>
     </div>
     <div class="rule-menu">
@@ -22010,8 +22015,11 @@
             (res) => {
                 $('#winner-table').bootstrapTable({
                     pagination: true,
-                    pageSize: 20,
-                    paginationLoop:false,
+                    sidePagination: 'server',
+                    pageSize: 10,
+                    paginationLoop:true,
+                    pageList: [10, 20],
+                    pageNumber: 1,
                     columns: [{
                         field: 'id',
                         title: 'STT'
