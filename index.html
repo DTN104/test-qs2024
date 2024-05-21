@@ -20889,6 +20889,7 @@
             },
             timeout: 30000
         }).then((res) => {
+            document.querySelector(".arrow-guide").style.display = "block";
             return res.data
         }).catch(err => {
             forceCrashApp();
@@ -21174,12 +21175,12 @@
     function touchEnd() {
         isDragging = false
         cancelAnimationFrame(animationID)
-        document.querySelector(".btn-back").style.display = "block"
-        document.querySelector(".arrow-guide").style.display = "block"
         // const movedBy = currentTranslate - prevTranslate
         // console.log(rect.top-rectIcon.top)
         // if (movedBy < (rect.top-rectIcon.top-200)) alert("pika")
         if(!isHitTheBox){
+            document.querySelector(".btn-back").style.display = "block"
+            document.querySelector(".arrow-guide").style.display = "block"
             setPositionByIndex();
         }
     }
@@ -21212,6 +21213,7 @@
 
     function handleHitTheBox (){
         $("#loadingModal").modal("show");
+        document.querySelector(".arrow-guide").style.display = "none"
         gacha(accountID,eventID,autoSpin,sessionAPI).then(
             (res) => {
                 console.log(res)
