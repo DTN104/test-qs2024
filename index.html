@@ -658,7 +658,25 @@
         position: absolute;
         top: 60%;
         left:50%;
-        transform: translateX(-50%) translateY(-50%) rotate(90deg);
+        transform: translateX(-50%) translateY(-50%);
+        /*animation: arrow-event 1.5s linear infinite;*/
+    }
+
+
+    .arrow-guide svg {
+        animation: arrow-event 1.5s linear infinite;
+    }
+
+    @keyframes arrow-event {
+        0%{
+            transform: translateY(0)
+        }
+        50%{
+            transform: translateY(-40%)
+        }
+        100%{
+            transform: translateY(0)
+        }
     }
 
     .block{
@@ -16405,11 +16423,11 @@
         </div>
         <div class="animation-line-event"></div>
         <div class="arrow-guide">
-                <img src="assets/image/quaysotrungthuong2024/event_page/arrow.gif" alt="" />
-<!--            <svg width="23" height="104" viewBox="0 0 23 104" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                <path d="M0 20L11.5 0L23 20H0Z" fill="#CCD423"/>-->
-<!--                <path d="M12 20V100" stroke="#CCD423" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round"/>-->
-<!--            </svg>-->
+<!--                <img src="assets/image/quaysotrungthuong2024/event_page/arrow.gif" alt="" />-->
+            <svg width="23" height="104" viewBox="0 0 23 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 20L11.5 0L23 20H0Z" fill="#CCD423"/>
+                <path d="M12 20V100" stroke="#CCD423" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round"/>
+            </svg>
 <!--            <dotlottie-player src="https://lottie.host/63f915f8-8782-47a3-b2f6-83d5f5148a0d/LsxPY0rVCr.json" background="transparent" speed="1" style="width: 100px;" loop autoplay></dotlottie-player>-->
         </div>
         <div class="btn-back" onclick="handleGoBackFromEventToHome()">
