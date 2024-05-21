@@ -1358,6 +1358,7 @@
         grid-template-columns: 50% 50%;
         justify-content: revert;
         align-items: center;
+        overflow-x: hidden;
     }
     .prize-box {
         width:120px;
@@ -21086,6 +21087,10 @@
         )
     }
 
+    const removeAccentsDiacriticsToUpperCase = (str) => {
+        return str.toLocaleLowerCase().replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a").replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e").replace(/ì|í|ị|ỉ|ĩ/g, "i").replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o").replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u").replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y").replace(/đ/g, "d").replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, "").replace(/\u02C6|\u0306|\u031B/g, "").toLocaleUpperCase();
+    };
+
     const handleCloseApp = () => {
         window.location.href="https://www.acbs.com.vn";
     }
@@ -21637,7 +21642,7 @@
                 console.log(res)
                 //set all piece giai kk =0 if can not find
                 if(res.data.awards.every(
-                    award => FormatText(award.award_name) !== "giải khuyến khích"
+                    award => removeAccentsDiacriticsToUpperCase(award.award_name) !== "GIAI KHUYEN KHICH"
                 )){
                     const elements = document.getElementById("prize-consolation-wrapper").children;
                     elements[0].classList.add("missing");
@@ -21645,7 +21650,7 @@
                 }
                 //set all piece giai nhat =0 if can not find
                 if(res.data.awards.every(
-                    award => FormatText(award.award_name) !== "giải 1" || FormatText(award.award_name) !== "giải nhất"
+                    award => removeAccentsDiacriticsToUpperCase(award.award_name) !== "GIAI 1" || removeAccentsDiacriticsToUpperCase(award.award_name) !== "GIAI NHAT"
                 )){
                     const elements = document.getElementById("prize-first-wrapper").children;
                     elements[0].classList.add("missing");
@@ -21658,7 +21663,7 @@
                     prizeFirstBottomRightCount.innerText = "x0"
                 }
                 if(res.data.awards.every(
-                    award => FormatText(award.award_name) !== "giải 2" || FormatText(award.award_name) !== "giải nhì"
+                    award => removeAccentsDiacriticsToUpperCase(award.award_name) !== "GIAI 2" || removeAccentsDiacriticsToUpperCase(award.award_name) !== "GIAI NHI"
                 )){
                     const elements = document.getElementById("prize-second-wrapper").children;
                     elements[0].classList.add("missing");
@@ -21671,7 +21676,7 @@
                     prizeSecondBottomRightCount.innerText = "x0"
                 }
                 if(res.data.awards.every(
-                    award => FormatText(award.award_name) !== "giải 3") || (FormatText(award.award_name) !== "giải ba"
+                    award => removeAccentsDiacriticsToUpperCase(award.award_name) !== "GIAI 3" || removeAccentsDiacriticsToUpperCase(award.award_name) !== "GIAI BA"
                 )){
                     const elements = document.getElementById("prize-third-wrapper").children;
                     elements[0].classList.add("missing");
@@ -21684,7 +21689,7 @@
                     prizeThirdBottomRightCount.innerText = "x0"
                 }
                 if(res.data.awards.every(
-                    award => FormatText(award.award_name) !== "giải 4") || (FormatText(award.award_name) !== "giải tư"
+                    award => removeAccentsDiacriticsToUpperCase(award.award_name) !== "GIAI 4" || removeAccentsDiacriticsToUpperCase(award.award_name) !== "GIAI TU"
                 )){
                     const elements = document.getElementById("prize-fourth-wrapper").children;
                     elements[0].classList.add("missing");
@@ -21697,7 +21702,7 @@
                     prizeFourthBottomRightCount.innerText = "x0"
                 }
                 if(res.data.awards.every(
-                    award => FormatText(award.award_name) !== "giải đặc biệt"
+                    award => removeAccentsDiacriticsToUpperCase(award.award_name) !== "GIAI DAC BIET"
                 )){
                     const elements = document.getElementById("prize-special-wrapper").children;
                     elements[0].classList.add("missing");
@@ -21712,7 +21717,7 @@
                 res.data.awards.map(
                     (item)=>{
                         console.log(FormatText(item.award_name))
-                        if(FormatText(item.award_name) === "giải khuyến khích"){
+                        if(removeAccentsDiacriticsToUpperCase(item.award_name) === "GIAI KHUYEN KHICH"){
                             //check if array contains that piece position or not to change UI
                             if (item.pieces.every(piece => piece.piece_position !== "Default")) {
                                 const elements = document.getElementById("prize-consolation-wrapper").children;
@@ -21731,7 +21736,7 @@
                                 }
                             )
                         }
-                        if(FormatText(item.award_name) === "giải 1" || FormatText(item.award_name) === "giải nhất"){
+                        if(removeAccentsDiacriticsToUpperCase(item.award_name) === "GIAI 1" || removeAccentsDiacriticsToUpperCase(item.award_name) === "GIAI NHAT"){
                             //check if array contains that piece position or not to change UI
                             if (item.pieces.every(piece => piece.piece_position !== "TopLeft")) {
                                 const elements = document.getElementById("prize-first-wrapper").children;
@@ -21783,7 +21788,7 @@
                                 }
                             )
                         }
-                        if(FormatText(item.award_name) === "giải 2" || FormatText(item.award_name) === "giải nhì"){
+                        if(removeAccentsDiacriticsToUpperCase(item.award_name) === "GIAI 2" || removeAccentsDiacriticsToUpperCase(item.award_name) === "GIAI NHI"){
                             //check if array contains that piece position or not to change UI
                             if (item.pieces.every(piece => piece.piece_position !== "TopLeft")) {
                                 const elements = document.getElementById("prize-second-wrapper").children;
@@ -21835,7 +21840,7 @@
                                 }
                             )
                         }
-                        if((FormatText(item.award_name) === "giải 3") || (FormatText(item.award_name) === "giải ba")){
+                        if((removeAccentsDiacriticsToUpperCase(item.award_name) === "GIAI 3") || (removeAccentsDiacriticsToUpperCase(item.award_name) === "GIAI BA")){
                             //check if array contains that piece position or not to change UI
                             if (item.pieces.every(piece => piece.piece_position !== "TopLeft")) {
                                 const elements = document.getElementById("prize-third-wrapper").children;
@@ -21887,7 +21892,7 @@
                                 }
                             )
                         }
-                        if((FormatText(item.award_name) === "giải 4") || (FormatText(item.award_name) === "giải tư")){
+                        if((removeAccentsDiacriticsToUpperCase(item.award_name) === "GIAI 4") || (removeAccentsDiacriticsToUpperCase(item.award_name) === "GIAI TU")){
                             //check if array contains that piece position or not to change UI
                             if (item.pieces.every(piece => piece.piece_position !== "TopLeft")) {
                                 const elements = document.getElementById("prize-fourth-wrapper").children;
@@ -21939,7 +21944,7 @@
                                 }
                             )
                         }
-                        if(FormatText(item.award_name) === "giải đặc biệt"){
+                        if(removeAccentsDiacriticsToUpperCase(item.award_name) === "GIAI DAC BIET"){
                             //check if array contains that piece position or not to change UI
                             if (item.pieces.every(piece => piece.piece_position !== "TopLeft")) {
                                 const elements = document.getElementById("prize-special-wrapper").children;
