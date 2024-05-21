@@ -1346,11 +1346,18 @@
         opacity: 0.4;
     }
     .inventory-content{
-        display: flex;
+        /*display: flex;*/
+        /*gap: 12px;*/
+        /*justify-content: space-around;*/
+        /*align-items: center;*/
+        /*flex-wrap: wrap;*/
+        display: grid;
+        margin: 0 auto;
         gap: 12px;
-        justify-content: space-around;
+        row-gap: 18px;
+        grid-template-columns: 50% 50%;
+        justify-content: revert;
         align-items: center;
-        flex-wrap: wrap;
     }
     .prize-box {
         width:120px;
@@ -1365,10 +1372,10 @@
     .prize-card {
         display:flex;
         flex-direction: column;
-        flex: 0 0 auto;
         justify-content: center;
         align-items: center;
         gap:6px;
+        flex:0 0 1;
     }
     .prize-label {
         font-size: 15px;
@@ -1376,6 +1383,8 @@
         color: #1E458C;
         text-transform: uppercase;
         line-height: 15px;
+        text-align: center;
+        white-space: nowrap;
     }
     .prize-detail {
         font-size: 13px;
@@ -17947,8 +17956,7 @@
                     <div id="popup-piece-count"></div>
                     <div class="popup-rule" onclick="openRule()">
                         <div>
-                            Xem thể lệ tại
-                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            Xem thể lệ tại <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.96533 2.07605H4.96533H3.96533V3.07562H4.96533H5.96533H6.96534V2.07605H5.96533Z" fill="#F8EBCE"/>
                                 <path d="M7.96545 2.07605H6.96545V3.07562H7.96545H8.96546V2.07605H7.96545Z" fill="#90D5DC"/>
                                 <path d="M9.9649 2.07605H8.96533V3.07562H9.9649V2.07605Z" fill="#F8EBCE"/>
@@ -21133,7 +21141,7 @@
     block.addEventListener('touchstart', touchStart())
     block.addEventListener('touchend', touchEnd)
     block.addEventListener('touchmove', touchMove)
-
+    block.addEventListener('touchcancel', touchCancel)
     // Disable context menu
     window.oncontextmenu = function (event) {
         event.preventDefault()
@@ -21189,6 +21197,19 @@
         }
     }
 
+    function touchCancel() {
+        isDragging = false
+        cancelAnimationFrame(animationID)
+        // const movedBy = currentTranslate - prevTranslate
+        // console.log(rect.top-rectIcon.top)
+        // if (movedBy < (rect.top-rectIcon.top-200)) alert("pika")
+        if(!isHitTheBox){
+            document.querySelector(".btn-back").style.display = "block"
+            document.querySelector(".arrow-guide").style.display = "block"
+            setPositionByIndex();
+        }
+    }
+
     function touchMove(event) {
         if (isDragging) {
             const currentPosition = event.touches[0].clientY
@@ -21203,6 +21224,7 @@
             }
         }
     }
+
 
     function animation() {
         block.style.transform = `translateY(${currentTranslate}px)`
