@@ -214,33 +214,6 @@
         }
     }
 
-    .sample-car1 {
-        position: absolute;
-        z-index: 102;
-        bottom: 500px;
-        right: 250px;
-        transform: scale(50%);
-        animation: car1 3s ease infinite;
-    }
-
-    .sample-car2 {
-        position: absolute;
-        z-index: 100;
-        bottom: 300px;
-        left: 80px;
-        transform: scale(80%);
-        animation: car2 3s reverse infinite;
-    }
-
-    .sample-car3 {
-        position: absolute;
-        z-index: 101;
-        bottom: 100px;
-        right: 50px;
-        animation: car3 3s ease-in-out infinite;
-        animation-direction: alternate-reverse;
-    }
-
     @keyframes car1{
         0%{
             transform: translateX(0)
@@ -288,13 +261,6 @@
         z-index: -100;
     }
 
-    .bottom-bg {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -100;
-    }
     .logoACB {
         position: absolute;
         top:12px;
@@ -355,7 +321,7 @@
         bottom: 0;
         width: 100%;
         height: 55%;
-        z-index:-15;
+        z-index:6;
     }
     .red-car {
         position: absolute;
@@ -444,7 +410,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        z-index: -20;
+        z-index: 5;
         top: -4.5vh;
         height: max-content;
     }
@@ -456,7 +422,7 @@
         transform: translateX(-50%);
         left: 50%;
         bottom: 0;
-        z-index: -25;
+        z-index: 4;
         height: 100%;
         width: 100%;
     }
@@ -474,7 +440,7 @@
         transform: translateX(-50%);
         left: 50%;
         top: calc(-4.5vh + 137px);
-        z-index: -30;
+        z-index: 3;
     }
     .cloud-1 {
         position: absolute;
@@ -566,7 +532,7 @@
         position: absolute;
         bottom: 0;
         opacity: 1;
-        z-index: -30;
+        z-index: 1;
         background: linear-gradient(0deg, rgb(88 89 91) 0%, rgb(88 89 91) 40%, rgb(65 65 67) 40%, rgb(65 65 67) 100%);
         background-size: 70px 100px;
         /*animation: animation-road-event 2s linear infinite;*/
@@ -591,7 +557,7 @@
         background-size: 50px 100px;
         /*animation: animate-line-event 2s linear infinite;*/
         animation-direction: reverse;
-        z-index: -11;
+        z-index: 2;
     }
 
     @keyframes animate-line-event {
