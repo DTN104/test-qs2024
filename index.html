@@ -754,6 +754,12 @@
         font-family: "Inter", sans-serif;
     }
 
+    .modal-backdrop {
+        --bs-backdrop-zindex: 1050;
+        --bs-backdrop-bg: #FFF;
+        --bs-backdrop-opacity: 0.7;
+    }
+
     #popup-piece-image{
         height: 130px;
         margin-bottom: 16px;
@@ -1505,7 +1511,7 @@
         left: -36px;
         -webkit-animation-delay: 0s;
         animation-delay: 0s;
-        stroke: #e1e1e1;
+        stroke: black;
     }
     .car__line--middle {
         position: absolute;
@@ -1513,7 +1519,7 @@
         -webkit-animation-delay: 0.2s;
         animation-delay: 0.2s;
         left: -57px;
-        stroke: #e1e1e1;
+        stroke: black;
     }
     .car__line--bottom {
         position: absolute;
@@ -1521,7 +1527,7 @@
         bottom: 5px;
         -webkit-animation-delay: 0.4s;
         animation-delay: 0.4s;
-        stroke: #e1e1e1;
+        stroke: black;
     }
     .car__wheel--left {
         position: absolute;
@@ -1546,7 +1552,7 @@
         text-align: center;
         font-size: 12px;
         font-weight: bold;
-        color:#e1e1e1
+        color:black;
     }
 
     @-webkit-keyframes carshake {
