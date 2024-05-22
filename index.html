@@ -532,20 +532,10 @@
         position: absolute;
         bottom: 0;
         opacity: 1;
-        z-index: 1;
+        z-index: -10;
         background: linear-gradient(0deg, rgb(88 89 91) 0%, rgb(88 89 91) 40%, rgb(65 65 67) 40%, rgb(65 65 67) 100%);
         background-size: 70px 100px;
-        /*animation: animation-road-event 2s linear infinite;*/
         animation-direction: reverse;
-    }
-
-    @keyframes animation-road-event {
-        0%{
-            background-position: 0 0;
-        }
-        100%{
-            background-position: -70px -100px;
-        }
     }
 
     .animation-line-event{
@@ -557,7 +547,7 @@
         background-size: 50px 100px;
         /*animation: animate-line-event 2s linear infinite;*/
         animation-direction: reverse;
-        z-index: 2;
+        z-index: -9;
     }
 
     @keyframes animate-line-event {
