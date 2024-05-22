@@ -466,6 +466,54 @@
         <div class="loader__text">Vui lòng chờ giây lát</div>
     </div>
 </body>
+<script>
+    const formatErrorContent = (codeErr) => {
+        switch(codeErr){
+            case 400: {
+                popupErrorTitle.innerHTML = `<div>Hết lượt quay</div>`
+                popupError.innerHTML = `<div>Quý khách vui lòng tiến hành giao dịch thêm với ACBS để có thêm lượt</div><br/>`
+            }
+                break;
+            case 401: {
+                popupErrorTitle.innerHTML = `<div>TRUY CẬP<br/>KHÔNG THÀNH CÔNG</div>`
+                popupError.innerHTML = `<div>Vui lòng thử lại hoặc đảm bảo truy cập trang thông qua ứng dụng ACBS Smart</div><br/>
+                    <div> Liên hệ Tổng đài <span style="font-weight:700">1900 5555 33</span> nếu Quý khách cần hỗ trợ.</div>`;
+            }
+                break;
+            case 500: {
+                popupErrorTitle.innerHTML = `<div>Lỗi hệ thống</div>`
+                popupError.innerHTML = `<div>Quý khách vui lòng đăng nhập lại từ app SMART để tiếp tục quay số</div><br/>`
+            }
+                break;
+            default: {
+                popupErrorTitle.innerHTML = `<div>Lỗi hệ thống</div>`
+                popupError.innerHTML = `<div>Quý khách vui lòng đăng nhập lại từ app SMART để tiếp tục quay số</div><br/>`
+            }
+        }
+    }
+
+    const formatErrorAction = (codeErr) => {
+        switch(codeErr){
+            case 400: {
+                resetState();
+                homePage.style.display = "block";
+                eventPage.style.display = "none";
+            }
+                break;
+            case 401: {
+                window.location.href="https://www.acbs.com.vn";
+            }
+                break;
+            case 500: {
+                window.location.href="https://www.acbs.com.vn";
+            }
+                break;
+            default: {
+                window.location.href="https://www.acbs.com.vn";
+            }
+        }
+    }
+</script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
