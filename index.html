@@ -1218,6 +1218,33 @@
         border:none;
     }
 
+    .fixed-table-pagination {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pagination {
+        display:flex !important;
+    }
+
+    .page-link{
+        background: transparent;
+        color: #1E458D;
+        border: solid 1px #1E458D;
+    }
+    .disabled .page-link{
+        background: #73737396;
+        border: solid 1px #1E458D;
+    }
+    .active .page-link{
+        background: #1E458D;
+        color: white;
+        border: solid 1px #1E458D;
+    }
+
+
     /* bottom-left border-radius */
     /*#winner-table tr:last-child td:first-child {*/
     /*    border-bottom-left-radius: 6px;*/
@@ -1229,12 +1256,6 @@
     /*}*/
 
     /* hide show select item per page */
-    .winner-content .pagination-detail {
-        display: none;
-    }
-    .winner-content .pagination {
-        display: block;
-    }
     .winner-content .bootstrap-table {
         width:300px;
         margin:0 auto;
@@ -1246,6 +1267,13 @@
     .page-link {
         font-size: 10px;
         line-height: 11px;
+    }
+    .no-records-found {
+        height: 24px;
+    }
+    .no-records-found td{
+        padding: 12px;
+
     }
 
     /******************Rule page*********************/
@@ -22094,12 +22122,17 @@
         getListWinner(eventID).then(
             (res) => {
                 $('#winner-table').bootstrapTable({
+                    smartDisplay:false,
                     pagination: true,
-                    sidePagination: 'server',
-                    pageSize: 10,
-                    paginationLoop:true,
-                    pageList: [10, 20],
-                    pageNumber: 1,
+                    alwaysShowAllButtons: true,
+                    paginationLoop:false,
+                    pageSize: 12,
+                    formatNoMatches: function () {
+                        return "Không có dữ liệu"
+                    },
+                    paginationParts:[
+                        'pageList'
+                    ],
                     columns: [{
                         field: 'id',
                         title: 'STT'
@@ -22113,7 +22146,7 @@
                         field: 'won_date',
                         title: 'Thời gian trúng'
                     }],
-                    data: formatWinnerList(res)
+                    data: formatWinnerList(fakeWinner)
                 })
             }
         )

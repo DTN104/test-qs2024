@@ -919,66 +919,204 @@ const resWinner = {
   }
 }
 
+// <div className="float-right pagination">
+//   <ul className="pagination">
+//     <li className="page-item page-pre disabled"><a className="page-link" aria-label="previous page"
+//                                                    href="javascript:void(0)">‹</a></li>
+//     <li className="page-item active"><a className="page-link" aria-label="to page 1" href="javascript:void(0)">1</a>
+//     </li>
+//     <li className="page-item"><a className="page-link" aria-label="to page 2" href="javascript:void(0)">2</a></li>
+//     <li className="page-item page-next"><a className="page-link" aria-label="next page" href="javascript:void(0)">›</a>
+//     </li>
+//   </ul>
+// </div>
+
 const fakeWinner = {
   "result_code": 0,
   "data": {
     "limit": 10,
     "offset": 0,
-    "max": 6,
+    "max": 16,
     "data": [
       {
-        "event_id": "ev_eb702-0c90-45",
+        "event_id": "ev_e26f9-3abe-4b",
         "client_id": "006C101072",
         "client_name": "Nguyễn Hữu Sang",
-        "award_name": "Giải 4",
-        "award_info": "Vali Traveler's choice",
-        "notification_status": null,
-        "won_date": "14:13:25 18/05/2024"
+        "award_name": "Giải ba",
+        "award_info": "Apple Watch Ultra 2",
+        "notification_status": "EMAIL",
+        "won_date": "16:32:15 22/05/2024"
       },
       {
-        "event_id": "ev_eb702-0c90-45",
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C101072",
+        "client_name": "Nguyễn Hữu Sang",
+        "award_name": "Giải tư",
+        "award_info": "Vali Traveler's choice",
+        "notification_status": "EMAIL",
+        "won_date": "16:32:16 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C000118",
+        "client_name": "NGUYỄN VĂN MAI",
+        "award_name": "Giải tư",
+        "award_info": "Vali Traveler's choice",
+        "notification_status": "EMAIL",
+        "won_date": "16:38:18 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C000122",
+        "client_name": "NGUYỄN GIA HÙNG",
+        "award_name": "Giải tư",
+        "award_info": "Vali Traveler's choice",
+        "notification_status": "EMAIL",
+        "won_date": "16:53:59 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C120777",
+        "client_name": "Tran thi cam van",
+        "award_name": "Giải tư",
+        "award_info": "Vali Traveler's choice",
+        "notification_status": "EMAIL",
+        "won_date": "17:41:37 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
         "client_id": "006C101072",
         "client_name": "Nguyễn Hữu Sang",
         "award_name": "Giải khuyến khích",
         "award_info": "Voucher Urbox 200k",
-        "notification_status": null,
-        "won_date": "13:52:29 18/05/2024"
+        "notification_status": "EMAIL",
+        "won_date": "16:32:15 22/05/2024"
       },
       {
-        "event_id": "ev_eb702-0c90-45",
-        "client_id": "006C000122",
-        "client_name": "NGUYỄN GIA HÙNG",
-        "award_name": "Giải 4",
-        "award_info": "Vali Traveler's choice",
-        "notification_status": null,
-        "won_date": "12:22:37 18/05/2024"
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C000118",
+        "client_name": "NGUYỄN VĂN MAI",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "16:38:18 22/05/2024"
       },
       {
-        "event_id": "ev_eb702-0c90-45",
-        "client_id": "006C000122",
-        "client_name": "NGUYỄN GIA HÙNG",
-        "award_name": "Giải nhất",
-        "award_info": "iPad Pro m2 12.9 inch 256GB",
-        "notification_status": null,
-        "won_date": "12:22:37 18/05/2024"
-      },
-      {
-        "event_id": "ev_eb702-0c90-45",
-        "client_id": "006C000122",
-        "client_name": "NGUYỄN GIA HÙNG",
-        "award_name": "Giải đặc biệt",
-        "award_info": "MacBook Pro 14 inch M3",
-        "notification_status": null,
-        "won_date": "12:22:36 18/05/2024"
-      },
-      {
-        "event_id": "ev_eb702-0c90-45",
+        "event_id": "ev_e26f9-3abe-4b",
         "client_id": "006C000122",
         "client_name": "NGUYỄN GIA HÙNG",
         "award_name": "Giải khuyến khích",
         "award_info": "Voucher Urbox 200k",
-        "notification_status": null,
-        "won_date": "12:22:35 18/05/2024"
+        "notification_status": "EMAIL",
+        "won_date": "16:53:49 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C000004",
+        "client_name": "NGUYÊN ĐỨC TUÂN",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "17:05:32 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C120777",
+        "client_name": "Tran thi cam van",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "17:41:37 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C120777",
+        "client_name": "Tran thi cam van",
+        "award_name": "Giải tư",
+        "award_info": "Vali Traveler's choice",
+        "notification_status": "EMAIL",
+        "won_date": "17:41:37 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C101072",
+        "client_name": "Nguyễn Hữu Sang",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "16:32:15 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C000118",
+        "client_name": "NGUYỄN VĂN MAI",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "16:38:18 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C000122",
+        "client_name": "NGUYỄN GIA HÙNG",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "16:53:49 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C000004",
+        "client_name": "NGUYÊN ĐỨC TUÂN",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "17:05:32 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C120777",
+        "client_name": "Tran thi cam van",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "17:41:37 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C000118",
+        "client_name": "NGUYỄN VĂN MAI",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "16:38:18 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C000122",
+        "client_name": "NGUYỄN GIA HÙNG",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "16:53:49 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C000004",
+        "client_name": "NGUYÊN ĐỨC TUÂN",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "17:05:32 22/05/2024"
+      },
+      {
+        "event_id": "ev_e26f9-3abe-4b",
+        "client_id": "006C120777",
+        "client_name": "Tran thi cam van",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "notification_status": "EMAIL",
+        "won_date": "17:41:37 22/05/2024"
       }
     ]
   }
