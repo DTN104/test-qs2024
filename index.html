@@ -20914,7 +20914,11 @@
         }).then((res) => {
             return res.data
         }).catch(err => {
-            forceCrashApp();
+            $("#errorModal").modal("show");
+            formatErrorContent(err.response.status);
+            $('#errorModal').on('hidden.bs.modal', function (e) {
+                formatErrorAction(err.response.status);
+            })
         });
     }
     const getTotalSpin = (accountId,eventId,sessionId) => {
@@ -20928,12 +20932,17 @@
             document.querySelector(".arrow-guide").style.display = "block";
             return res.data
         }).catch(err => {
-            forceCrashApp();
+            $("#loadingModal").modal("hide");
+            $("#errorModal").modal("show");
+            formatErrorContent(err.response.status);
+            $('#errorModal').on('hidden.bs.modal', function (e) {
+                formatErrorAction(err.response.status);
+            })
         });
     }
 
     const gacha = (accountId,eventId,autospin,sessionId) => {
-        return axios.get(`${baseUrl}/event/draw-piece?event_id=${eventId}&client_id=${accountId}&auto_spin=${autospin}`, {
+        return axios.get(`${baseUrl}/event/draw-pieced?event_id=${eventId}&client_id=${accountId}&auto_spin=${autospin}`, {
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
                 "session_id": sessionId
@@ -20942,7 +20951,6 @@
         }).then((res) => {
             return res.data
         }).catch(err => {
-            console.log(err.response);
             $("#loadingModal").modal("hide");
             $("#errorModal").modal("show");
                 formatErrorContent(err.response.status);
@@ -20962,7 +20970,11 @@
         }).then((res) => {
             return res.data
         }).catch(err => {
-            forceCrashApp();
+            $("#errorModal").modal("show");
+            formatErrorContent(err.response.status);
+            $('#errorModal').on('hidden.bs.modal', function (e) {
+                formatErrorAction(err.response.status);
+            })
         });
     }
 
@@ -20986,7 +20998,11 @@
         }).then((res) => {
             return res.data
         }).catch(err => {
-            forceCrashApp();
+            $("#errorModal").modal("show");
+            formatErrorContent(err.response.status);
+            $('#errorModal').on('hidden.bs.modal', function (e) {
+                formatErrorAction(err.response.status);
+            })
         });
     }
 </script>
