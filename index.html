@@ -1178,11 +1178,11 @@
     }
 
     #winner-table tr td:nth-child(3) {
-        font-weight: bold;
+        font-weight: 500;
     }
 
     #winner-table tr td:nth-child(2) span:first-child {
-        font-weight: bold;
+        font-weight: 500;
     }
 
     #winner-table tr td:first-child, #winner-table tr th:first-child {
@@ -21188,7 +21188,7 @@
         return res.data.data.map(
             (item,index) => ({
                 "id": index+1,
-                "client_name": "<span style='font-weight: bold'>" + item.client_name + "</span>" + "\n" + item.client_id,
+                "client_name": "<span style='font-weight: 500'>" + item.client_name + "</span>" + "\n" + item.client_id,
                 "award_name": item.award_name,
                 "won_date":item.won_date
             })
@@ -22146,7 +22146,7 @@
                         field: 'won_date',
                         title: 'Thời gian trúng'
                     }],
-                    data: formatWinnerList(fakeWinner)
+                    data: formatWinnerList(res)
                 })
             }
         )
