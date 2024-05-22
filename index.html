@@ -916,6 +916,8 @@
         font-weight: 400;
         font-size:7px;
         line-height: 9px;
+        text-align:center;
+        text-transform: uppercase;
     }
     .card-popup-list__count-wrapper__number{
         position: absolute;
@@ -21056,6 +21058,7 @@
                 let obj = {};
                 obj.piece_id = curr.piece_id;
                 obj.award_id = curr.award_id;
+                obj.award_info = curr.award_info;
                 obj.count = 1;
                 obj.name = curr.name;
                 obj.image = curr.image;
@@ -21114,6 +21117,7 @@
                 return {
                     // "award_id": awards[0].award_id,
                     "award_name": awards[0].award_name,
+                    "award_info": awards[0].award_info,
                     // "total_piece": awards[0].total_piece,
                     // "award_image": awards[0].award_image,
                     // "piece_id": item.piece_id,
@@ -21444,8 +21448,8 @@
                                                 <div class="card-popup-list__count-wrapper__number">x${item.count}</div>
                                             </div>
                                         </div>
-                                        <div class="card-popup-list__title">${item.award_name}</div>
-                                        <div class="card-popup-list__detail">${item.name}</div>
+                                        <div class="card-popup-list__title">Mảnh ghép</div>
+                                        <div class="card-popup-list__detail">${item.award_info}</div>
                                     </div>`)
                             )
                             document.getElementById("popup-piece-list").innerHTML = `
@@ -21541,8 +21545,8 @@
                                                 <div class="card-popup-list__count-wrapper__number">x${item.count}</div>
                                             </div>
                                         </div>
-                                        <div class="card-popup-list__title">${item.award_name}</div>
-                                        <div class="card-popup-list__detail">${item.name}</div>
+                                        <div class="card-popup-list__title">Mảnh ghép</div>
+                                        <div class="card-popup-list__detail">${item.award_info}</div>
                                     </div>`)
                             )
                             document.getElementById("popup-piece-list").innerHTML = `
