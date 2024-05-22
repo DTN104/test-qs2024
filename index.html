@@ -714,6 +714,18 @@
         width: 280px;
     }
 
+    .popup-bg .award-decor-bg{
+        width: 100%;
+        position:absolute;
+        top:0;
+        left:0;
+        padding: 12px;
+    }
+
+    .popup-bg .award-decor-bg img{
+        width: 100%;
+    }
+
     .popup-bg svg{
         width: 100%;
         min-height: 400px;
@@ -811,7 +823,7 @@
 
     /***********************Popup Group*****************/
     #popup-piece-list {
-        max-height: 265px;
+        max-height: 290px;
         overflow-y: scroll;
         overflow-x: hidden;
         scrollbar-color: rgba(123, 121, 121, 1) white;
@@ -866,8 +878,19 @@
         margin-bottom: 4px;
         border-radius: 8px;
     }
-    .card-popup-list__img-wrapper img{
-        width: 50%;
+    .card-popup-list__img-wrapper__pic{
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+    }
+    .card-popup-list__img-wrapper__pic img{
+        width: 45px;
+        height: 45px;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
     }
     .card-popup-list__count-wrapper{
         display: flex;
@@ -1327,14 +1350,13 @@
         opacity: 0.4;
     }
     .inventory-content{
-        /*display: flex;*/
-        /*gap: 12px;*/
-        /*justify-content: space-around;*/
-        /*align-items: center;*/
-        /*flex-wrap: wrap;*/
+        /* gap: 12px; */
+        /* justify-content: space-around; */
+        /* align-items: center; */
+        /* flex-wrap: wrap; */
         display: grid;
         margin: 0 auto;
-        gap: 12px;
+        /* gap: 12px; */
         row-gap: 18px;
         grid-template-columns: 50% 50%;
         justify-content: revert;
@@ -1350,6 +1372,7 @@
         align-items: center;
         display:flex;
         margin-bottom: 4px;
+        border-radius:10px;
     }
     .prize-card {
         display:flex;
@@ -18096,7 +18119,9 @@
                 </div>
                 <div class="popup-group-award">
                     <div class="popup-bg">
-                        <img style="position:absolute;top:0;left:0" src="assets/image/quaysotrungthuong2024/event_page/decor_award_popup.png" alt="" />
+                        <div class="award-decor-bg">
+                            <img src="assets/image/quaysotrungthuong2024/event_page/decor_award_popup.png" alt="" />
+                        </div>
                         <svg width="279" height="398" viewBox="0 0 279 398" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M259 388H20V398H259V388Z" fill="black"/>
                             <path d="M268.91 378.46H258.95V388.42H268.91V378.46Z" fill="black"/>
@@ -21389,7 +21414,9 @@
                                 item =>
                                     (`<div class="card-popup-piece-list">
                                         <div class="card-popup-list__img-wrapper">
-                                            <img src="${item.image}" alt=""/>
+                                            <div class="card-popup-list__img-wrapper__pic">
+                                                <img src="${item.image}" alt=""/>
+                                            </div>
                                             <div class="card-popup-list__count-wrapper">
                                                 <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_530_3629)">
@@ -21484,7 +21511,9 @@
                                 item =>
                                     (`<div className="card-popup-piece-list">
                                         <div class="card-popup-list__img-wrapper">
-                                            <img src=${item.image} alt=""/>
+                                            <div class="card-popup-list__img-wrapper__pic">
+                                                <img src="${item.image}" alt=""/>
+                                            </div>
                                             <div class="card-popup-list__count-wrapper">
                                                 <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_530_3629)">
