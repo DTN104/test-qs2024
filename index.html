@@ -21059,6 +21059,7 @@
                 obj.piece_id = curr.piece_id;
                 obj.award_id = curr.award_id;
                 obj.award_info = curr.award_info;
+                obj.piece_position = curr.piece_position;
                 obj.count = 1;
                 obj.name = curr.name;
                 obj.image = curr.image;
@@ -21413,7 +21414,7 @@
                             }, 2000);
                             document.querySelector(".popup-piece").style.display = "none";
                             document.querySelector(".popup-group").style.display = "flex";
-                            let array = formatMultipleSpinResult(res);
+                            let array = formatMultipleSpinResult(resultFake);
                             const newList = array.map(
                                 item =>
                                     (`<div class="card-popup-piece-list">

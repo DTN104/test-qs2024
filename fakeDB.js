@@ -4,104 +4,748 @@ const resultFake = {
     "event_end_date": "31/05/2024",
     "award": [
       {
-        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
-        "award_name": "Giải nhì",
-        "award_info": "iPhone 15 Pro Max 256GB",
-        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-nhi.png",
-        "total_piece": "4"
-      },
-      {
-        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
-        "award_name": "Giải ba",
-        "award_info": "Apple Watch Ultra 2",
-        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-ba.png",
-        "total_piece": "4"
-      },
-      {
-        "award_id": "award_c5-c236-436f-bde8-03fbe25b8998",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
         "award_name": "Giải đặc biệt",
         "award_info": "MacBook Pro 14 inch M3",
         "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-dac-biet.png",
         "total_piece": "4"
       },
       {
-        "award_id": "award_e0-67c9-4342-8d49-0565d5f76d9a",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "award_name": "Giải nhì",
+        "award_info": "iPhone 15 Pro Max 256GB",
+        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-nhi.png",
+        "total_piece": "4"
+      },
+      {
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
         "award_name": "Giải nhất",
         "award_info": "iPad Pro m2 12.9 inch 256GB",
         "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-nhat.png",
+        "total_piece": "4"
+      },
+      {
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "award_name": "Giải tư",
+        "award_info": "Vali Traveler's choice",
+        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-tu.png",
+        "total_piece": "4"
+      },
+      {
+        "award_id": "award_5b-3325-4623-a181-1ddced1d45a2",
+        "award_name": "Giải khuyến khích",
+        "award_info": "Voucher Urbox 200k",
+        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-nam.png",
+        "total_piece": "1"
+      },
+      {
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "award_name": "Giải ba",
+        "award_info": "Apple Watch Ultra 2",
+        "award_image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-ba.png",
         "total_piece": "4"
       }
     ],
     "piece": [
       {
-        "piece_id": "award_piece_4-4337-baa5-ed127c0aa100",
-        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
-        "name": "Mảnh trên trái giải nhì",
+        "piece_id": "award_piece_e-446e-a3d0-bd775893d82e",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh trên phải đặc biệt",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-02.png"
       },
       {
-        "piece_id": "award_piece_5-4ea8-b8b3-48515266f24f",
-        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
-        "name": "Mảnh dưới trái giải ba",
+        "piece_id": "award_piece_e-42e4-909d-0e1852a5dff2",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh trên trái giải nhất",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-05.png"
       },
       {
-        "piece_id": "award_piece_5-4ea8-b8b3-48515266f24f",
-        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
-        "name": "Mảnh dưới trái giải ba",
-        "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
-      },
-      {
-        "piece_id": "award_piece_a-41a8-8255-e264fd914f5e",
-        "award_id": "award_c5-c236-436f-bde8-03fbe25b8998",
+        "piece_id": "award_piece_e-402a-9afd-7b643824d94d",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
         "name": "Mảnh dưới phải đặc biệt",
         "key": "false",
         "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-04.png"
       },
       {
-        "piece_id": "award_piece_2-4c46-9713-16348d7ef276",
-        "award_id": "award_e0-67c9-4342-8d49-0565d5f76d9a",
-        "name": "Mảnh dưới phải giải nhất",
+        "piece_id": "award_piece_5-4467-8f76-9a8a23b079be",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh dưới trái giải tư",
         "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-19.png"
       },
       {
-        "piece_id": "award_piece_4-4337-baa5-ed127c0aa100",
-        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
-        "name": "Mảnh trên trái giải nhì",
-        "key": "false",
-        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
-      },
-      {
-        "piece_id": "award_piece_b-4805-a54a-f8b7cd48b139",
-        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
+        "piece_id": "award_piece_8-43fd-8916-8df05cc7766b",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
         "name": "Mảnh trên phải giải ba",
         "key": "false",
         "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-14.png"
       },
       {
-        "piece_id": "award_piece_a-4aca-a9fd-d5de7683d5ca",
-        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
+        "piece_id": "award_piece_3-4759-9346-1b7a43d0e9bb",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh dưới phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-20.png"
+      },
+      {
+        "piece_id": "award_piece_f-4d59-a9bf-ef0d1ae75838",
+        "award_id": "award_5b-3325-4623-a181-1ddced1d45a2",
+        "name": "Mảnh giải khuyến khích",
+        "key": "true",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nam/manh-ghep-giai-nam.png"
+      },
+      {
+        "piece_id": "award_piece_e-446e-a3d0-bd775893d82e",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh trên phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-02.png"
+      },
+      {
+        "piece_id": "award_piece_7-4473-959c-ca718c4699f4",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh trên phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-18.png"
+      },
+      {
+        "piece_id": "award_piece_7-4375-a78c-69a0d1d9f6b1",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới trái giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-07.png"
+      },
+      {
+        "piece_id": "award_piece_e-42e4-909d-0e1852a5dff2",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh trên trái giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-05.png"
+      },
+      {
+        "piece_id": "award_piece_e-4e03-88ff-c001605b785b",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh trên phải giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-10.png"
+      },
+      {
+        "piece_id": "award_piece_1-472e-9ec3-82c275557ece",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
         "name": "Mảnh trên trái giải ba",
         "key": "false",
         "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png"
       },
       {
-        "piece_id": "award_piece_5-4ea8-b8b3-48515266f24f",
-        "award_id": "award_91-871d-4b61-9072-23727a37cf16",
+        "piece_id": "award_piece_b-4613-b061-92107b2d74ad",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh giải tư key",
+        "key": "true",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/key-manh-ghep-giai-tu-17.png"
+      },
+      {
+        "piece_id": "award_piece_0-4cf8-adf7-3ce92462b529",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
         "name": "Mảnh dưới trái giải ba",
         "key": "false",
         "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
       },
       {
-        "piece_id": "award_piece_d-497c-97c4-919507d2b0ed",
-        "award_id": "award_1b-18ff-427b-b6d0-0f9fb765fab0",
+        "piece_id": "award_piece_1-4247-a6eb-62168da1c38c",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới phải giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
+      },
+      {
+        "piece_id": "award_piece_e-42e4-909d-0e1852a5dff2",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh trên trái giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-05.png"
+      },
+      {
+        "piece_id": "award_piece_1-472e-9ec3-82c275557ece",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh trên trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png"
+      },
+      {
+        "piece_id": "award_piece_e-402a-9afd-7b643824d94d",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-04.png"
+      },
+      {
+        "piece_id": "award_piece_5-422c-bdf5-d02666ea8323",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh giải nhất key",
+        "key": "true",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/key-manh-ghep-giai-nhat-06.png"
+      },
+      {
+        "piece_id": "award_piece_0-4cf8-adf7-3ce92462b529",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh dưới trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
+      },
+      {
+        "piece_id": "award_piece_0-4cf8-adf7-3ce92462b529",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh dưới trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
+      },
+      {
+        "piece_id": "award_piece_b-4d81-921e-12665a6611ad",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh giải ba key",
+        "key": "true",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/key-manh-ghep-giai-ba-16.png"
+      },
+      {
+        "piece_id": "award_piece_7-4150-b588-45f5c5263755",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh trên trái giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
+      },
+      {
+        "piece_id": "award_piece_9-4258-ae01-f7013960e203",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới trái đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-03.png"
+      },
+      {
+        "piece_id": "award_piece_e-4e03-88ff-c001605b785b",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh trên phải giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-10.png"
+      },
+      {
+        "piece_id": "award_piece_e-446e-a3d0-bd775893d82e",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh trên phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-02.png"
+      },
+      {
+        "piece_id": "award_piece_e-402a-9afd-7b643824d94d",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-04.png"
+      },
+      {
+        "piece_id": "award_piece_5-4138-a7f4-c6fba7d2baec",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
         "name": "Mảnh dưới phải giải nhì",
         "key": "false",
         "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-12.png"
+      },
+      {
+        "piece_id": "award_piece_5-4138-a7f4-c6fba7d2baec",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh dưới phải giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-12.png"
+      },
+      {
+        "piece_id": "award_piece_d-4af2-a32d-23d359cee7be",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh giải nhì key",
+        "key": "true",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/key-manh-ghep-giai-nhi-11.png"
+      },
+      {
+        "piece_id": "award_piece_9-4258-ae01-f7013960e203",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới trái đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-03.png"
+      },
+      {
+        "piece_id": "award_piece_e-402a-9afd-7b643824d94d",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-04.png"
+      },
+      {
+        "piece_id": "award_piece_9-4258-ae01-f7013960e203",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới trái đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-03.png"
+      },
+      {
+        "piece_id": "award_piece_a-4962-a86c-3efbb0b971bd",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh đặc biệt key",
+        "key": "true",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/key-manh-ghep-giai-db-01.png"
+      },
+      {
+        "piece_id": "award_piece_e-402a-9afd-7b643824d94d",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-04.png"
+      },
+      {
+        "piece_id": "award_piece_1-4247-a6eb-62168da1c38c",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới phải giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
+      },
+      {
+        "piece_id": "award_piece_7-4473-959c-ca718c4699f4",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh trên phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-18.png"
+      },
+      {
+        "piece_id": "award_piece_7-4473-959c-ca718c4699f4",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh trên phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-18.png"
+      },
+      {
+        "piece_id": "award_piece_e-4e03-88ff-c001605b785b",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh trên phải giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-10.png"
+      },
+      {
+        "piece_id": "award_piece_7-4150-b588-45f5c5263755",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh trên trái giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
+      },
+      {
+        "piece_id": "award_piece_e-4e03-88ff-c001605b785b",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh trên phải giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-10.png"
+      },
+      {
+        "piece_id": "award_piece_e-42e4-909d-0e1852a5dff2",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh trên trái giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-05.png"
+      },
+      {
+        "piece_id": "award_piece_7-4473-959c-ca718c4699f4",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh trên phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-18.png"
+      },
+      {
+        "piece_id": "award_piece_3-4759-9346-1b7a43d0e9bb",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh dưới phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-20.png"
+      },
+      {
+        "piece_id": "award_piece_1-4247-a6eb-62168da1c38c",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới phải giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
+      },
+      {
+        "piece_id": "award_piece_7-4473-959c-ca718c4699f4",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh trên phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-18.png"
+      },
+      {
+        "piece_id": "award_piece_7-4150-b588-45f5c5263755",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh trên trái giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
+      },
+      {
+        "piece_id": "award_piece_e-446e-a3d0-bd775893d82e",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh trên phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-02.png"
+      },
+      {
+        "piece_id": "award_piece_7-4473-959c-ca718c4699f4",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh trên phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-18.png"
+      },
+      {
+        "piece_id": "award_piece_7-4473-959c-ca718c4699f4",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh trên phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-18.png"
+      },
+      {
+        "piece_id": "award_piece_e-42e4-909d-0e1852a5dff2",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh trên trái giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-05.png"
+      },
+      {
+        "piece_id": "award_piece_7-4150-b588-45f5c5263755",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh trên trái giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
+      },
+      {
+        "piece_id": "award_piece_e-446e-a3d0-bd775893d82e",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh trên phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-02.png"
+      },
+      {
+        "piece_id": "award_piece_3-4759-9346-1b7a43d0e9bb",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh dưới phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-20.png"
+      },
+      {
+        "piece_id": "award_piece_7-4375-a78c-69a0d1d9f6b1",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới trái giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-07.png"
+      },
+      {
+        "piece_id": "award_piece_7-4473-959c-ca718c4699f4",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh trên phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-18.png"
+      },
+      {
+        "piece_id": "award_piece_1-4247-a6eb-62168da1c38c",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới phải giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
+      },
+      {
+        "piece_id": "award_piece_8-43fd-8916-8df05cc7766b",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh trên phải giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-14.png"
+      },
+      {
+        "piece_id": "award_piece_5-4467-8f76-9a8a23b079be",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh dưới trái giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-19.png"
+      },
+      {
+        "piece_id": "award_piece_1-4247-a6eb-62168da1c38c",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới phải giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
+      },
+      {
+        "piece_id": "award_piece_1-472e-9ec3-82c275557ece",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh trên trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png"
+      },
+      {
+        "piece_id": "award_piece_e-42e4-909d-0e1852a5dff2",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh trên trái giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-05.png"
+      },
+      {
+        "piece_id": "award_piece_1-472e-9ec3-82c275557ece",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh trên trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png"
+      },
+      {
+        "piece_id": "award_piece_0-4cf8-adf7-3ce92462b529",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh dưới trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
+      },
+      {
+        "piece_id": "award_piece_7-4473-959c-ca718c4699f4",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh trên phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-18.png"
+      },
+      {
+        "piece_id": "award_piece_1-4247-a6eb-62168da1c38c",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới phải giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
+      },
+      {
+        "piece_id": "award_piece_1-472e-9ec3-82c275557ece",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh trên trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png"
+      },
+      {
+        "piece_id": "award_piece_8-43fd-8916-8df05cc7766b",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh trên phải giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-14.png"
+      },
+      {
+        "piece_id": "award_piece_9-4258-ae01-f7013960e203",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới trái đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-03.png"
+      },
+      {
+        "piece_id": "award_piece_7-4473-959c-ca718c4699f4",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh trên phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-18.png"
+      },
+      {
+        "piece_id": "award_piece_5-4467-8f76-9a8a23b079be",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh dưới trái giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-19.png"
+      },
+      {
+        "piece_id": "award_piece_1-472e-9ec3-82c275557ece",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh trên trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png"
+      },
+      {
+        "piece_id": "award_piece_1-4247-a6eb-62168da1c38c",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới phải giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
+      },
+      {
+        "piece_id": "award_piece_e-4e03-88ff-c001605b785b",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh trên phải giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-10.png"
+      },
+      {
+        "piece_id": "award_piece_1-4247-a6eb-62168da1c38c",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới phải giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
+      },
+      {
+        "piece_id": "award_piece_e-402a-9afd-7b643824d94d",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-04.png"
+      },
+      {
+        "piece_id": "award_piece_9-4258-ae01-f7013960e203",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới trái đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-03.png"
+      },
+      {
+        "piece_id": "award_piece_1-4247-a6eb-62168da1c38c",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới phải giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
+      },
+      {
+        "piece_id": "award_piece_7-4150-b588-45f5c5263755",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh trên trái giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
+      },
+      {
+        "piece_id": "award_piece_8-43fd-8916-8df05cc7766b",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh trên phải giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-14.png"
+      },
+      {
+        "piece_id": "award_piece_0-4cf8-adf7-3ce92462b529",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh dưới trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
+      },
+      {
+        "piece_id": "award_piece_7-4150-b588-45f5c5263755",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh trên trái giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
+      },
+      {
+        "piece_id": "award_piece_9-4258-ae01-f7013960e203",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới trái đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-03.png"
+      },
+      {
+        "piece_id": "award_piece_7-4150-b588-45f5c5263755",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh trên trái giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-09.png"
+      },
+      {
+        "piece_id": "award_piece_5-4467-8f76-9a8a23b079be",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh dưới trái giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-19.png"
+      },
+      {
+        "piece_id": "award_piece_e-446e-a3d0-bd775893d82e",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh trên phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-02.png"
+      },
+      {
+        "piece_id": "award_piece_1-472e-9ec3-82c275557ece",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh trên trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-13.png"
+      },
+      {
+        "piece_id": "award_piece_1-4247-a6eb-62168da1c38c",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới phải giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-08.png"
+      },
+      {
+        "piece_id": "award_piece_7-4375-a78c-69a0d1d9f6b1",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới trái giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-07.png"
+      },
+      {
+        "piece_id": "award_piece_e-446e-a3d0-bd775893d82e",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh trên phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-02.png"
+      },
+      {
+        "piece_id": "award_piece_7-4375-a78c-69a0d1d9f6b1",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh dưới trái giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-07.png"
+      },
+      {
+        "piece_id": "award_piece_9-4258-ae01-f7013960e203",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới trái đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-03.png"
+      },
+      {
+        "piece_id": "award_piece_5-4138-a7f4-c6fba7d2baec",
+        "award_id": "award_b8-f257-4a1a-b91a-6b1f249f2d66",
+        "name": "Mảnh dưới phải giải nhì",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhi/manh-ghep-giai-nhi-12.png"
+      },
+      {
+        "piece_id": "award_piece_0-4cf8-adf7-3ce92462b529",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh dưới trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
+      },
+      {
+        "piece_id": "award_piece_e-402a-9afd-7b643824d94d",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh dưới phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-04.png"
+      },
+      {
+        "piece_id": "award_piece_0-4cf8-adf7-3ce92462b529",
+        "award_id": "award_22-31e6-4171-9b88-ba98012c09ac",
+        "name": "Mảnh dưới trái giải ba",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_ba/manh-ghep-giai-ba-15.png"
+      },
+      {
+        "piece_id": "award_piece_e-42e4-909d-0e1852a5dff2",
+        "award_id": "award_b3-ec80-45b6-ad71-9275004cae22",
+        "name": "Mảnh trên trái giải nhất",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_nhat/manh-ghep-giai-nhat-05.png"
+      },
+      {
+        "piece_id": "award_piece_e-446e-a3d0-bd775893d82e",
+        "award_id": "award_ac-3e24-41d7-b70b-1965e2aa3ec8",
+        "name": "Mảnh trên phải đặc biệt",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_dac_biet/manh-ghep-giai-db-02.png"
+      },
+      {
+        "piece_id": "award_piece_7-4473-959c-ca718c4699f4",
+        "award_id": "award_8a-05a2-485b-a201-38de16db1b4e",
+        "name": "Mảnh trên phải giải tư",
+        "key": "false",
+        "image": "https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_tu/manh-ghep-giai-tu-18.png"
       }
     ]
   }
