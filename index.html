@@ -504,14 +504,14 @@
 
     .left-tree {
         position: absolute;
-        left:0;
-        top:0;
+        left: 0;
+        bottom: 0;
         z-index: -10;
     }
     .right-tree {
         position: absolute;
-        right:0;
-        top:0;
+        right: 0;
+        bottom: 0;
         z-index: -10;
     }
     .road {
@@ -565,7 +565,7 @@
         position: absolute;
         transform: translateX(-50%);
         left: 50%;
-        bottom: 0;
+        bottom: -64px;
         z-index: -10;
         width: 100vw;
         height: 100px;
@@ -605,7 +605,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        top: 0;
+        top: 24px;
         position: absolute;
     }
 
@@ -21341,7 +21341,7 @@
             const currentPosition = event.touches[0].clientY
             currentTranslate = prevTranslate + currentPosition - startPos
             const movedBy = currentTranslate - prevTranslate
-            if (movedBy < (destination.getBoundingClientRect().top-block.getBoundingClientRect().top-100)) {
+            if (movedBy < (destination.getBoundingClientRect().top-block.getBoundingClientRect().top-200)) {
                 block.style.display = "none";
                 isHitTheBox = true;
                 handleHitTheBox();
