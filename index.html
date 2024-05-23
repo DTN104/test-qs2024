@@ -21013,7 +21013,7 @@
 
     const getListWinner = (eventId) => {
         return axios.post(`${baseUrl}/event/award-winner`,{
-            "limit": 10,
+            "limit": 0,
             "offset": 0,
             "query": {
                 "award_name": [],
@@ -22160,8 +22160,10 @@
                     }],
                     data: formatWinnerList(res)
                 })
+                console.log(formatWinnerList(res))
             }
         )
+
     }
 
     const startRulePage = () => {
