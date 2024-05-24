@@ -20635,6 +20635,7 @@
     let accountTest = "";
     let eventIdTest = "";
     let autoSpin = 0 ;
+    let totalSpin = 0;
     let currentPage = "test"; //"test","home","event","rule"
     let sessionAuthen = "";
     let accountID = "";
@@ -20702,6 +20703,7 @@
             timeout: 30000
         }).then((res) => {
             document.querySelector(".arrow-guide").style.display = "block";
+            totalSpin = Number(res.data.data.spinCount);
             // if(res.data.data.spinCount < 10){
             //     alert("10")
             // }
