@@ -23867,6 +23867,7 @@
         gacha(accountID,eventID,autoSpin,sessionAPI).then(
             (res) => {
                 if(res.result_code === 0 && !!res.data){
+                    getTotalSpin(accountID,eventID,sessionAPI);
                     $("#loadingModal").modal("hide");
                     $("#giftModal").modal("show");
                     setTimeout(openBox, 1000);
@@ -23886,7 +23887,6 @@
                             document.getElementById("total-piece").innerText = res.data.award[0].total_piece;
                             document.getElementById("infoModal").addEventListener('hidden.bs.modal',function () {
                                 resetState();
-                                getTotalSpin(accountID,eventID,sessionAPI)
                             })
                             // $("#infoModal").on('hidden.bs.modal', function () {
                             //     resetState();
@@ -23920,7 +23920,6 @@
                             document.getElementById("img-popup-award").setAttribute("src",res.data.award[0].award_image);
                             $('#awardModal').on('hidden.bs.modal', function (e) {
                                 resetState();
-                                getTotalSpin(accountID,eventID,sessionAPI)
                             })
                         }
                     } else {
@@ -24005,7 +24004,6 @@
                             $('#awardModal').on('hidden.bs.modal', function (e) {
                                 document.getElementById("popup-group-ward__award-list").innerHTML = ``;
                                 resetState();
-                                getTotalSpin(accountID, eventID, sessionAPI)
                             })
                         } else {
                             //handle not receive multi award
@@ -24060,7 +24058,6 @@
                             `;
                             $('#infoModal').on('hidden.bs.modal', function () {
                                 resetState();
-                                getTotalSpin(accountID,eventID,sessionAPI)
                             })
                         }
                     }
