@@ -20702,6 +20702,24 @@
             timeout: 30000
         }).then((res) => {
             document.querySelector(".arrow-guide").style.display = "block";
+            // if(res.data.data.spinCount < 10){
+            //     alert("10")
+            // }
+            // if(res.data.data.spinCount < 100){
+            //     alert("100")
+            // }
+            if(Number(res.data.data.spinCount) === 0){
+                startEnable.style.display = "none";
+                startDisable.style.display = "block";
+                playerSpinCountHome.innerHTML = Math.floor(res.data.data.spinCount).toLocaleString();
+                playerSpinCountEvent.innerHTML = Math.floor(res.data.data.spinCount).toLocaleString();
+            } else {
+                startEnable.style.display = "block";
+                startDisable.style.display = "none";
+                playerSpinCountHome.innerHTML = Math.floor(res.data.data.spinCount).toLocaleString();
+                playerSpinCountEvent.innerHTML = Math.floor(res.data.data.spinCount).toLocaleString();
+                currentPage = "home";
+            }
             return res.data
         }).catch(err => {
             $("#errorModal").modal("show");
@@ -23868,21 +23886,7 @@
                             document.getElementById("total-piece").innerText = res.data.award[0].total_piece;
                             document.getElementById("infoModal").addEventListener('hidden.bs.modal',function () {
                                 resetState();
-                                getTotalSpin(accountID,eventID,sessionAPI).then(
-                                    (res) => {
-                                        if(res.data.spinCount === 0){
-                                            startDisable.style.display = "block";
-                                            startEnable.style.display = "none";
-                                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                        } else {
-                                            startDisable.style.display = "none";
-                                            startEnable.style.display = "block";
-                                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                        }
-                                    }
-                                );
+                                getTotalSpin(accountID,eventID,sessionAPI)
                             })
                             // $("#infoModal").on('hidden.bs.modal', function () {
                             //     resetState();
@@ -23916,21 +23920,7 @@
                             document.getElementById("img-popup-award").setAttribute("src",res.data.award[0].award_image);
                             $('#awardModal').on('hidden.bs.modal', function (e) {
                                 resetState();
-                                getTotalSpin(accountID,eventID,sessionAPI).then(
-                                    (res) => {
-                                        if(res.data.spinCount === 0){
-                                            startDisable.style.display = "block";
-                                            startEnable.style.display = "none";
-                                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                        } else {
-                                            startDisable.style.display = "none";
-                                            startEnable.style.display = "block";
-                                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                        }
-                                    }
-                                );
+                                getTotalSpin(accountID,eventID,sessionAPI)
                             })
                         }
                     } else {
@@ -23943,7 +23933,6 @@
                             document.querySelector(".popup-piece").style.display = "none";
                             document.querySelector(".popup-group").style.display = "flex";
                             let array = formatMultipleSpinResult(res);
-                            console.log(array)
                             const newList = array.map(
                                 item =>
                                     (`<div class="card-popup-piece-list">
@@ -24014,22 +24003,9 @@
                                 `;
                             })
                             $('#awardModal').on('hidden.bs.modal', function (e) {
+                                document.getElementById("popup-group-ward__award-list").innerHTML = ``;
                                 resetState();
-                                getTotalSpin(accountID, eventID, sessionAPI).then(
-                                    (res) => {
-                                        if (res.data.spinCount === 0) {
-                                            startDisable.style.display = "block";
-                                            startEnable.style.display = "none";
-                                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                        } else {
-                                            startDisable.style.display = "none";
-                                            startEnable.style.display = "block";
-                                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                        }
-                                    }
-                                );
+                                getTotalSpin(accountID, eventID, sessionAPI)
                             })
                         } else {
                             //handle not receive multi award
@@ -24039,7 +24015,6 @@
                             document.querySelector(".popup-piece").style.display = "none";
                             document.querySelector(".popup-group").style.display = "flex";
                             let array = formatMultipleSpinResult(res);
-                            console.log(array)
                             const newList = array.map(
                                 item =>
                                     (`<div class="card-popup-piece-list">
@@ -24085,21 +24060,7 @@
                             `;
                             $('#infoModal').on('hidden.bs.modal', function () {
                                 resetState();
-                                getTotalSpin(accountID,eventID,sessionAPI).then(
-                                    (res) => {
-                                        if(res.data.spinCount === 0){
-                                            startDisable.style.display = "block";
-                                            startEnable.style.display = "none";
-                                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                        } else {
-                                            startDisable.style.display = "none";
-                                            startEnable.style.display = "block";
-                                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                        }
-                                    }
-                                );
+                                getTotalSpin(accountID,eventID,sessionAPI)
                             })
                         }
                     }
@@ -24127,21 +24088,7 @@
 
     $("#infoModal").on('hidden.bs.modal', function () {
         resetState();
-        getTotalSpin(accountID,eventID,sessionAPI).then(
-            (res) => {
-                if(res.data.spinCount === 0){
-                    startDisable.style.display = "block";
-                    startEnable.style.display = "none";
-                    playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                    playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                } else {
-                    startDisable.style.display = "none";
-                    startEnable.style.display = "block";
-                    playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                    playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                }
-            }
-        );
+        getTotalSpin(accountID,eventID,sessionAPI)
     });
 
     $('#infoModal').on('shown.bs.modal', function (e) {
@@ -24210,24 +24157,7 @@
         accountTest = inputTestAccId.value;
         eventIdTest = inputTestEventId.value;
         if(accountTest !== "" && eventIdTest !== ""){
-            getTotalSpin(accountID,eventID,sessionAPI).then(
-                (res) => {
-                    if(res.data.spinCount === 0){
-                        startDisable.style.display = "block";
-                        startEnable.style.display = "none";
-                        playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                        playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                    } else {
-                        startDisable.style.display = "none";
-                        startEnable.style.display = "block";
-                        playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                        playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                        document.getElementById("test-page").style.display = "none";
-                        document.getElementById("home-page").style.display = "block";
-                        currentPage = "home";
-                    }
-                }
-            )
+            getTotalSpin(accountID,eventID,sessionAPI)
         }
     }
 
@@ -24259,7 +24189,6 @@
         inventoryPage.style.display = "block";
         getInventory(accountID,eventID,sessionAPI).then(
             (res) => {
-                console.log(res)
                 //set all piece giai kk =0 if can not find
                 if(res.data.awards.every(
                     award => removeAccentsDiacriticsToUpperCase(award.award_name) !== "GIAI KHUYEN KHICH"
@@ -24336,7 +24265,6 @@
                 }
                 res.data.awards.map(
                     (item)=>{
-                        console.log(FormatText(item.award_name))
                         if(removeAccentsDiacriticsToUpperCase(item.award_name) === "GIAI KHUYEN KHICH"){
                             //check if array contains that piece position or not to change UI
                             if (item.pieces.every(piece => piece.piece_position !== "Default")) {
@@ -24655,7 +24583,6 @@
                     }],
                     data: formatWinnerList(res)
                 })
-                console.log(formatWinnerList(res))
             }
         )
 
@@ -24698,22 +24625,7 @@
             (res) => {
                 eventID = res.data.event_id;
                 sessionAPI = res.data.session_id;
-                getTotalSpin(res.data.client_id,res.data.event_id,res.data.session_id).then(
-                    (res) => {
-                        if(Number(res.data.spinCount) === 0){
-                            startEnable.style.display = "none";
-                            startDisable.style.display = "block";
-                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                        } else {
-                            startEnable.style.display = "block";
-                            startDisable.style.display = "none";
-                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            currentPage = "home";
-                        }
-                    }
-                ).catch(err => {
+                getTotalSpin(res.data.client_id,res.data.event_id,res.data.session_id).catch(err => {
                     forceCrashApp();
                 });
             }
