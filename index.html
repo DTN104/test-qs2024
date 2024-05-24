@@ -939,7 +939,7 @@
         width: 100%;
         max-width:280px;
         min-height: 400px;
-        display: flex;
+        display: none;
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
@@ -23854,6 +23854,8 @@
                             }, 2000);
                             document.querySelector(".popup-piece").style.display = "flex";
                             document.querySelector(".popup-group").style.display = "none";
+                            document.querySelector(".popup-award").style.display = "none";
+                            document.querySelector(".popup-group-award").style.display = "none";
                             document.getElementById("popup-piece-prize").innerHTML = "Mảnh ghép <br/>"+res.data.award[0].award_info;
                             document.getElementById("popup-piece-count").innerHTML = "Thu thập đủ "+res.data.award[0].total_piece+" mảnh ghép để<br/>"+"nhận thưởng từ nay đến "+res.data.event_end_date;
                             document.getElementById("popup-piece-image").setAttribute("src",res.data.piece[0].image);
@@ -24168,9 +24170,10 @@
         destination.style.display = "block";
         document.getElementById('boxContainer').classList.remove('shake');
         document.getElementById('boxContainer').classList.remove('zoomIn');
-        document.querySelector(".popup-piece").style.display = "flex";
-        document.querySelector(".popup-group").style.display = "flex";
-        document.querySelector(".popup-award").style.display = "flex";
+        document.querySelector(".popup-piece").style.display = "none";
+        document.querySelector(".popup-group").style.display = "none";
+        document.querySelector(".popup-award").style.display = "none";
+        document.querySelector(".popup-group-award").style.display = "none";
         document.querySelector(".btn-back").style.display = "block";
         document.querySelector(".arrow-guide").style.display = "block"
         setPositionByIndex();
