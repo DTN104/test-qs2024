@@ -23409,7 +23409,7 @@
         return res.data.data.map(
             (item,index) => ({
                 "id": index+1,
-                "client_name": "<span style='font-weight: 500'>" + item.client_name + "</span>" + "\n" + item.client_id,
+                "client_name": "<span style='font-weight: 500;text-transform: capitalize;'>" + item.client_name + "</span>" + "\n" + item.client_id,
                 "award_name": item.award_name,
                 "won_date":item.won_date
             })
