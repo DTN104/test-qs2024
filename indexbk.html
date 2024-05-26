@@ -18066,7 +18066,7 @@
             </div>
         </div>
     </div>
-    <div class="modal modalInfo" id="awardModalSingle" tabindex="-1" aria-labelledby="awardModalSingleLabel" aria-hidden="true"
+    <div class="modal modalInfo" id="awardModal" tabindex="-1" aria-labelledby="awardModalLabel" aria-hidden="true"
          data-bs-theme="light" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="background: transparent;border:none">
@@ -18165,13 +18165,6 @@
                         </svg>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal modalInfo" id="awardModalMulti" tabindex="-1" aria-labelledby="awardModalMultiLabel" aria-hidden="true"
-         data-bs-theme="light" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: transparent;border:none">
                 <div class="popup-group-award">
                     <div class="popup-bg">
                         <div class="award-decor-bg">
@@ -23905,15 +23898,16 @@
                         } else {
                             //receive 1 award
                             setTimeout(()=> {
-                                $("#awardModalSingle").modal("show")
+                                $("#awardModal").modal("show")
                             }, 2000);
                             document.querySelector(".popup-piece").style.display = "none";
                             document.querySelector(".popup-group").style.display = "none";
                             document.querySelector(".popup-award").style.display = "flex";
+                            document.querySelector(".popup-group-award").style.display = "none";
                             document.getElementById("popup-award-name").innerHTML = res.data.award[0].award_name;
                             document.getElementById("popup-award-info").innerHTML = res.data.award[0].award_info;
                             document.getElementById("img-popup-award").setAttribute("src",res.data.award[0].award_image);
-                            $('#awardModalSingle').on('hidden.bs.modal', function (e) {
+                            $('#awardModal').on('hidden.bs.modal', function (e) {
                                 resetState();
                                 getTotalSpin(accountID,eventID,sessionAPI).then(
                                     (res) => {
@@ -23988,39 +23982,13 @@
                             $('#infoModal').on('hidden.bs.modal', function (e) {
                                 document.querySelector(".popup-piece").style.display = "none";
                                 document.querySelector(".popup-group").style.display = "none";
+                                $("#awardModal").modal("show");
+                                document.querySelector(".popup-award").style.display = "none";
+                                document.querySelector(".popup-group-award").style.display = "flex";
                                 let awardArr = GetAwardData(res);
-                                console.log(awardArr)
-                                if(awardArr.length === 1){
-                                    //trung 1 giai
-                                    $("#awardModalSingle").modal("show");
-                                    document.querySelector(".popup-award").style.display = "flex";
-                                    document.getElementById("popup-award-name").innerHTML = res.data.award[0].award_name;
-                                    document.getElementById("popup-award-info").innerHTML = res.data.award[0].award_info;
-                                    document.getElementById("img-popup-award").setAttribute("src",res.data.award[0].award_image);
-                                    $('#awardModalSingle').on('hidden.bs.modal', function (e) {
-                                        resetState();
-                                        getTotalSpin(accountID,eventID,sessionAPI).then(
-                                            (res) => {
-                                                if(res.data.spinCount === 0){
-                                                    startDisable.style.display = "block";
-                                                    startEnable.style.display = "none";
-                                                    playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                                    playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                                } else {
-                                                    startDisable.style.display = "none";
-                                                    startEnable.style.display = "block";
-                                                    playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                                    playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                                }
-                                            }
-                                        );
-                                    })
-                                } else {
-                                    //trung nhieu giai
-                                    $("#awardModalMulti").modal("show");
-                                    const awardList = awardArr.map(
-                                        item =>
-                                            (`
+                                const awardList = awardArr.map(
+                                    item =>
+                                        (`
                                     <div class="card-popup-award-list">
                                         <div class="card-popup-award-list__award-img">
                                             <img
@@ -24030,31 +23998,30 @@
                                         <div class="card-popup-award-list__award-title">${item.award_name}</div>
                                         <div class="card-popup-award-list__award-info">${item.award_info}</div>
                                     </div>`)
-                                    )
-                                    document.getElementById("popup-group-ward__award-list").innerHTML = `
-                                        <div class="popup-group-award__card-popup-award-list-holder">
-                                            ${awardList.join().replaceAll(",","")}
-                                        </div>
-                                    `;
-                                    $('#awardModalMulti').on('hidden.bs.modal', function (e) {
-                                        resetState();
-                                        getTotalSpin(accountID, eventID, sessionAPI).then(
-                                            (res) => {
-                                                if (res.data.spinCount === 0) {
-                                                    startDisable.style.display = "block";
-                                                    startEnable.style.display = "none";
-                                                    playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                                    playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                                } else {
-                                                    startDisable.style.display = "none";
-                                                    startEnable.style.display = "block";
-                                                    playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                                    playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                                                }
-                                            }
-                                        );
-                                    })
-                                }
+                                )
+                                document.getElementById("popup-group-ward__award-list").innerHTML = `
+                                <div class="popup-group-award__card-popup-award-list-holder">
+                                    ${awardList.join().replaceAll(",","")}
+                                </div>
+                                `;
+                            })
+                            $('#awardModal').on('hidden.bs.modal', function (e) {
+                                resetState();
+                                getTotalSpin(accountID, eventID, sessionAPI).then(
+                                    (res) => {
+                                        if (res.data.spinCount === 0) {
+                                            startDisable.style.display = "block";
+                                            startEnable.style.display = "none";
+                                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+                                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+                                        } else {
+                                            startDisable.style.display = "none";
+                                            startEnable.style.display = "block";
+                                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+                                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+                                        }
+                                    }
+                                );
                             })
                         } else {
                             //handle not receive multi award
