@@ -23927,7 +23927,6 @@
     })
 
     $("#infoModal").on('hidden.bs.modal', function () {
-        resetState();
         if(receiveMulti && !receiveSingle){
             handleReceiveAwardMulti(responseGacha)
         }
@@ -23935,6 +23934,7 @@
             handleReceiveAwardSingle(responseGacha)
         }
         if(!receiveMulti && !receiveSingle){
+            resetState();
             getTotalSpin(accountID,eventID,sessionAPI).then(
                 (res) => {
                     if(res.data.spinCount === 0){
