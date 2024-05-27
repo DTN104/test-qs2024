@@ -24788,13 +24788,13 @@
         // You can get url_string from window.location.href if you want to work with
         // the URL of the current page
         //https://dtn104.github.io/test-qs2024?sessionID=UAT2QSTT2024&accountID=006C101072
-        // var req = new XMLHttpRequest();
-        // req.open('GET', document.location, true);
-        // req.send(null);
-        // req.onload = function() {
-        //     var headers = req.getAllResponseHeaders().toLowerCase();
-        //     console.log(headers);
-        // };
+        var req = new XMLHttpRequest();
+        req.open('GET', document.location, true);
+        req.send(null);
+        req.onload = function() {
+            var headers = req.getAllResponseHeaders().toLowerCase();
+            console.log(headers);
+        };
         var url = new URL(window.location.href);
         sessionAuthen = url.searchParams.get("sessionID");
         accountID = url.searchParams.get("accountID");
