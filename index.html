@@ -23926,6 +23926,33 @@
         block.style.display = `none`
     })
 
+    $("#infoModal").on('hidden.bs.modal', function () {
+        resetState();
+        if(receiveMulti && !receiveSingle){
+            handleReceiveAwardMulti(responseGacha)
+        }
+        if(!receiveMulti && receiveSingle){
+            handleReceiveAwardSingle(responseGacha)
+        }
+        if(!receiveMulti && !receiveSingle){
+            getTotalSpin(accountID,eventID,sessionAPI).then(
+                (res) => {
+                    if(res.data.spinCount === 0){
+                        startDisable.style.display = "block";
+                        startEnable.style.display = "none";
+                        playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+                        playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+                    } else {
+                        startDisable.style.display = "none";
+                        startEnable.style.display = "block";
+                        playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+                        playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+                    }
+                }
+            );
+        }
+    });
+
     function handleHitTheBox (){
         $("#loadingModal").modal("show");
         document.querySelector(".arrow-guide").style.display = "none"
@@ -24235,35 +24262,6 @@
 
     }
 
-    $("#infoModal").on('hidden.bs.modal', function () {
-        resetState();
-        if(receiveMulti && !receiveSingle){
-            alert("receive multi")
-            handleReceiveAwardMulti(responseGacha)
-        }
-        if(!receiveMulti && receiveSingle){
-            alert("receive single")
-            handleReceiveAwardSingle(responseGacha)
-        }
-        if(!receiveMulti && !receiveSingle){
-            alert("not receive")
-            getTotalSpin(accountID,eventID,sessionAPI).then(
-                (res) => {
-                    if(res.data.spinCount === 0){
-                        startDisable.style.display = "block";
-                        startEnable.style.display = "none";
-                        playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                        playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                    } else {
-                        startDisable.style.display = "none";
-                        startEnable.style.display = "block";
-                        playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                        playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                    }
-                }
-            );
-        }
-    });
     const handleStart = () => {
         homePage.style.display = "none";
         eventPage.style.display = "block";
