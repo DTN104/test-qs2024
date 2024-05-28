@@ -449,6 +449,7 @@
         -ms-transform: translateX(-80%);
         transform: translateX(-80%);
         -webkit-backface-visibility: hidden;
+        will-change: transform;
     }
 
     @keyframes cloud1{
@@ -471,6 +472,7 @@
         -ms-transform: translateX(-80%);
         transform: translateX(-80%);
         -webkit-backface-visibility: hidden;
+        will-change: transform;
     }
 
     @keyframes cloud2{
@@ -493,6 +495,7 @@
         -ms-transform: translateX(-80%);
         transform: translateX(-80%);
         -webkit-backface-visibility: hidden;
+        will-change: transform;
     }
 
     @keyframes cloud3{
@@ -528,6 +531,8 @@
         background: linear-gradient(0deg, rgb(88 89 91) 0%, rgb(88 89 91) 40%, rgb(65 65 67) 40%, rgb(65 65 67) 100%);
         background-size: 70px 100px;
         animation-direction: reverse;
+        will-change: transform;
+        backface-visibility: hidden;
     }
 
     .animation-line-event{
@@ -540,6 +545,8 @@
         /*animation: animate-line-event 2s linear infinite;*/
         animation-direction: reverse;
         z-index: -9;
+        backface-visibility: hidden;
+        will-change: transform;
     }
 
     @keyframes animate-line-event {
@@ -1609,17 +1616,25 @@
         position: absolute;
         top: 0;
         left: 0;
-        -webkit-animation: carshake 0.2s ease-in-out infinite alternate;
         animation: carshake 0.2s ease-in-out infinite alternate;
+        -webkit-animation: carshake 0.2s ease-in-out infinite alternate;
+        -moz-animation: carshake 0.2s ease-in-out infinite alternate;
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     .car__line {
         position: absolute;
         transform-origin: center right;
         stroke-dasharray: 22;
-        -webkit-animation: line 0.8s ease-in-out infinite;
+        -webkit-animation: smokeline 0.8s ease-in-out infinite;
         animation: smokeline 0.8s ease-in-out infinite;
+        -moz-animation: smokeline 0.8s ease-in-out infinite;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     .car__line--top {
         position: absolute;
@@ -1628,6 +1643,9 @@
         -webkit-animation-delay: 0s;
         animation-delay: 0s;
         stroke: black;
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     .car__line--middle {
         position: absolute;
@@ -1636,6 +1654,9 @@
         animation-delay: 0.2s;
         left: -57px;
         stroke: black;
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     .car__line--bottom {
         position: absolute;
@@ -1644,6 +1665,9 @@
         -webkit-animation-delay: 0.4s;
         animation-delay: 0.4s;
         stroke: black;
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     .car__wheel--left {
         position: absolute;
@@ -1651,6 +1675,11 @@
         left: 0;
         z-index: 2;
         animation: wheelrotate 0.8s ease-in-out infinite;
+        -webkit-animation: wheelrotate 0.8s ease-in-out infinite;
+        -moz-animation: wheelrotate 0.8s ease-in-out infinite;
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     .car__wheel--right{
         position: absolute;
@@ -1658,6 +1687,11 @@
         right: 36px;
         z-index: 2;
         animation: wheelrotate 0.8s ease-in-out infinite;
+        -webkit-animation: wheelrotate 0.8s ease-in-out infinite;
+        -moz-animation: wheelrotate 0.8s ease-in-out infinite;
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     .loader__text {
         width:100%;
