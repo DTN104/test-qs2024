@@ -20350,7 +20350,6 @@
         </svg>
         <div class="winner-content">
             <table id="winner-table">
-
             </table>
         </div>
     </div>
@@ -25034,6 +25033,33 @@
         console.log(sessionAPI)
         console.log(accountID)
         console.log(eventID)
+        $('#winner-table').bootstrapTable({
+            smartDisplay:false,
+            pagination: true,
+            alwaysShowAllButtons: true,
+            paginationLoop:false,
+            pageSize: 12,
+            formatNoMatches: function () {
+                return "Không có dữ liệu"
+            },
+            paginationParts:[
+                'pageList'
+            ],
+            columns: [{
+                field: 'id',
+                title: 'STT'
+            }, {
+                field: 'client_name',
+                title: 'Khách hàng'
+            }, {
+                field: 'award_name',
+                title: 'Giải thưởng'
+            },{
+                field: 'won_date',
+                title: 'Thời gian trúng'
+            }],
+            data: []
+        })
         getTotalSpin(accountID,eventID,sessionAPI).then(
             (res) => {
                 if(Number(res.data.spinCount) === 0){
@@ -25048,33 +25074,6 @@
                     playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
                     currentPage = "home";
                 }
-                $('#winner-table').bootstrapTable({
-                    smartDisplay:false,
-                    pagination: true,
-                    alwaysShowAllButtons: true,
-                    paginationLoop:false,
-                    pageSize: 12,
-                    formatNoMatches: function () {
-                        return "Không có dữ liệu"
-                    },
-                    paginationParts:[
-                        'pageList'
-                    ],
-                    columns: [{
-                        field: 'id',
-                        title: 'STT'
-                    }, {
-                        field: 'client_name',
-                        title: 'Khách hàng'
-                    }, {
-                        field: 'award_name',
-                        title: 'Giải thưởng'
-                    },{
-                        field: 'won_date',
-                        title: 'Thời gian trúng'
-                    }],
-                    data: winnerTable
-                })
             }
         )
         if(currentPage === "home"){
