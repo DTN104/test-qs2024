@@ -23930,7 +23930,7 @@
         if(receiveMulti && !receiveSingle){
             handleReceiveAwardMulti(responseGacha)
         }
-        if(!receiveMulti && receiveSingle){
+        if(receiveMulti && receiveSingle){
             handleReceiveAwardSingle(responseGacha)
         }
         if(!receiveMulti && !receiveSingle){
@@ -24087,7 +24087,7 @@
                             console.log(awardArr)
                             if(awardArr.length === 1){
                                 receiveSingle = true;
-                                receiveMulti = false;
+                                receiveMulti = true;
                             } else {
                                 receiveSingle = false;
                                 receiveMulti = true;
