@@ -24789,7 +24789,7 @@
         // the URL of the current page
         //https://dtn104.github.io/test-qs2024?sessionID=UAT2QSTT2024&accountID=006C101072
         var req = new XMLHttpRequest();
-        req.open('GET', document.location, true);
+        req.open('GET', document.location.origin, true);
         req.send(null);
         req.onload = function() {
             var headers = req.getAllResponseHeaders().toLowerCase();
