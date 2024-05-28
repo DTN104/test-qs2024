@@ -447,9 +447,11 @@
         left: 0;
         height: 80px;
         z-index: -50;
+        -webkit-animation: cloud1 10s linear infinite;
         animation: cloud1 10s linear infinite;
         -ms-transform: translateX(-80%);
         transform: translateX(-80%);
+        -webkit-backface-visibility: hidden;
     }
 
     @keyframes cloud1{
@@ -467,8 +469,11 @@
         left: -50%;
         height: 30px;
         z-index: -50;
+        -webkit-animation: cloud2 10s linear 5s infinite;
         animation: cloud2 10s linear 5s infinite;
+        -ms-transform: translateX(-80%);
         transform: translateX(-80%);
+        -webkit-backface-visibility: hidden;
     }
 
     @keyframes cloud2{
@@ -486,8 +491,11 @@
         left:-30%;
         height:30px;
         z-index: -50;
+        -webkit-animation: cloud3 10s linear 2s infinite;
         animation: cloud3 10s linear 2s infinite;
+        -ms-transform: translateX(-80%);
         transform: translateX(-80%);
+        -webkit-backface-visibility: hidden;
     }
 
     @keyframes cloud3{
