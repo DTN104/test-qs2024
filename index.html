@@ -170,7 +170,7 @@
 
     .animation-road-home {
         width: 100%;
-        height: 140%;
+        height: 130%;
         position: absolute;
         bottom: 0;
         opacity: 1;
@@ -20636,6 +20636,7 @@
     let receiveMulti = false;
     let receiveSingle = false;
     let responseGacha = "";
+    let winnerTable = ""
     const inputTestAccId = document.getElementById("input-test-acc-id");
     const inputTestEventId = document.getElementById("input-test-event-id");
     const inputSpinDate = document.getElementById("input-spin-date");
@@ -24726,36 +24727,9 @@
         inventoryPage.style.display = "none";
         getListWinner(eventID).then(
             (res) => {
-                $('#winner-table').bootstrapTable({
-                    smartDisplay:false,
-                    pagination: true,
-                    alwaysShowAllButtons: true,
-                    paginationLoop:false,
-                    pageSize: 12,
-                    formatNoMatches: function () {
-                        return "Không có dữ liệu"
-                    },
-                    paginationParts:[
-                        'pageList'
-                    ],
-                    columns: [{
-                        field: 'id',
-                        title: 'STT'
-                    }, {
-                        field: 'client_name',
-                        title: 'Khách hàng'
-                    }, {
-                        field: 'award_name',
-                        title: 'Giải thưởng'
-                    },{
-                        field: 'won_date',
-                        title: 'Thời gian trúng'
-                    }],
-                    data: formatWinnerList(res)
-                })
+                winnerTable = formatWinnerList(res);
             }
         )
-
     }
 
     const startRulePage = () => {
@@ -24789,32 +24763,57 @@
         // the URL of the current page
         //https://dtn104.github.io/test-qs2024?sessionID=UAT2QSTT2024&accountID=006C101072
         var url = new URL(window.location.href);
-        sessionAuthen = url.searchParams.get("sessionID");
+        sessionAPI = url.searchParams.get("sessionID");
         accountID = url.searchParams.get("accountID");
-        authen(sessionAuthen,accountID).then(
+        eventID = url.searchParams.get("eventID");
+        console.log(sessionAPI)
+        console.log(accountID)
+        console.log(eventID)
+        getTotalSpin(eventID,eventID,sessionAPI).then(
             (res) => {
-                eventID = res.data.event_id;
-                sessionAPI = res.data.session_id;
-                getTotalSpin(res.data.client_id,res.data.event_id,res.data.session_id).then(
-                    (res) => {
-                        if(Number(res.data.spinCount) === 0){
-                            startEnable.style.display = "none";
-                            startDisable.style.display = "block";
-                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                        } else {
-                            startEnable.style.display = "block";
-                            startDisable.style.display = "none";
-                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            currentPage = "home";
-                        }
-                    }
-                ).catch(err => {
-                    forceCrashApp();
-                });
+                if(Number(res.data.spinCount) === 0){
+                    startEnable.style.display = "none";
+                    startDisable.style.display = "block";
+                    playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+                    playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+                } else {
+                    startEnable.style.display = "block";
+                    startDisable.style.display = "none";
+                    playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+                    playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+                    currentPage = "home";
+                }
+                $('#winner-table').bootstrapTable({
+                    smartDisplay:false,
+                    pagination: true,
+                    alwaysShowAllButtons: true,
+                    paginationLoop:false,
+                    pageSize: 12,
+                    formatNoMatches: function () {
+                        return "Không có dữ liệu"
+                    },
+                    paginationParts:[
+                        'pageList'
+                    ],
+                    columns: [{
+                        field: 'id',
+                        title: 'STT'
+                    }, {
+                        field: 'client_name',
+                        title: 'Khách hàng'
+                    }, {
+                        field: 'award_name',
+                        title: 'Giải thưởng'
+                    },{
+                        field: 'won_date',
+                        title: 'Thời gian trúng'
+                    }],
+                    data: winnerTable
+                })
             }
-        )
+        ).catch(err => {
+            forceCrashApp();
+        });
         if(currentPage === "home"){
             canStartEvent();
         }
