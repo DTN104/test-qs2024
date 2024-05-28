@@ -795,7 +795,7 @@
         font-weight: 700;
     }
     /***************Popup piece*******************/
-    .popup-piece,.popup-award,.popup-group-award {
+    .popup-piece,.popup-award,.popup-group-award,.popup-error {
         width: 100%;
         max-width:280px;
         min-height: 400px;
@@ -808,7 +808,7 @@
         padding: 24px;
     }
 
-    .popup-award {
+    .popup-award,.popup-error {
         justify-content: flex-start;
         gap:12px;
     }
@@ -7615,7 +7615,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="background: transparent;border:none">
             <div class="modal-body">
-                <div class="popup-award" style="padding: 48px 24px;justify-content:flex-start;gap:24px">
+                <div class="popup-error" style="padding: 48px 24px;justify-content:flex-start;gap:24px">
                     <div class="popup-bg">
                         <svg width="279" height="398" viewBox="0 0 279 398" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M259 388H20V398H259V388Z" fill="black"/>
@@ -9171,9 +9171,9 @@
         destination.style.display = "block";
         document.getElementById('boxContainer').classList.remove('shake');
         document.getElementById('boxContainer').classList.remove('zoomIn');
-        document.querySelector(".popup-piece").style.display = "flex";
-        document.querySelector(".popup-group").style.display = "flex";
-        document.querySelector(".popup-award").style.display = "flex";
+        document.querySelector(".popup-piece").style.display = "none";
+        document.querySelector(".popup-group").style.display = "none";
+        document.querySelector(".popup-award").style.display = "none";
         document.querySelector(".btn-back").style.display = "block";
         document.querySelector(".arrow-guide").style.display = "block";
         setPositionByIndex();
