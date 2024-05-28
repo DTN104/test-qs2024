@@ -111,19 +111,6 @@
         user-select: none;
     }
 
-    #test-page {
-        /*display:flex;*/
-        display:none;
-        width: 100%;
-        max-width: 420px;
-        height: 100%;
-        position: relative;
-        background: black;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
     #event-page {
         display: none;
         width: 100%;
@@ -374,9 +361,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        z-index: 0;
         height:50%;
-        touch-action: none;
     }
 
     .test-area {
@@ -1764,21 +1749,6 @@
     }
 </style>
 <body>
-<section id="test-page" class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="test-area">
-                <div>NHẬP EVENT ID</div>
-                <input placeholder="Nhập event id" id="input-test-event-id" type="text"/>
-                <div>NHẬP STK </div>
-                <input placeholder="Nhập stk" id="input-test-acc-id" type="text"/>
-                <div>NGÀY TRÚNG GIẢI</div>
-                <input placeholder="VD: 29/04/2024" id="input-spin-date" type="text"/>
-                <button style="width:200px;height:36px" onclick="startTest()">START TEST</button>
-            </div>
-        </div>
-    </div>
-</section>
 <section id="home-page" class="container">
     <div class="top-combo">
         <img class="sky-bg" src="https://drive.google.com/thumbnail?id=1QORR-pfEc4R7SIHptBVH6tL5ZBYuwbHz" alt="" width="100%"/>
@@ -1809,8 +1779,8 @@
         </div>
     </div>
     <div class="bottom-combo">
-<!--        <div class="animation-road-home"></div>-->
-<!--        <div class="animation-line"></div>-->
+        <div class="animation-road-home"></div>
+        <div class="animation-line"></div>
         <div class="finish-line-home">
             <svg shape-rendering="crispEdges" width="222" height="25" viewBox="0 0 222 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.6201 1.19496L24.0301 1.18497L21.0501 4.44496H18.5801L21.6201 1.19496Z" fill="white"/>
@@ -20568,40 +20538,40 @@
         </div>
     </div>
 </section>
-<div class="modal modalInfo" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true"
-     data-bs-theme="light" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content" style="background: transparent;border:none">
-            <div class="modal-body">
-                <div class="popup-award" style="padding: 48px 24px;justify-content:flex-start;gap:24px">
-                    <div class="popup-bg">
-                        <svg width="279" height="398" viewBox="0 0 279 398" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M259 388H20V398H259V388Z" fill="black"/>
-                            <path d="M268.91 378.46H258.95V388.42H268.91V378.46Z" fill="black"/>
-                            <path d="M259 369H20V388H259V369Z" fill="#CDDB46"/>
-                            <path d="M259 10H20V30H259V10Z" fill="#CDDB46"/>
-                            <path d="M269 20H10V378H269V20Z" fill="#CDDB46"/>
-                            <path d="M19.92 378.46H9.95996V388.42H19.92V378.46Z" fill="black"/>
-                            <path d="M279 20H269V378H279V20Z" fill="black"/>
-                            <path d="M10 20H0V378H10V20Z" fill="black"/>
-                            <path d="M268.91 9.96002H258.95V19.92H268.91V9.96002Z" fill="black"/>
-                            <path d="M19.92 9.96002H9.95996V19.92H19.92V9.96002Z" fill="black"/>
-                            <path d="M259 0H20V10H259V0Z" fill="black"/>
-                        </svg>
-                    </div>
-                    <button type="button" class="btn-close--popup" data-bs-dismiss="modal"
-                            aria-label="Close">
-                        X
-                    </button>
-                    <div id="popup-error-image">
-                    </div>
-                    <div id="popup-error-title"></div>
-                    <div id="popup-error-content"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="modal modalInfo" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true"-->
+<!--     data-bs-theme="light" data-bs-backdrop="static" data-bs-keyboard="false">-->
+<!--    <div class="modal-dialog" role="document">-->
+<!--        <div class="modal-content" style="background: transparent;border:none">-->
+<!--            <div class="modal-body">-->
+<!--                <div class="popup-award" style="padding: 48px 24px;justify-content:flex-start;gap:24px">-->
+<!--                    <div class="popup-bg">-->
+<!--                        <svg width="279" height="398" viewBox="0 0 279 398" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <path d="M259 388H20V398H259V388Z" fill="black"/>-->
+<!--                            <path d="M268.91 378.46H258.95V388.42H268.91V378.46Z" fill="black"/>-->
+<!--                            <path d="M259 369H20V388H259V369Z" fill="#CDDB46"/>-->
+<!--                            <path d="M259 10H20V30H259V10Z" fill="#CDDB46"/>-->
+<!--                            <path d="M269 20H10V378H269V20Z" fill="#CDDB46"/>-->
+<!--                            <path d="M19.92 378.46H9.95996V388.42H19.92V378.46Z" fill="black"/>-->
+<!--                            <path d="M279 20H269V378H279V20Z" fill="black"/>-->
+<!--                            <path d="M10 20H0V378H10V20Z" fill="black"/>-->
+<!--                            <path d="M268.91 9.96002H258.95V19.92H268.91V9.96002Z" fill="black"/>-->
+<!--                            <path d="M19.92 9.96002H9.95996V19.92H19.92V9.96002Z" fill="black"/>-->
+<!--                            <path d="M259 0H20V10H259V0Z" fill="black"/>-->
+<!--                        </svg>-->
+<!--                    </div>-->
+<!--                    <button type="button" class="btn-close&#45;&#45;popup" data-bs-dismiss="modal"-->
+<!--                            aria-label="Close">-->
+<!--                        X-->
+<!--                    </button>-->
+<!--                    <div id="popup-error-image">-->
+<!--                    </div>-->
+<!--                    <div id="popup-error-title"></div>-->
+<!--                    <div id="popup-error-content"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <div class="modal modalInfo" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true"
      data-bs-theme="light" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog" role="document">
@@ -24605,7 +24575,6 @@
                         startEnable.style.display = "block";
                         playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
                         playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                        document.getElementById("test-page").style.display = "none";
                         document.getElementById("home-page").style.display = "block";
                         currentPage = "home";
                     }
@@ -25017,7 +24986,6 @@
     const startRulePage = () => {
         $("#infoModal").modal("hide");
         resetState();
-        document.getElementById("test-page").style.display = "none";
         document.getElementById("home-page").style.display = "none";
         document.getElementById("event-page").style.display = "none";
         document.getElementById("rule-page").style.display = "block";
