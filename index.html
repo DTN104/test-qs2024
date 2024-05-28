@@ -20680,7 +20680,15 @@
             },
             timeout: 30000
         }).then((res) => {
-            return res.data
+            if(res.data.result_code === 0){
+                return res.data
+            }else{
+                $("#errorModal").modal("show");
+                formatErrorContent(res.data.result_code);
+                $('#errorModal').on('hidden.bs.modal', function (e) {
+                    formatErrorAction(res.data.result_code);
+                })
+            }
         }).catch(err => {
             $("#errorModal").modal("show");
             formatErrorContent(err.response.status);
@@ -20697,8 +20705,17 @@
             },
             timeout: 30000
         }).then((res) => {
+            console.log(res)
             document.querySelector(".arrow-guide").style.display = "block";
-            return res.data
+            if(res.data.result_code === 0){
+                return res.data
+            }else{
+                $("#errorModal").modal("show");
+                formatErrorContent(res.data.result_code);
+                $('#errorModal').on('hidden.bs.modal', function (e) {
+                    formatErrorAction(res.data.result_code);
+                })
+            }
         }).catch(err => {
             $("#errorModal").modal("show");
             formatErrorContent(err.response.status);
@@ -20716,7 +20733,15 @@
             },
             timeout: 30000
         }).then((res) => {
-            return res.data
+            if(res.data.result_code === 0){
+                return res.data
+            }else{
+                $("#errorModal").modal("show");
+                formatErrorContent(res.data.result_code);
+                $('#errorModal').on('hidden.bs.modal', function (e) {
+                    formatErrorAction(res.data.result_code);
+                })
+            }
         }).catch(err => {
             $("#loadingModal").modal("hide");
             $("#errorModal").modal("show");
@@ -20735,7 +20760,15 @@
             },
             timeout: 30000
         }).then((res) => {
-            return res.data
+            if(res.data.result_code === 0){
+                return res.data
+            }else{
+                $("#errorModal").modal("show");
+                formatErrorContent(res.data.result_code);
+                $('#errorModal').on('hidden.bs.modal', function (e) {
+                    formatErrorAction(res.data.result_code);
+                })
+            }
         }).catch(err => {
             $("#errorModal").modal("show");
             formatErrorContent(err.response.status);
@@ -20763,7 +20796,15 @@
             },
             timeout: 30000,
         }).then((res) => {
-            return res.data
+            if(res.data.result_code === 0){
+                return res.data
+            }else{
+                $("#errorModal").modal("show");
+                formatErrorContent(res.data.result_code);
+                $('#errorModal').on('hidden.bs.modal', function (e) {
+                    formatErrorAction(res.data.result_code);
+                })
+            }
         }).catch(err => {
             $("#errorModal").modal("show");
             formatErrorContent(err.response.status);
@@ -24811,9 +24852,7 @@
                     data: winnerTable
                 })
             }
-        ).catch(err => {
-            forceCrashApp();
-        });
+        )
         if(currentPage === "home"){
             canStartEvent();
         }
