@@ -9192,37 +9192,13 @@
         }
     }
 
-    const accInputHandler = function(e) {
-        accountTest = e.target.value;
+    function preventCopy(event) {
+        event.preventDefault();
     }
 
-    const eventInputHandler = function(e) {
-        eventIdTest = e.target.value;
-    }
+    homePage.addEventListener("touchstart",   preventCopy, false); // simple touch events
+    homePage.addEventListener("gesturestart", preventCopy, false); // events with more than one finger
 
-    const startTest = () => {
-        accountTest = inputTestAccId.value;
-        eventIdTest = inputTestEventId.value;
-        if(accountTest !== "" && eventIdTest !== ""){
-            getTotalSpin(accountID,eventID,sessionAPI).then(
-                (res) => {
-                    if(res.data.spinCount === 0){
-                        startDisable.style.display = "block";
-                        startEnable.style.display = "none";
-                        playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                        playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                    } else {
-                        startDisable.style.display = "none";
-                        startEnable.style.display = "block";
-                        playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                        playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                        document.getElementById("home-page").style.display = "block";
-                        currentPage = "home";
-                    }
-                }
-            )
-        }
-    }
 
     const openInventory = () => {
         startRulePage();
