@@ -9192,13 +9192,6 @@
         }
     }
 
-    function preventCopy(event) {
-        event.preventDefault();
-    }
-
-    homePage.addEventListener("touchstart",   preventCopy, false); // simple touch events
-    homePage.addEventListener("gesturestart", preventCopy, false); // events with more than one finger
-
 
     const openInventory = () => {
         startRulePage();
