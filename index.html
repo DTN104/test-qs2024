@@ -132,16 +132,6 @@
         overflow: hidden;
     }
 
-    #rule-page {
-        display: none;
-        width: 100%;
-        max-width: 420px;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        padding-top:12px;
-    }
-
     #inventory-page {
         display: none;
         width: 100%;
@@ -678,6 +668,117 @@
         font-size: 12px;
     }
 
+    /*****************************Rule page*******************************/
+    #rule-page {
+        display: none;
+        width: 100%;
+        max-width: 420px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        padding-top:12px;
+    }
+    .rule-content{
+        font-family: "Inter", sans-serif;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 36px;
+        width: 95%;
+        height: 100%;
+        max-height: 90%;
+        overflow: scroll;
+    }
+    .bg-rule {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    .rule-content__sub-title {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        color: #2E3187;
+    }
+
+    .rule-content__wrap-row{
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 8px;
+        text-align: left;
+        color: #2E3187;
+    }
+
+    .rule-content__sub-title__table {
+        max-width: 282px;
+        overflow-x: scroll;
+    }
+
+    #award-table-price, #condition-table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    #award-table-price tr:first-child, #condition-table tr:first-child {
+        background: #1E458D;
+        color: white;
+    }
+
+    #award-table-price tr:first-child, #condition-table tr:first-child {
+        background: #1E458D;
+        color: white;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 10px;
+        text-align: center;
+    }
+
+    #award-table-price tr, #condition-table tr{
+        background: transparent;
+        color: #1E458D;
+        min-height: 12px;
+    }
+
+    #award-table-price tr td,#award-table-price tr th{
+        font-size: 8px;
+        line-height: 12px;
+        text-align: center;
+        border: solid 1px #1E458D;
+        border-spacing: 0;
+        padding: 8px
+    }
+    #condition-table tr td,#condition-table tr th {
+        font-size: 8px;
+        line-height: 12px;
+        border: solid 1px #1E458D;
+        border-spacing: 0;
+        padding: 8px;
+        width: 50%;
+    }
+    #award-table-price tr td:first-child,#award-table-price tr td:nth-child(2){
+        font-weight: 700;
+    }
+
+    #award-table-price tr td:nth-child(2){
+        min-width:108px;
+    }
+
+    #award-table-price tr td:first-child{
+        min-width:62px;
+    }
+
+    #award-table-price tr td:nth-child(3){
+        min-width:82px;
+    }
+
+    #condition-table tr td:first-child {
+        font-weight: 700;
+    }
     /***************Popup piece*******************/
     .popup-piece,.popup-award,.popup-group-award {
         width: 100%;
@@ -18635,7 +18736,124 @@
             </g>
         </svg>
         <div class="rule-content">
-
+            <div class="rule-content__wrap-row">
+                <span class="rule-content__sub-title">1. Tên chương trình khuyến mãi: ĐUA CỰC SIÊU, TRÚNG QUÀ YÊU</span>
+            </div>
+            <div class="rule-content__wrap-row">
+                <span class="rule-content__sub-title">2. Áp dụng đối với:</span> Dịch vụ giao dịch Chứng khoán cơ sở và chứng quyền có bảo đảm
+            </div>
+            <div class="rule-content__wrap-row">
+                <span class="rule-content__sub-title">3. Thời gian:</span> Từ ngày 15/6/2024 đến hết ngày 31/7/2024 hoặc cho đến khi tổng số lượng quà đã được trao hết, tùy điều kiện nào đến trước.
+            </div>
+            <div class="rule-content__wrap-row">
+                <span class="rule-content__sub-title">4. Đối tượng được tham gia:</span> Khách hàng cá nhân trong nước có tài khoản giao dịch chứng khoán tại ACBS, bao gồm cả tài khoản mở mới.
+            </div>
+            <div class="rule-content__wrap-row">
+                <div class="rule-content__sub-title">5. Cơ cấu giải thưởng:</div><br/>
+                <div class="rule-content__sub-title__table">
+                    <table id="award-table-price">
+                        <tr>
+                            <th>Cơ cấu
+                                giải thưởng</th><th>Nội dung giải thưởng</th><th>Trị giá giải thưởng
+                            (VNĐ)</th><th>Số giải</th><th>Thành tiền
+                            (VNĐ)</th>
+                        </tr>
+                        <tr>
+                            <td>Giải đặc biệt</td>
+                            <td>MacBook Pro 14 inch M3</td>
+                            <td>49.999.000</td>
+                            <td>1</td>
+                            <td>49.999.000</td>
+                        </tr>
+                        <tr>
+                            <td>Giải nhất</td>
+                            <td>iPad Pro M2 12.9 inch 256GB</td>
+                            <td>35.699.000</td>
+                            <td>1</td>
+                            <td>35.699.000</td>
+                        </tr>
+                        <tr>
+                            <td>Giải nhì</td>
+                            <td>iPhone 15 Pro Max 256 GB</td>
+                            <td>34.999.000</td>
+                            <td>1</td>
+                            <td>34.999.000</td>
+                        </tr>
+                        <tr>
+                            <td>Giải tư</td>
+                            <td>Vali du lịch thương hiệu Pisani Tatti (cabin size)</td>
+                            <td>1.994.000</td>
+                            <td>10</td>
+                            <td>19.940.000</td>
+                        </tr>
+                        <tr>
+                            <td>Giải khuyến khích</td>
+                            <td>Voucher điện tử Urbox</td>
+                            <td>200.000</td>
+                            <td>200</td>
+                            <td>40.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>Giải phụ</td>
+                            <td>Dù gấp ACBS</td>
+                            <td>160.000</td>
+                            <td>50</td>
+                            <td>8.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>Tổng cộng</td>
+                            <td></td>
+                            <td></td>
+                            <td>265</td>
+                            <td>237.996.998</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="rule-content__wrap-row">
+                <div class="rule-content__sub-title">6. Cách thức tham gia chương trình:</div><br/>
+                <table id="condition-table">
+                    <tr>
+                        <th>Điều kiện</th>
+                        <th>Lượt chơi</th>
+                    </tr>
+                    <tr>
+                        <td>Mở tài khoản CKCS thành công</td>
+                        <td>2 lượt chơi</td>
+                    </tr>
+                    <tr>
+                        <td>Tổng GTGD chứng khoán ít nhất bằng 100 triệu đồng</td>
+                        <td>- Với GTGD = 100 triệu đồng, nhận 1 lượt chơi 
+                            - Với GTGD > 100 triệu đồng, nhận số lượt chơi = GTGD chia cho 100 triệu đồng
+                        </td>
+                    </tr>
+                </table><br/>
+                <ul>
+                    <li>Khách hàng cá nhân trong nước có tài khoản giao dịch chứng khoán tại ACBS, bao gồm cả tài khoản mở mới.</li>
+                    <li>Sau khi có lượt chơi, khách hàng tiền hành chơi game và sưu tầm mảnh ghép</li>
+                    <li>Các mảnh thu thập được sẽ sáng lên, khi thu thập đủ 4 mảnh/ giải thưởng (trừ giải khuyến khích chỉ cần 1 mảnh), giải thưởng sẽ sáng hết lên, đồng nghĩa với việc khách hàng đã trúng giải đó.</li>
+                    <li>Mỗi khách hàng có thể trúng nhiều giải nhưng không thể trúng cùng 1 loại giải. Ví dụ: khách hàng có thể trúng 1 giải Khuyến khích và 1 giải Nhất nhưng không thể trúng 2 giải Khuyến khích.</li>
+                </ul>
+            </div>
+            <div class="rule-content__wrap-row">
+                <div class="rule-content__sub-title">7.Cách nhận lượt chơi:</div><br/>
+                <ul>
+                    <li>Với mỗi giao dịch đủ điều kiện tham gia chương trình trên các nền tảng giao dịch của ACBS trong thời gian triển khai chương trình khuyến mại, khách hàng sẽ nhận được lượt chơi và tự tiến hành chơi.</li>
+                    <li>Các lượt chơi được cộng vào đầu ngày hôm sau khi khách hàng thực hiện giao dịch đủ điều kiện. Ví dụ GTGD của KH trong ngày thứ 2 bằng 100 triệu thì KH sẽ nhận được 1 lượt chơi vào thứ 3, nếu giao dịch đủ điều kiện phát sinh vào thứ 6 thì số lượt chơi sẽ được tính vào thứ 2 sau đó.</li>
+                    <li>ACBS sẽ thông báo tới khách hàng số lượt chơi chưa được sử dụng vào thứ 6 hàng tuần.</li>
+                    <li>Khách hàng chủ động tự thực hiện thu thập mảnh ghép mọi lúc mọi nơi trên ứng dụng ACBS SMART.</li>
+                    <li>Thời hạn cuối để KH xác định trúng thưởng là 23h59 ngày 31/7/2024</li>
+                </ul>
+            </div>
+            <div class="rule-content__wrap-row">
+                <div class="rule-content__sub-title">8.Thông báo trúng thưởng:</div><br/>
+                <ul>
+                    <li>ACBS gửi thông báo trúng thưởng cho khách hàng qua email đã đăng ký với ACBS và mục thông báo trên nền tảng giao dịch ACBS SMART. Trong trường hợp khách hàng không có email thì sẽ gửi qua tin nhắn sms đến số điện thoại di động khách hàng đã đăng ký tại ACBS kèm thông báo trên nền tảng giao dịch ACBS </li>
+                    <li>ACBS dùng email contact.center@acbs.com.vn hoặc số điện thoại có tên định danh (brandname) là “ACBS” để gửi thông báo trúng thưởng cho khách hàng. Thông báo trên nền tảng giao dịch ACBS là mục thông báo trên ứng dụng và trang giao dịch ACBS SMART của công ty.</li>
+                    <li>Thông báo trúng thưởng qua email/sms sẽ được gửi sau thời điểm khách hàng thu thập đủ mảnh ghép và trúng thưởng.</li>
+                </ul>
+            </div>
+            <div class="rule-content__wrap-row">Trên đây chỉ là thể lệ tóm tắt về chương trình, các thông tin chi tiết hơn vui lòng tham khảo Thể lệ chương trình khuyến mãi <a href="#">(hyperlink)</a></div>
         </div>
     </div>
     <div class="rule-menu">
