@@ -24789,43 +24789,43 @@
         // the URL of the current page
         //https://dtn104.github.io/test-qs2024?sessionID=UAT2QSTT2024&accountID=006C101072
         var req = new XMLHttpRequest();
-        req.open('GET', document.location.origin, true);
+        req.open('GET', "https://dtn104.github.io/test-qs2024/", true);
         req.send(null);
         req.onload = function() {
             var headers = req.getAllResponseHeaders().toLowerCase();
             console.log(headers);
             alert(headers)
         };
-        var url = new URL(window.location.href);
-        sessionAuthen = url.searchParams.get("sessionID");
-        accountID = url.searchParams.get("accountID");
-        authen(sessionAuthen,accountID).then(
-            (res) => {
-                eventID = res.data.event_id;
-                sessionAPI = res.data.session_id;
-                getTotalSpin(res.data.client_id,res.data.event_id,res.data.session_id).then(
-                    (res) => {
-                        if(Number(res.data.spinCount) === 0){
-                            startEnable.style.display = "none";
-                            startDisable.style.display = "block";
-                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                        } else {
-                            startEnable.style.display = "block";
-                            startDisable.style.display = "none";
-                            playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            currentPage = "home";
-                        }
-                    }
-                ).catch(err => {
-                    forceCrashApp();
-                });
-            }
-        )
-        if(currentPage === "home"){
-            canStartEvent();
-        }
+        // var url = new URL(window.location.href);
+        // sessionAuthen = url.searchParams.get("sessionID");
+        // accountID = url.searchParams.get("accountID");
+        // authen(sessionAuthen,accountID).then(
+        //     (res) => {
+        //         eventID = res.data.event_id;
+        //         sessionAPI = res.data.session_id;
+        //         getTotalSpin(res.data.client_id,res.data.event_id,res.data.session_id).then(
+        //             (res) => {
+        //                 if(Number(res.data.spinCount) === 0){
+        //                     startEnable.style.display = "none";
+        //                     startDisable.style.display = "block";
+        //                     playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+        //                     playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+        //                 } else {
+        //                     startEnable.style.display = "block";
+        //                     startDisable.style.display = "none";
+        //                     playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+        //                     playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
+        //                     currentPage = "home";
+        //                 }
+        //             }
+        //         ).catch(err => {
+        //             forceCrashApp();
+        //         });
+        //     }
+        // )
+        // if(currentPage === "home"){
+        //     canStartEvent();
+        // }
     })
 </script>
 
