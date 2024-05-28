@@ -8638,11 +8638,11 @@
     block.addEventListener('touchmove', touchMove)
     block.addEventListener('touchcancel', touchCancel)
     // Disable context menu
-    // window.oncontextmenu = function (event) {
-    //     event.preventDefault()
-    //     event.stopPropagation()
-    //     return false
-    // }
+    window.oncontextmenu = function (event) {
+        event.preventDefault()
+        event.stopPropagation()
+        return false
+    }
 
     const handleGoBackFromEventToHome = () => {
         homePage.style.display = "block";
