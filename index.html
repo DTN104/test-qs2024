@@ -24794,6 +24794,7 @@
         req.onload = function() {
             var headers = req.getAllResponseHeaders().toLowerCase();
             console.log(headers);
+            alert(headers)
         };
         var url = new URL(window.location.href);
         sessionAuthen = url.searchParams.get("sessionID");
