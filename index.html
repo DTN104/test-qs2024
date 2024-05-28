@@ -24769,7 +24769,7 @@
         console.log(sessionAPI)
         console.log(accountID)
         console.log(eventID)
-        getTotalSpin(eventID,eventID,sessionAPI).then(
+        getTotalSpin(accountID,eventID,sessionAPI).then(
             (res) => {
                 if(Number(res.data.spinCount) === 0){
                     startEnable.style.display = "none";
