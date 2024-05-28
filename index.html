@@ -953,7 +953,7 @@
     /***********************Popup Group*****************/
     #popup-piece-list {
         max-height: 290px;
-        overflow-y: scroll;
+        overflow-y: hidden;
         overflow-x: hidden;
         scrollbar-color: rgba(123, 121, 121, 1) white;
         scrollbar-width: thin;
@@ -987,6 +987,7 @@
         grid-template-columns: auto auto auto;
         grid-template-rows: 100px;
         gap:6px;
+        overflow-y: scroll;
     }
     .card-popup-piece-list{
         width:75px;
