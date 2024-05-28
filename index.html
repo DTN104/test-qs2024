@@ -168,8 +168,8 @@
         background: linear-gradient(90deg, rgb(88 89 91) 0%, rgb(88 89 91) 40%, rgb(65 65 67) 40%, rgb(65 65 67) 100%);
         background-size: 70px;
         animation: animate1 0.9s linear infinite;
-        /*transform-style: preserve-3d;*//*not compatible with ios ~16*/
-        /*transform: perspective(200px) rotateX(50deg) rotate(90deg);*/
+        transform-style: preserve-3d;not compatible with ios ~16
+        transform: perspective(200px) rotateX(50deg) rotate(90deg);
         animation-direction: reverse;
     }
 
@@ -24004,11 +24004,11 @@
     block.addEventListener('touchmove', touchMove)
     block.addEventListener('touchcancel', touchCancel)
     // Disable context menu
-    window.oncontextmenu = function (event) {
-        event.preventDefault()
-        event.stopPropagation()
-        return false
-    }
+    // window.oncontextmenu = function (event) {
+    //     event.preventDefault()
+    //     event.stopPropagation()
+    //     return false
+    // }
 
     const handleGoBackFromEventToHome = () => {
         homePage.style.display = "block";
