@@ -1460,7 +1460,7 @@
     .rule-enable{
 
     }
-    .rule-content,.inventory-content{
+    .inventory-content{
         position: absolute;
         top: 5%;
         left: 50%;
@@ -1471,6 +1471,20 @@
         max-height: 90%;
         overflow: scroll;
     }
+
+    .rule-content{
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 324px;
+        height: 100%;
+        max-height: 90%;
+        overflow: scroll;
+        padding: 0 24px 0 0;
+        margin-left: 12px;
+    }
+
     .prize-wrapper{
         width: 100px;
         height: 100px;
@@ -5255,7 +5269,7 @@
                             aria-label="Close">
                         X
                     </button>
-                    <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/giai_thuong/giai-ba.png" id="img-popup-award" alt="" style="width:150px"/>
+                    <img src="" id="img-popup-award" alt="" style="width:150px"/>
                     <div class="congrats-text">Chúc mừng bạn đã thu thập<br/>đủ mảnh và trúng thưởng</div>
                     <div>
                         <div id="popup-award-name"></div>
@@ -7610,40 +7624,40 @@
         </div>
     </div>
 </section>
-<div class="modal modalInfo" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true"
-     data-bs-theme="light" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content" style="background: transparent;border:none">
-            <div class="modal-body">
-                <div class="popup-error" style="padding: 48px 24px;justify-content:flex-start;gap:24px">
-                    <div class="popup-bg">
-                        <svg width="279" height="398" viewBox="0 0 279 398" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M259 388H20V398H259V388Z" fill="black"/>
-                            <path d="M268.91 378.46H258.95V388.42H268.91V378.46Z" fill="black"/>
-                            <path d="M259 369H20V388H259V369Z" fill="#CDDB46"/>
-                            <path d="M259 10H20V30H259V10Z" fill="#CDDB46"/>
-                            <path d="M269 20H10V378H269V20Z" fill="#CDDB46"/>
-                            <path d="M19.92 378.46H9.95996V388.42H19.92V378.46Z" fill="black"/>
-                            <path d="M279 20H269V378H279V20Z" fill="black"/>
-                            <path d="M10 20H0V378H10V20Z" fill="black"/>
-                            <path d="M268.91 9.96002H258.95V19.92H268.91V9.96002Z" fill="black"/>
-                            <path d="M19.92 9.96002H9.95996V19.92H19.92V9.96002Z" fill="black"/>
-                            <path d="M259 0H20V10H259V0Z" fill="black"/>
-                        </svg>
-                    </div>
-                    <button type="button" class="btn-close--popup" data-bs-dismiss="modal"
-                            aria-label="Close">
-                        X
-                    </button>
-                    <div id="popup-error-image">
-                    </div>
-                    <div id="popup-error-title"></div>
-                    <div id="popup-error-content"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="modal modalInfo" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true"-->
+<!--     data-bs-theme="light" data-bs-backdrop="static" data-bs-keyboard="false">-->
+<!--    <div class="modal-dialog" role="document">-->
+<!--        <div class="modal-content" style="background: transparent;border:none">-->
+<!--            <div class="modal-body">-->
+<!--                <div class="popup-error" style="padding: 48px 24px;justify-content:flex-start;gap:24px">-->
+<!--                    <div class="popup-bg">-->
+<!--                        <svg width="279" height="398" viewBox="0 0 279 398" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <path d="M259 388H20V398H259V388Z" fill="black"/>-->
+<!--                            <path d="M268.91 378.46H258.95V388.42H268.91V378.46Z" fill="black"/>-->
+<!--                            <path d="M259 369H20V388H259V369Z" fill="#CDDB46"/>-->
+<!--                            <path d="M259 10H20V30H259V10Z" fill="#CDDB46"/>-->
+<!--                            <path d="M269 20H10V378H269V20Z" fill="#CDDB46"/>-->
+<!--                            <path d="M19.92 378.46H9.95996V388.42H19.92V378.46Z" fill="black"/>-->
+<!--                            <path d="M279 20H269V378H279V20Z" fill="black"/>-->
+<!--                            <path d="M10 20H0V378H10V20Z" fill="black"/>-->
+<!--                            <path d="M268.91 9.96002H258.95V19.92H268.91V9.96002Z" fill="black"/>-->
+<!--                            <path d="M19.92 9.96002H9.95996V19.92H19.92V9.96002Z" fill="black"/>-->
+<!--                            <path d="M259 0H20V10H259V0Z" fill="black"/>-->
+<!--                        </svg>-->
+<!--                    </div>-->
+<!--                    <button type="button" class="btn-close&#45;&#45;popup" data-bs-dismiss="modal"-->
+<!--                            aria-label="Close">-->
+<!--                        X-->
+<!--                    </button>-->
+<!--                    <div id="popup-error-image">-->
+<!--                    </div>-->
+<!--                    <div id="popup-error-title"></div>-->
+<!--                    <div id="popup-error-content"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <div class="modal modalInfo" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true"
      data-bs-theme="light" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog" role="document">
