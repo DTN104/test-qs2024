@@ -7726,25 +7726,6 @@
                             document.getElementById("popup-piece-image").setAttribute("src",res.data.piece[0].image);
                             document.getElementById("spin-end-date").innerText = res.data.event_end_date;
                             document.getElementById("total-piece").innerText = res.data.award[0].total_piece;
-                            // $("#infoModal").on('hidden.bs.modal', function () {
-                            //     alert("not receive single")
-                            //     resetState();
-                            //     getTotalSpin(accountID,eventID,sessionAPI).then(
-                            //         (res) => {
-                            //             if(res.data.spinCount === 0){
-                            //                 startDisable.style.display = "block";
-                            //                 startEnable.style.display = "none";
-                            //                 playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //                 playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //             } else {
-                            //                 startDisable.style.display = "none";
-                            //                 startEnable.style.display = "block";
-                            //                 playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //                 playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //             }
-                            //         }
-                            //     );
-                            // });
                         } else {
                             //receive 1 award
                             receiveMulti = false;
@@ -7840,80 +7821,6 @@
                                 receiveSingle = false;
                                 receiveMulti = true;
                             }
-                            // $('#infoModal').on('hidden.bs.modal', function (e) {
-                            //     alert("receive multi")
-                            //     document.querySelector(".popup-piece").style.display = "none";
-                            //     document.querySelector(".popup-group").style.display = "none";
-                            //     if(awardArr.length === 1){
-                            //         receiveSingle = true;
-                            //         receiveMulti = false;
-                            //         //trung 1 giai
-                            //         $("#awardModalSingle").modal("show");
-                            //         document.querySelector(".popup-award").style.display = "flex";
-                            //         document.getElementById("popup-award-name").innerHTML = res.data.award[0].award_name;
-                            //         document.getElementById("popup-award-info").innerHTML = res.data.award[0].award_info;
-                            //         document.getElementById("img-popup-award").setAttribute("src",res.data.award[0].award_image);
-                            //         $('#awardModalSingle').on('hidden.bs.modal', function (e) {
-                            //             resetState();
-                            //             getTotalSpin(accountID,eventID,sessionAPI).then(
-                            //                 (res) => {
-                            //                     if(res.data.spinCount === 0){
-                            //                         startDisable.style.display = "block";
-                            //                         startEnable.style.display = "none";
-                            //                         playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //                         playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //                     } else {
-                            //                         startDisable.style.display = "none";
-                            //                         startEnable.style.display = "block";
-                            //                         playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //                         playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //                     }
-                            //                 }
-                            //             );
-                            //         })
-                            //     } else {
-                            //         receiveSingle = false;
-                            //         receiveMulti = true;
-                            //         //trung nhieu giai
-                            //         $("#awardModalMulti").modal("show");
-                            //         const awardList = awardArr.map(
-                            //             item =>
-                            //                 (`
-                            //         <div class="card-popup-award-list">
-                            //             <div class="card-popup-award-list__award-img">
-                            //                 <img
-                            //                     src="${item.award_image}"
-                            //                     alt=""/>
-                            //             </div>
-                            //             <div class="card-popup-award-list__award-title">${item.award_name}</div>
-                            //             <div class="card-popup-award-list__award-info">${item.award_info}</div>
-                            //         </div>`)
-                            //         )
-                            //         document.getElementById("popup-group-ward__award-list").innerHTML = `
-                            //             <div class="popup-group-award__card-popup-award-list-holder">
-                            //                 ${awardList.join().replaceAll(",","")}
-                            //             </div>
-                            //         `;
-                            //         $('#awardModalMulti').on('hidden.bs.modal', function (e) {
-                            //             resetState();
-                            //             getTotalSpin(accountID, eventID, sessionAPI).then(
-                            //                 (res) => {
-                            //                     if (res.data.spinCount === 0) {
-                            //                         startDisable.style.display = "block";
-                            //                         startEnable.style.display = "none";
-                            //                         playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //                         playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //                     } else {
-                            //                         startDisable.style.display = "none";
-                            //                         startEnable.style.display = "block";
-                            //                         playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //                         playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //                     }
-                            //                 }
-                            //             );
-                            //         })
-                            //     }
-                            // })
                         } else {
                             receiveSingle = false;
                             receiveMulti = false;
@@ -7967,25 +7874,6 @@
                                     ${newList.join().replaceAll(",","")}
                                 </div>
                             `;
-                            // $('#infoModal').on('hidden.bs.modal', function () {
-                            //     alert("not receive multi")
-                            //     resetState();
-                            //     getTotalSpin(accountID,eventID,sessionAPI).then(
-                            //         (res) => {
-                            //             if(res.data.spinCount === 0){
-                            //                 startDisable.style.display = "block";
-                            //                 startEnable.style.display = "none";
-                            //                 playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //                 playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //             } else {
-                            //                 startDisable.style.display = "none";
-                            //                 startEnable.style.display = "block";
-                            //                 playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //                 playerSpinCountEvent.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
-                            //             }
-                            //         }
-                            //     );
-                            // })
                         }
                     }
                 }
@@ -8015,6 +7903,10 @@
         eventPage.style.display = "block";
         currentPage = "event";
         autoSpin = document.querySelector('input[name="spin-options"]:checked').value;
+        setTimeout(()=> {
+            handleHitTheBox()
+        }, 5000);
+
     }
 
     const resetState = () => {
