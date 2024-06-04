@@ -7592,6 +7592,7 @@
         document.getElementById("popup-award-info").innerHTML = resGacha.data.award[0].award_info;
         document.getElementById("img-popup-award").setAttribute("src",resGacha.data.award[0].award_image);
         $('#awardModalSingle').on('hidden.bs.modal', function (e) {
+            $('#awardModalSingle').modal("dispose");
             resetState();
             getTotalSpin(accountID,eventID,sessionAPI).then(
                 (res) => {
@@ -7634,6 +7635,7 @@
                 </div>
             `;
         $('#awardModalMulti').on('hidden.bs.modal', function (e) {
+            $('#awardModalMulti').modal("dispose");
             resetState();
             getTotalSpin(accountID, eventID, sessionAPI).then(
                 (res) => {
@@ -7757,6 +7759,7 @@
                             document.getElementById("popup-award-info").innerHTML = res.data.award[0].award_info;
                             document.getElementById("img-popup-award").setAttribute("src",res.data.award[0].award_image);
                             $('#awardModalSingle').on('hidden.bs.modal', function (e) {
+                                $("#awardModalSingle").modal("dispose");
                                 resetState();
                                 getTotalSpin(accountID,eventID,sessionAPI).then(
                                     (res) => {
