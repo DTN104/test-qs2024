@@ -686,15 +686,15 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        animation: car-event 2s ease-in forwards;
+        animation: car-event 1.2s ease-in forwards;
     }
 
     @keyframes car-event {
         0% {
-            transform: translateX(-50%) translateY(-10vh);
+            transform: translateX(-50%) translateY(0);
         }
         100% {
-            transform: translateX(-50%) translateY(calc(-91vh + 300px));
+            transform: translateX(-50%) translateY(calc(-91vh + 340px));
         }
     }
 
@@ -1368,14 +1368,15 @@
         white-space: break-spaces;
     }
     #winner-table .th-inner {
-        white-space: break-spaces;
+        white-space: nowrap;
     }
     #winner-table tr th {
         vertical-align: middle;
+        white-space: nowrap;
     }
     #winner-table tr td:nth-child(3), #winner-table tr th:nth-child(3) {
         padding: 0;
-        max-width: 80px;
+        width: 75px;
         white-space: break-spaces;
     }
 
@@ -1958,7 +1959,7 @@
                         <path d="M5.35116 5.68802H3.5646V3.789H5.35116V5.68802ZM3.5646 5.68802H1.78656V9.47702H3.5646V5.68802ZM1.78656 9.47702H0V24.633H1.78656V9.47702ZM8.91576 3.789V1.89902H5.35116V3.789H8.91576ZM3.5646 28.422V30.321H5.35116V28.422H3.5646ZM3.5646 24.633H1.78656V28.422H3.5646V24.633ZM5.35116 30.321V32.211H8.91576V30.321H5.35116ZM8.91576 32.211V34.11H101.357V32.211H8.91576ZM106.7 5.68802V3.789H104.922V5.68802H106.7ZM106.7 9.47702H108.486V5.68802H106.7V9.47702ZM108.486 9.47702V24.633H110.273V9.47702H108.486ZM104.922 3.789V1.89902H101.357V3.789H104.922ZM104.922 30.321H106.7V28.422H104.922V30.321ZM106.7 28.422H108.486V24.633H106.7V28.422ZM101.357 30.321V32.211H104.922V30.321H101.357ZM101.357 1.89902V0H8.91576V1.89902H101.357Z" fill="black"/>
                         <path d="M62.5124 9.47704V24.633H60.7769V28.422H59.0414V30.3211H55.5789V32.211H8.7201V30.3211H5.24907V28.422H3.51356V24.633H1.78656V9.47704H3.51356V5.68805H5.24907V3.78903H8.7201V1.89905H55.5789V3.78903H59.0414V5.68805H60.7769V9.47704H62.5124Z" fill="#FFF8F3"/>
                     </svg>
-                    <svg width="65" height="20" viewBox="0 0 65 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="text-spin-1" width="65" height="20" viewBox="0 0 65 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_20_72)">
                             <path d="M39.1474 20H22L22.6498 17.187H28.3391L30.954 5.74485H28.1807L28.8463 2.85261H31.6197L32.3011 0H38.046L34.084 17.1078H39.8209L39.1474 20Z" fill="#1E458F"/>
                             <path d="M43.7274 7.66241H38.9731L40.2647 2.11566H41.8494L40.748 6.87002H43.9176L43.7274 7.66241Z" fill="#1E4591"/>
@@ -1992,7 +1993,7 @@
                         <path d="M5.35116 5.68802H3.5646V3.789H5.35116V5.68802ZM3.5646 5.68802H1.78656V9.47702H3.5646V5.68802ZM1.78656 9.47702H0V24.633H1.78656V9.47702ZM8.91576 3.789V1.89902H5.35116V3.789H8.91576ZM3.5646 28.422V30.321H5.35116V28.422H3.5646ZM3.5646 24.633H1.78656V28.422H3.5646V24.633ZM5.35116 30.321V32.211H8.91576V30.321H5.35116ZM8.91576 32.211V34.11H101.357V32.211H8.91576ZM106.7 5.68802V3.789H104.922V5.68802H106.7ZM106.7 9.47702H108.486V5.68802H106.7V9.47702ZM108.486 9.47702V24.633H110.273V9.47702H108.486ZM104.922 3.789V1.89902H101.357V3.789H104.922ZM104.922 30.321H106.7V28.422H104.922V30.321ZM106.7 28.422H108.486V24.633H106.7V28.422ZM101.357 30.321V32.211H104.922V30.321H101.357ZM101.357 1.89902V0H8.91576V1.89902H101.357Z" fill="black"/>
                         <path d="M62.5124 9.47704V24.633H60.7769V28.422H59.0414V30.3211H55.5789V32.211H8.7201V30.3211H5.24907V28.422H3.51356V24.633H1.78656V9.47704H3.51356V5.68805H5.24907V3.78903H8.7201V1.89905H55.5789V3.78903H59.0414V5.68805H60.7769V9.47704H62.5124Z" fill="#FFF8F3"/>
                     </svg>
-                    <svg width="82" height="20" viewBox="0 0 82 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="text-spin-10" width="82" height="20" viewBox="0 0 82 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_28_32304)">
                             <path d="M25.1474 20H8L8.64976 17.187H14.3391L16.954 5.74485H14.1807L14.8463 2.85261H17.6197L18.3011 0H24.046L20.084 17.1078H25.8209L25.1474 20Z" fill="#1E458F"/>
                             <path d="M44.8621 14.2631H42.1363L41.4786 17.1157H38.626L37.9604 20.0079H29.2441L29.878 17.2742H27.0254L27.691 14.3819H24.8383L26.8431 5.70523H29.5689L30.187 2.89223H33.1189L33.8162 0H42.4136L41.7797 2.73376H44.6719L44.0143 5.54675H46.8669L44.8621 14.2631ZM38.4675 17.1157L41.122 5.54675H38.2773L38.9033 2.89223H33.2298L30.5832 14.374H33.4754L32.8415 17.1078L38.4675 17.1157Z" fill="#1E458F"/>
@@ -2026,7 +2027,7 @@
                         <path d="M5.35116 5.68802H3.5646V3.789H5.35116V5.68802ZM3.5646 5.68802H1.78656V9.47702H3.5646V5.68802ZM1.78656 9.47702H0V24.633H1.78656V9.47702ZM8.91576 3.789V1.89902H5.35116V3.789H8.91576ZM3.5646 28.422V30.321H5.35116V28.422H3.5646ZM3.5646 24.633H1.78656V28.422H3.5646V24.633ZM5.35116 30.321V32.211H8.91576V30.321H5.35116ZM8.91576 32.211V34.11H101.357V32.211H8.91576ZM106.7 5.68802V3.789H104.922V5.68802H106.7ZM106.7 9.47702H108.486V5.68802H106.7V9.47702ZM108.486 9.47702V24.633H110.273V9.47702H108.486ZM104.922 3.789V1.89902H101.357V3.789H104.922ZM104.922 30.321H106.7V28.422H104.922V30.321ZM106.7 28.422H108.486V24.633H106.7V28.422ZM101.357 30.321V32.211H104.922V30.321H101.357ZM101.357 1.89902V0H8.91576V1.89902H101.357Z" fill="black"/>
                         <path d="M62.5124 9.47704V24.633H60.7769V28.422H59.0414V30.3211H55.5789V32.211H8.7201V30.3211H5.24907V28.422H3.51356V24.633H1.78656V9.47704H3.51356V5.68805H5.24907V3.78903H8.7201V1.89905H55.5789V3.78903H59.0414V5.68805H60.7769V9.47704H62.5124Z" fill="#FFF8F3"/>
                     </svg>
-                    <svg width="92" height="20" viewBox="0 0 92 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="text-spin-100" width="92" height="20" viewBox="0 0 92 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_28_32303)">
                             <path d="M20.1474 20H3L3.64976 17.187H9.33914L11.954 5.74485H9.18067L9.84628 2.85261H12.6197L13.3011 0H19.046L15.084 17.1078H20.8209L20.1474 20Z" fill="#1E458F"/>
                             <path d="M39.8622 14.2631H37.1363L36.4786 17.1157H33.626L32.9604 20.0079H24.2441L24.878 17.2742H22.0254L22.691 14.3819H19.8384L21.8431 5.70523H24.569L25.187 2.89223H28.1189L28.8162 0H37.4137L36.7797 2.73376H39.672L39.0143 5.54675H41.8669L39.8622 14.2631ZM33.4675 17.1157L36.1221 5.54675H33.2774L33.9034 2.89223H28.2298L25.5832 14.374H28.4755L27.8415 17.1078L33.4675 17.1157Z" fill="#1E458F"/>
@@ -3435,9 +3436,9 @@
 <!--                <path d="M12 20V100" stroke="#CCD423" stroke-width="7" stroke-miterlimit="10" stroke-linecap="round"/>-->
 <!--            </svg>-->
 <!--        </div>-->
-        <div class="btn-back" onclick="handleGoBackFromEventToHome()" style="width:40px">
-            <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/btn-back.svg" alt="" />
-        </div>
+<!--        <div class="btn-back" onclick="handleGoBackFromEventToHome()" style="width:40px">-->
+<!--            <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/btn-back.svg" alt="" />-->
+<!--        </div>-->
         <div class="block">
             <div class="car-img" id="car-img">
                 <img src="https://dtn104.github.io/test-qs2024/assets/image/quaysotrungthuong2024/event_page/car-event.svg" alt="" />
@@ -5373,40 +5374,40 @@
         </div>
     </div>
 </section>
-<!--<div class="modal modalInfo" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true"-->
-<!--     data-bs-theme="light" data-bs-backdrop="static" data-bs-keyboard="false">-->
-<!--    <div class="modal-dialog" role="document">-->
-<!--        <div class="modal-content" style="background: transparent;border:none">-->
-<!--            <div class="modal-body">-->
-<!--                <div class="popup-error" style="padding: 48px 24px;justify-content:flex-start;gap:24px">-->
-<!--                    <div class="popup-bg">-->
-<!--                        <svg width="279" height="398" viewBox="0 0 279 398" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                            <path d="M259 388H20V398H259V388Z" fill="black"/>-->
-<!--                            <path d="M268.91 378.46H258.95V388.42H268.91V378.46Z" fill="black"/>-->
-<!--                            <path d="M259 369H20V388H259V369Z" fill="#CDDB46"/>-->
-<!--                            <path d="M259 10H20V30H259V10Z" fill="#CDDB46"/>-->
-<!--                            <path d="M269 20H10V378H269V20Z" fill="#CDDB46"/>-->
-<!--                            <path d="M19.92 378.46H9.95996V388.42H19.92V378.46Z" fill="black"/>-->
-<!--                            <path d="M279 20H269V378H279V20Z" fill="black"/>-->
-<!--                            <path d="M10 20H0V378H10V20Z" fill="black"/>-->
-<!--                            <path d="M268.91 9.96002H258.95V19.92H268.91V9.96002Z" fill="black"/>-->
-<!--                            <path d="M19.92 9.96002H9.95996V19.92H19.92V9.96002Z" fill="black"/>-->
-<!--                            <path d="M259 0H20V10H259V0Z" fill="black"/>-->
-<!--                        </svg>-->
-<!--                    </div>-->
-<!--                    <button type="button" class="btn-close&#45;&#45;popup" data-bs-dismiss="modal"-->
-<!--                            aria-label="Close">-->
-<!--                        X-->
-<!--                    </button>-->
-<!--                    <div id="popup-error-image">-->
-<!--                    </div>-->
-<!--                    <div id="popup-error-title"></div>-->
-<!--                    <div id="popup-error-content"></div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="modal modalInfo" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true"
+     data-bs-theme="light" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="background: transparent;border:none">
+            <div class="modal-body">
+                <div class="popup-error" style="padding: 48px 24px;justify-content:flex-start;gap:24px">
+                    <div class="popup-bg">
+                        <svg width="279" height="398" viewBox="0 0 279 398" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M259 388H20V398H259V388Z" fill="black"/>
+                            <path d="M268.91 378.46H258.95V388.42H268.91V378.46Z" fill="black"/>
+                            <path d="M259 369H20V388H259V369Z" fill="#CDDB46"/>
+                            <path d="M259 10H20V30H259V10Z" fill="#CDDB46"/>
+                            <path d="M269 20H10V378H269V20Z" fill="#CDDB46"/>
+                            <path d="M19.92 378.46H9.95996V388.42H19.92V378.46Z" fill="black"/>
+                            <path d="M279 20H269V378H279V20Z" fill="black"/>
+                            <path d="M10 20H0V378H10V20Z" fill="black"/>
+                            <path d="M268.91 9.96002H258.95V19.92H268.91V9.96002Z" fill="black"/>
+                            <path d="M19.92 9.96002H9.95996V19.92H19.92V9.96002Z" fill="black"/>
+                            <path d="M259 0H20V10H259V0Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <button type="button" class="btn-close--popup" data-bs-dismiss="modal"
+                            aria-label="Close">
+                        X
+                    </button>
+                    <div id="popup-error-image">
+                    </div>
+                    <div id="popup-error-title"></div>
+                    <div id="popup-error-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="modal modalInfo" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true"
      data-bs-theme="light" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog" role="document">
@@ -5866,6 +5867,26 @@
                 return piece.key === "true"
             }
         )
+    }
+
+    const checkSpinCount = (count) => {
+        if(count<=0){
+            document.getElementById('spin-100').setAttribute("disabled","true");
+            document.getElementById('text-spin-100').style.opacity = "0.7";
+            document.getElementById('spin-10').setAttribute("disabled","true");
+            document.getElementById('text-spin-10').style.opacity = "0.7";
+            document.getElementById('spin-1').setAttribute("disabled","true");
+            document.getElementById('text-spin-1').style.opacity = "0.7";
+            document.getElementById("box-spin-1").style.display = "none";
+        } else if(count > 0 && count<10){
+            document.getElementById('spin-100').setAttribute("disabled","true");
+            document.getElementById('text-spin-100').style.opacity = "0.7";
+            document.getElementById('spin-10').setAttribute("disabled","true");
+            document.getElementById('text-spin-10').style.opacity = "0.7";
+        } else if(count >= 10 && count < 100){
+            document.getElementById('spin-100').setAttribute("disabled","true");
+            document.getElementById('text-spin-100').style.opacity = "0.7";
+        }
     }
 
     const formatErrorContent = (codeErr) => {
@@ -6429,65 +6450,6 @@
         homePage.style.display = "block"
     }
 
-    // function touchStart() {
-    //     return function (event) {
-    //         // document.querySelector(".btn-back").style.display = "none";
-    //         document.querySelector(".arrow-guide").style.display = "none";
-    //         startPos = event.touches[0].clientY
-    //         isDragging = true
-    //         isHitTheBox  = false
-    //         // https://css-tricks.com/using-requestanimationframe/
-    //         animationID = requestAnimationFrame(animation)
-    //     }
-    // }
-    //
-    // function touchEnd() {
-    //     isDragging = false
-    //     cancelAnimationFrame(animationID)
-    //     // const movedBy = currentTranslate - prevTranslate
-    //     // console.log(rect.top-rectIcon.top)
-    //     // if (movedBy < (rect.top-rectIcon.top-200)) alert("pika")
-    //     if(!isHitTheBox){
-    //         document.querySelector(".btn-back").style.display = "block"
-    //         document.querySelector(".arrow-guide").style.display = "block"
-    //         setPositionByIndex();
-    //     }
-    // }
-    //
-    // function touchCancel() {
-    //     isDragging = false
-    //     cancelAnimationFrame(animationID)
-    //     // const movedBy = currentTranslate - prevTranslate
-    //     // console.log(rect.top-rectIcon.top)
-    //     // if (movedBy < (rect.top-rectIcon.top-200)) alert("pika")
-    //     if(!isHitTheBox){
-    //         document.querySelector(".btn-back").style.display = "block"
-    //         document.querySelector(".arrow-guide").style.display = "block"
-    //         setPositionByIndex();
-    //     }
-    // }
-    //
-    // function touchMove(event) {
-    //     if (isDragging) {
-    //         const currentPosition = event.touches[0].clientY
-    //         currentTranslate = prevTranslate + currentPosition - startPos
-    //         const movedBy = currentTranslate - prevTranslate
-    //         if (movedBy < (destination.getBoundingClientRect().top-block.getBoundingClientRect().top-150)) {
-    //             block.style.display = "none";
-    //             isHitTheBox = true;
-    //             handleHitTheBox();
-    //             isDragging = false
-    //             cancelAnimationFrame(animationID)
-    //         }
-    //     }
-    // }
-
-
-    function animation() {
-        block.style.transform = `translateY(${currentTranslate}px)`
-        if (isDragging) requestAnimationFrame(animation)
-    }
-
     function setPositionByIndex() {
         currentTranslate = 0;
         prevTranslate = currentTranslate
@@ -6507,7 +6469,8 @@
             resetState();
             getTotalSpin(accountID,eventID,sessionAPI).then(
                 (res) => {
-                    if(res.data.spinCount === 0){
+                    checkSpinCount(Number(res.data.spinCount));
+                    if(Number(res.data.spinCount) === 0){
                         startDisable.style.display = "block";
                         startEnable.style.display = "none";
                         playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
@@ -6552,7 +6515,8 @@
             resetState();
             getTotalSpin(accountID, eventID, sessionAPI).then(
                 (res) => {
-                    if (res.data.spinCount === 0) {
+                    checkSpinCount(Number(res.data.spinCount));
+                    if (Number(res.data.spinCount) === 0) {
                         startDisable.style.display = "block";
                         startEnable.style.display = "none";
                         playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
@@ -6599,7 +6563,8 @@
             resetState();
             getTotalSpin(accountID,eventID,sessionAPI).then(
                 (res) => {
-                    if(res.data.spinCount === 0){
+                    checkSpinCount(Number(res.data.spinCount));
+                    if(Number(res.data.spinCount) === 0){
                         startDisable.style.display = "block";
                         startEnable.style.display = "none";
                         playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
@@ -6660,7 +6625,8 @@
                                 resetState();
                                 getTotalSpin(accountID,eventID,sessionAPI).then(
                                     (res) => {
-                                        if(res.data.spinCount === 0){
+                                        checkSpinCount(Number(res.data.spinCount));
+                                        if(Number(res.data.spinCount) === 0){
                                             startDisable.style.display = "block";
                                             startEnable.style.display = "none";
                                             playerSpinCountHome.innerHTML = Math.floor(res.data.spinCount).toLocaleString();
@@ -6839,7 +6805,9 @@
         autoSpin = document.querySelector('input[name="spin-options"]:checked').value;
         setTimeout(()=> {
             handleHitTheBox()
-        }, 2200);
+            isHitTheBox=true;
+        }, 1300);
+        canStartEvent()
         // let id=null;
         // myMove(id);
     }
@@ -6848,23 +6816,22 @@
         currentTranslate = 0;
         block.style.bottom = "0px"
         prevTranslate = currentTranslate
-        block.style.transform = `translateY(0)`
+        block.style.transform = `translateY(-10vh)`
         block.style.display = `flex`
         destination.style.display = "block";
         receiveMulti = false;
         receiveSingle = false;
         document.getElementById('boxContainer').classList.remove('shake');
         document.getElementById('boxContainer').classList.remove('zoomIn');
-        document.querySelector(".popup-piece").style.display = "none";
-        document.querySelector(".popup-group").style.display = "none";
-        document.querySelector(".popup-award").style.display = "none";
-        document.querySelector(".btn-back").style.display = "block";
-        setPositionByIndex();
         isHitTheBox = false;
+        document.getElementById("box-spin-1").style.display = "block";
+        document.getElementById("box-spin-10").style.display = "none";
+        document.getElementById("box-spin-100").style.display = "none";
+        document.querySelector('input[name="spin-options"]:checked').value = 1;
     }
 
     const canStartEvent = () => {
-        if(accountTest === "" || eventIdTest === "" || autoSpin === 0 || !playerSpinCountEvent.value || !playerSpinCountHome.value){
+        if(autoSpin === 0 || !playerSpinCountEvent.value || !playerSpinCountHome.value){
             startDisable.style.display = "block";
             startEnable.style.display = "none";
             return false;
@@ -7308,9 +7275,6 @@
         sessionAPI = url.searchParams.get("sessionID");
         accountID = url.searchParams.get("accountID");
         eventID = url.searchParams.get("eventid");
-        console.log(sessionAPI)
-        console.log(accountID)
-        console.log(eventID)
         $('#winner-table').bootstrapTable({
             smartDisplay:false,
             pagination: true,
@@ -7340,6 +7304,7 @@
         })
         getTotalSpin(accountID,eventID,sessionAPI).then(
             (res) => {
+                checkSpinCount(Number(res.data.spinCount))
                 if(Number(res.data.spinCount) === 0){
                     startEnable.style.display = "none";
                     startDisable.style.display = "block";
