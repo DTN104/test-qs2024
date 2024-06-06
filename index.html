@@ -5988,7 +5988,7 @@
                 obj.piece_id = curr.piece_id;
                 obj.award_id = curr.award_id;
                 obj.award_info = curr.award_info;
-                obj.piece_position = curr.piece_position;
+                obj.position = curr.position;
                 obj.count = 1;
                 obj.name = curr.name;
                 obj.image = curr.image;
@@ -6051,6 +6051,7 @@
                     // "total_piece": awards[0].total_piece,
                     // "award_image": awards[0].award_image,
                     // "piece_id": item.piece_id,
+                    "position": item.position,
                     "count": item.count,
                     "name": item.name,
                     "image": item.image
@@ -6658,7 +6659,7 @@
                                     (`<div class="card-popup-piece-list">
                                         <div class="card-popup-list__img-wrapper">
                                             <div class="card-popup-list__img-wrapper__pic">
-                                                <img src="${item.image}" alt=""/>
+                                                <img style="width: ${item.position === "TopLeft" || item.position === "BottomRight" ? "50%" : "auto"};height: ${item.position === "TopRight" || item.position === "BottomLeft" ? "50%" : "auto"}" src="${item.image}" alt=""/>
                                             </div>
                                             <div class="card-popup-list__count-wrapper">
                                                 <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -6697,7 +6698,6 @@
                                 </div>
                             `;
                             let awardArr = GetAwardData(res);
-                            console.log(awardArr)
                             if(awardArr.length === 1){
                                 receiveSingle = true;
                                 receiveMulti = true;
@@ -6720,7 +6720,7 @@
                                     (`<div class="card-popup-piece-list">
                                         <div class="card-popup-list__img-wrapper">
                                             <div class="card-popup-list__img-wrapper__pic">
-                                                <img src="${item.image}" alt=""/>
+                                                <img style="width: ${item.position === "TopLeft" || item.position === "BottomRight" ? "50%" : "auto"};height: ${item.position === "TopRight" || item.position === "BottomLeft" ? "50%" : "auto"}" src="${item.image}" alt=""/>
                                             </div>
                                             <div class="card-popup-list__count-wrapper">
                                                 <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -7255,16 +7255,19 @@
         document.getElementById("box-spin-1").style.display = "block";
         document.getElementById("box-spin-10").style.display = "none";
         document.getElementById("box-spin-100").style.display = "none";
+        document.querySelector('input[name="spin-options"]:checked').value = 1;
     })
     document.getElementById("spin-10").addEventListener("click",function(event){
         document.getElementById("box-spin-10").style.display = "block";
         document.getElementById("box-spin-1").style.display = "none";
         document.getElementById("box-spin-100").style.display = "none";
+        document.querySelector('input[name="spin-options"]:checked').value = 10;
     })
     document.getElementById("spin-100").addEventListener("click",function(event){
         document.getElementById("box-spin-100").style.display = "block";
         document.getElementById("box-spin-1").style.display = "none";
         document.getElementById("box-spin-10").style.display = "none";
+        document.querySelector('input[name="spin-options"]:checked').value = 100;
     })
 
     window.addEventListener("DOMContentLoaded",function (){
