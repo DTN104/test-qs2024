@@ -1082,11 +1082,11 @@
     .card-popup-list__detail{
         color: #1E458C;
         font-weight: 400;
-        font-size:7px;
+        min-height: 17px;
+        font-size: 7px;
         line-height: 9px;
-        text-align:center;
+        text-align: center;
         text-transform: uppercase;
-        white-space: nowrap;
     }
     .card-popup-list__count-wrapper__number{
         position: absolute;
@@ -6458,13 +6458,14 @@
     }
 
     function handleReceiveAwardSingle (resGacha){
+        const awardList = GetAwardData(resGacha)
         document.querySelector(".popup-piece").style.display = "none";
         document.querySelector(".popup-group").style.display = "none";
         $("#awardModalSingle").modal("show");
         document.querySelector(".popup-award").style.display = "flex";
-        document.getElementById("popup-award-name").innerHTML = resGacha.data.award[0].award_name;
-        document.getElementById("popup-award-info").innerHTML = resGacha.data.award[0].award_info;
-        document.getElementById("img-popup-award").setAttribute("src",resGacha.data.award[0].award_image);
+        document.getElementById("popup-award-name").innerHTML = awardList[0].award_name;
+        document.getElementById("popup-award-info").innerHTML = awardList[0].award_info;
+        document.getElementById("img-popup-award").setAttribute("src",awardList[0].award_image);
         $('#awardModalSingle').on('hidden.bs.modal', function (e) {
             $('#awardModalSingle').modal("dispose");
             resetState();
@@ -6554,6 +6555,7 @@
     })
 
     $("#infoModal").on('hidden.bs.modal', function () {
+        console.log(responseGacha);
         if(receiveMulti && !receiveSingle){
             handleReceiveAwardMulti(responseGacha)
         }
@@ -6615,12 +6617,13 @@
                             setTimeout(()=> {
                                 $("#awardModalSingle").modal("show")
                             }, 2000);
+                            const awardList = GetAwardData(res)
                             document.querySelector(".popup-piece").style.display = "none";
                             document.querySelector(".popup-group").style.display = "none";
                             document.querySelector(".popup-award").style.display = "flex";
-                            document.getElementById("popup-award-name").innerHTML = res.data.award[0].award_name;
-                            document.getElementById("popup-award-info").innerHTML = res.data.award[0].award_info;
-                            document.getElementById("img-popup-award").setAttribute("src",res.data.award[0].award_image);
+                            document.getElementById("popup-award-name").innerHTML = awardList[0].award_name;
+                            document.getElementById("popup-award-info").innerHTML = awardList[0].award_info;
+                            document.getElementById("img-popup-award").setAttribute("src",awardList[0].award_image);
                             $('#awardModalSingle').on('hidden.bs.modal', function (e) {
                                 $("#awardModalSingle").modal("dispose");
                                 resetState();
@@ -6659,7 +6662,7 @@
                                     (`<div class="card-popup-piece-list">
                                         <div class="card-popup-list__img-wrapper">
                                             <div class="card-popup-list__img-wrapper__pic">
-                                                <img style="width: ${item.position === "TopLeft" || item.position === "BottomRight" ? "50%" : "auto"};height: ${item.position === "TopRight" || item.position === "BottomLeft" ? "50%" : "auto"}" src="${item.image}" alt=""/>
+                                                <img style="width: ${item.position === "TopLeft" || item.position === "BottomRight" || item.position === "Default" ? "50%" : "auto"};height: ${item.position === "TopRight" || item.position === "BottomLeft" || item.position === "Default" ? "50%" : "auto"}" src="${item.image}" alt=""/>
                                             </div>
                                             <div class="card-popup-list__count-wrapper">
                                                 <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -6720,7 +6723,7 @@
                                     (`<div class="card-popup-piece-list">
                                         <div class="card-popup-list__img-wrapper">
                                             <div class="card-popup-list__img-wrapper__pic">
-                                                <img style="width: ${item.position === "TopLeft" || item.position === "BottomRight" ? "50%" : "auto"};height: ${item.position === "TopRight" || item.position === "BottomLeft" ? "50%" : "auto"}" src="${item.image}" alt=""/>
+                                                <img style="width: ${item.position === "TopLeft" || item.position === "BottomRight" || item.position === "Default" ? "50%" : "auto"};height: ${item.position === "TopRight" || item.position === "BottomLeft" || item.position === "Default" ? "50%" : "auto"}" src="${item.image}" alt=""/>
                                             </div>
                                             <div class="card-popup-list__count-wrapper">
                                                 <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -6821,13 +6824,15 @@
         destination.style.display = "block";
         receiveMulti = false;
         receiveSingle = false;
+        document.getElementById("img-popup-award").setAttribute("src","");
+        document.getElementById("popup-piece-image").setAttribute("src","");
         document.getElementById('boxContainer').classList.remove('shake');
         document.getElementById('boxContainer').classList.remove('zoomIn');
         isHitTheBox = false;
-        document.getElementById("box-spin-1").style.display = "block";
-        document.getElementById("box-spin-10").style.display = "none";
-        document.getElementById("box-spin-100").style.display = "none";
-        document.querySelector('input[name="spin-options"]:checked').value = 1;
+        // document.getElementById("box-spin-1").style.display = "block";
+        // document.getElementById("box-spin-10").style.display = "none";
+        // document.getElementById("box-spin-100").style.display = "none";
+        // document.querySelector('input[name="spin-options"]:checked').value = 1;
     }
 
     const canStartEvent = () => {
@@ -7245,6 +7250,7 @@
 
     const startRulePage = () => {
         $("#infoModal").modal("hide");
+        $("#awardModalSingle").modal("hide");
         resetState();
         document.getElementById("home-page").style.display = "none";
         document.getElementById("event-page").style.display = "none";
