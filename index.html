@@ -129,6 +129,9 @@
         position: relative;
         overflow: hidden;
         padding-top:12px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #winner-page {
@@ -139,6 +142,9 @@
         position: relative;
         overflow: hidden;
         padding-top:12px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .modalInfo {
@@ -724,6 +730,9 @@
         position: relative;
         overflow: hidden;
         padding-top:12px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .rule-content{
         font-family: "Inter", sans-serif;
@@ -3694,6 +3703,9 @@
                     <div class="congrats-text">Chúc mừng<br/>bạn đã nhận được </div>
                     <div id="popup-piece-list">
                     </div>
+                    <div id="holder-popup-rule">
+
+                    </div>
 <!--                    <div class="popup-rule" onclick="openRule()">-->
 <!--                        <div>-->
 <!--                            Xem thể lệ tại<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">-->
@@ -4009,9 +4021,6 @@
 <section id="rule-page" class="container">
     <img class="sky-bg" style="height:100%" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/bg_inventory.png" width="100%" alt=""/>
     <div class="top-layer">
-        <div class="btn-back-rule" onclick="handleGoBackFromRuleToHome()">
-            <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/btn-back.svg" alt="" />
-        </div>
         <div class="rule-text">
             <svg width="132" height="55" viewBox="0 0 132 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22.03 27.1099H16.52V44.4399H10.89V27.2299H5.21997V24.3199H22.02V27.1099H22.03Z" fill="#1E458C"/>
@@ -4029,6 +4038,9 @@
                 <path d="M70.26 4.60999H66.26V8.60998H70.26V12.61H68.26V16.61H72.26V12.61H74.26V8.60998V4.60999H70.26Z" fill="#1E458C"/>
             </svg>
         </div>
+    </div>
+    <div class="btn-back-rule" onclick="handleGoBackFromRuleToHome()" style="top:28px;left:24px">
+        <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/btn-back.svg" alt="" />
     </div>
     <div class="bg-rule">
 <!--        <img style="height:100%" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/bg_popup_inventory.png" width="100%" alt=""/>-->
@@ -4374,9 +4386,6 @@
 <section id="inventory-page" class="container">
     <img class="sky-bg" style="height:100%" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/bg_inventory.png" width="100%" alt=""/>
     <div class="top-layer">
-        <div class="btn-back-rule" onclick="handleGoBackFromInventoryToHome()">
-            <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/btn-back.svg" alt="" />
-        </div>
         <div class="inventory-text">
             <svg width="177" height="45" viewBox="0 0 177 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M27.7701 36.64H19.4301V33.77H16.6401V30.78H13.8901V36.64H8.18005V16.53H13.7301V25.01H16.4801V22.18H19.2701V19.31H22.1401V16.52H27.7701V19.31H25.0901V22.18H22.3001V25.01H19.4301V27.92H22.1501V30.79H24.9801V33.74H27.7701V36.65V36.64Z" fill="#1E458C"/>
@@ -4389,6 +4398,9 @@
                 <path d="M114.23 2.51001H110.23V6.51001H114.23V10.51H112.23V14.51H116.23V10.51H118.23V6.51001V2.51001H114.23Z" fill="#1E458C"/>
             </svg>
         </div>
+    </div>
+    <div class="btn-back-rule" onclick="handleGoBackFromRuleToHome()" style="top:28px;left:24px">
+        <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/btn-back.svg" alt="" />
     </div>
     <div class="bg-rule">
         <svg width="343" height="535" viewBox="0 0 343 535" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5125,9 +5137,6 @@
 <section id="winner-page" class="container">
     <img class="sky-bg" style="height:100%" src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/bg_inventory.png" width="100%" alt=""/>
     <div class="top-layer">
-        <div class="btn-back-rule" onclick="handleGoBackFromWinnerToHome()">
-            <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/btn-back.svg" alt="" />
-        </div>
         <div class="winner-text" style="width:285px">
             <svg width="302" height="50" viewBox="0 0 302 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M28.58 33.34H26.04V36.06H23.39V38.82H9.96997V19.71H23.24V22.32H25.93V25.04H28.58V33.33V33.34ZM23.24 33.34V25.05H20.59V22.48H15.32V36.06H20.7V33.34H23.24Z" fill="#1E458C"/>
@@ -5149,6 +5158,9 @@
                 <path d="M249.07 10.2H245.27V14H249.07V10.2Z" fill="#1E458C"/>
             </svg>
         </div>
+    </div>
+    <div class="btn-back-rule" onclick="handleGoBackFromRuleToHome()" style="top:28px;left:24px">
+        <img src="https://cdn-devtest.acbs.tech/assets/image/quaysotrungthuong2024/event_page/btn-back.svg" alt="" />
     </div>
     <div class="bg-rule">
         <svg width="343" height="535" viewBox="0 0 343 535" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -6761,6 +6773,39 @@
                                     ${newList.join().replaceAll(",","")}
                                 </div>
                             `;
+                            document.getElementById("holder-popup-rule").innerHTML = `
+                                <div class="popup-rule" onclick="openRule()">
+                                    <div>
+                                        Xem thể lệ tại<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.96533 2.07605H4.96533H3.96533V3.07562H4.96533H5.96533H6.96534V2.07605H5.96533Z" fill="#F8EBCE"/>
+                                        <path d="M7.96545 2.07605H6.96545V3.07562H7.96545H8.96546V2.07605H7.96545Z" fill="#90D5DC"/>
+                                        <path d="M9.9649 2.07605H8.96533V3.07562H9.9649V2.07605Z" fill="#F8EBCE"/>
+                                        <path d="M12.9653 2.07605H11.9653H10.9653H9.96533V3.07562H10.9653H11.9653H12.9653H13.9653V2.07605H12.9653Z" fill="#90D5DC"/>
+                                        <path d="M3.96503 3.07568H2.96545V4.07526H3.96503V3.07568Z" fill="#F8EBCE"/>
+                                        <path d="M14.9649 3.07568H13.9653V4.07526H14.9649V3.07568Z" fill="#90D5DC"/>
+                                        <path d="M2.96545 4.0752V5.07477V6.07434H3.96503V5.07477V4.0752H2.96545Z" fill="#90D5DC"/>
+                                        <path d="M5.96491 9.07312H4.96533V10.0727H5.96491V9.07312Z" fill="#3C9CCF"/>
+                                        <path d="M14.9653 2.07611V1.07654H2.96533V2.07611H1.96533V14.0778H2.96533V15.0774H14.9722V14.0778H15.9722V2.07611H14.9722H14.9653ZM14.9653 4.07526V13.0714H13.9653V14.071H3.96533V13.0714H2.96533V3.07568H3.96533V2.07611H13.9653V3.07568H14.9653V4.07526Z" fill="#254D9E"/>
+                                        <path d="M13.9653 0.0700684H12.9653H11.9653H10.9653H9.96534H8.96534H7.96534H6.96534H5.96534H4.96533H3.96533H2.96533V1.07649H3.96533H4.96533H5.96534H6.96534H7.96534H8.96534H9.96534H10.9653H11.9653H12.9653H13.9653H14.9653V0.0700684H13.9653Z" fill="#262168"/>
+                                        <path d="M1.96533 2.07599H0.965332V3.07556V4.07514V5.07471V6.07428V7.07386V8.07343V9.073V10.0726V11.0721V12.0717V13.0713V14.0709H1.96533V15.0704H2.96533V14.0709H1.96533V13.0713V12.0717V11.0721V10.0726V9.073V8.07343V7.07386V6.07428V5.07471V4.07514V3.07556V2.07599H2.96533V1.07642H1.96533V2.07599Z" fill="#262168"/>
+                                        <path d="M15.9649 1.07642H14.9653V2.07599H15.9649V1.07642Z" fill="#262168"/>
+                                        <path d="M15.9653 2.07605V3.07562V4.0752V5.07477V6.07434V7.07392V8.07349V9.07306V10.0726V11.0722V12.0718V13.0714V14.0709H16.9649V13.0714V12.0718V11.0722V10.0726V9.07306V8.07349V7.07392V6.07434V5.07477V4.0752V3.07562V2.07605H15.9653Z" fill="#262168"/>
+                                        <path d="M15.9649 14.0709H14.9653V15.0705H15.9649V14.0709Z" fill="#262168"/>
+                                        <path d="M12.9653 15.0706H11.9653H10.9653H9.96534H8.96534H7.96534H6.96534H5.96534H4.96533H3.96533H2.96533V16.0701H3.96533H4.96533H5.96534H6.96534H7.96534H8.96534H9.96534H10.9653H11.9653H12.9653H13.9653H14.9653V15.0706H13.9653H12.9653Z" fill="#262168"/>
+                                        <path d="M13.9655 4.07526V3.07568H12.9655H11.9655H10.9655H9.96546H8.96546H7.96546H6.96546H5.96546H4.96546H3.96546V4.07526V5.07483V6.0744H2.96545V7.07398V8.07355V9.07312V10.0727V11.0723V12.0718V13.0714H3.96546V14.071H4.96546H5.96546H6.96546H7.96546H8.96546H9.96546H10.9655H11.9655H12.9655H13.9655V13.0714H14.9655V12.0718V11.0723V10.0727V9.07312V8.07355V7.07398V6.0744V5.07483V4.07526H13.9655Z" fill="#3C9CCF"/>
+                                        <path d="M8.54756 12.3662H7.69824V13.2083H8.54756H9.39002H10.2325V12.3662H9.39002H8.54756Z" fill="#262168"/>
+                                        <path d="M9.39002 7.30671H10.2325V6.4646H9.39002H8.54756H7.69824V7.30671H8.54756H9.39002Z" fill="#262168"/>
+                                        <path d="M10.2325 8.99085V9.83981V10.6819V11.524V12.3661H11.0746V11.524V10.6819V9.83981V8.99085V8.14875V7.30664H10.2325V8.14875V8.99085Z" fill="#262168"/>
+                                        <path d="M7.69794 12.3661V11.524V10.6819V9.83981V8.99085V8.14875V7.30664H6.85583V8.14875V8.99085V9.83981V10.6819V11.524V12.3661H7.69794Z" fill="#262168"/>
+                                        <path d="M7.69794 4.7804H6.85583V5.6225V6.46461H7.69794V5.6225V4.7804Z" fill="#262168"/>
+                                        <path d="M9.39002 4.78035H10.2325V3.9314H9.39002H8.54756H7.69824V4.78035H8.54756H9.39002Z" fill="#262168"/>
+                                        <path d="M10.2325 6.46461H11.0746V5.6225V4.7804H10.2325V5.6225V6.46461Z" fill="#262168"/>
+                                        <path d="M10.2256 4.7804H7.69824V6.46461H10.2256V4.7804Z" fill="#90D5DC"/>
+                                        <path d="M10.2256 7.30676H7.69824V12.3662H10.2256V7.30676Z" fill="#90D5DC"/>
+                                    </svg>ở màn hình chính
+                                    </div>
+                                </div>
+                            `;
                         }
                     }
                 }
@@ -6865,7 +6910,7 @@
     }
 
     const openRuleTab = () => {
-        rulePage.style.display = "block";
+        rulePage.style.display = "flex";
         winnerPage.style.display = "none";
         inventoryPage.style.display = "none";
     }
@@ -6873,7 +6918,7 @@
     const openInventoryTab = () => {
         rulePage.style.display = "none";
         winnerPage.style.display = "none";
-        inventoryPage.style.display = "block";
+        inventoryPage.style.display = "flex";
         getInventory(accountID,eventID,sessionAPI).then(
             (res) => {
                 //set all piece giai kk =0 if can not find
@@ -7239,7 +7284,7 @@
 
     const openWinnerTab = () => {
         rulePage.style.display = "none";
-        winnerPage.style.display = "block";
+        winnerPage.style.display = "flex";
         inventoryPage.style.display = "none";
         getListWinner(eventID).then(
             (res) => {
@@ -7254,7 +7299,7 @@
         resetState();
         document.getElementById("home-page").style.display = "none";
         document.getElementById("event-page").style.display = "none";
-        document.getElementById("rule-page").style.display = "block";
+        document.getElementById("rule-page").style.display = "flex";
     }
 
     document.getElementById("spin-1").addEventListener("click",function(event){
