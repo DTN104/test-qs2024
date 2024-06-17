@@ -1340,7 +1340,7 @@
         border:none;
         border-right: 1px solid #1E458D;
         border-bottom: 1px solid #1E458D;
-        padding: 5px;
+        padding: 3px;
         background: transparent;
         color: #1E458D;
     }
@@ -1368,6 +1368,14 @@
 
     #winner-table tr td:nth-child(2) span:first-child {
         font-weight: 500;
+    }
+
+    #winner-table tr td:nth-child(2) div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
 
     #winner-table tr td:first-child, #winner-table tr th:first-child {
@@ -4029,18 +4037,18 @@
         <div class="rule-text">
             <svg width="132" height="55" viewBox="0 0 132 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22.03 27.1099H16.52V44.4399H10.89V27.2299H5.21997V24.3199H22.02V27.1099H22.03Z" fill="#1E458C"/>
-                <path d="M48.87 44.4299H43.32V35.7899H34.98V44.4299H29.27V24.3199H34.82V32.8799H43.24V24.3199H48.87V44.4299Z" fill="#1E458C"/>
-                <path d="M71.85 44.27H52.02V23.95H71.85V26.78H57.72V32.56H66.18V35.5499H57.72V41.3699H71.85V44.2799V44.27Z" fill="#1E458C"/>
+                <path d="M43.87 44.4299H38.32V35.7899H29.98V44.4299H24.27V24.3199H29.82V32.8799H38.24V24.3199H43.87V44.4299Z" fill="#1E458C"/>
+                <path d="M66.85 44.27H47.02V23.95H66.85V26.78H52.72V32.56H61.18V35.5499H52.72V41.3699H66.85V44.2799V44.27Z" fill="#1E458C"/>
                 <path d="M95.93 44.4299H79.13V24.3199H84.68V41.5299H95.94V44.4399L95.93 44.4299Z" fill="#1E458C"/>
-                <path d="M123.13 44.27H103.3V23.95H123.13V26.78H109V32.56H117.46V35.5499H109V41.3699H123.13V44.2799V44.27Z" fill="#1E458C"/>
-                <path d="M111.62 18.2H107.62V22.2H111.62V18.2Z" fill="#1E458C"/>
-                <path d="M119.62 18.2H115.62V22.2H119.62V18.2Z" fill="#1E458C"/>
-                <path d="M115.12 46.5601H111.12V50.5601H115.12V46.5601Z" fill="#1E458C"/>
-                <path d="M115.62 14.2H111.62V18.2H115.62V14.2Z" fill="#1E458C"/>
-                <path d="M60.26 18.2H56.26V22.2H60.26V18.2Z" fill="#1E458C"/>
-                <path d="M68.26 18.2H64.26V22.2H68.26V18.2Z" fill="#1E458C"/>
-                <path d="M64.26 14.2H60.26V18.2H64.26V14.2Z" fill="#1E458C"/>
-                <path d="M70.26 4.60999H66.26V8.60998H70.26V12.61H68.26V16.61H72.26V12.61H74.26V8.60998V4.60999H70.26Z" fill="#1E458C"/>
+                <path d="M119.13 44.27H99.2999V23.95H119.13V26.78H105V32.56H113.46V35.5499H105V41.3699H119.13V44.2799V44.27Z" fill="#1E458C"/>
+                <path d="M107.62 18.2H103.62V22.2H107.62V18.2Z" fill="#1E458C"/>
+                <path d="M115.62 18.2H111.62V22.2H115.62V18.2Z" fill="#1E458C"/>
+                <path d="M111.12 46.56H107.12V50.56H111.12V46.56Z" fill="#1E458C"/>
+                <path d="M111.62 14.2H107.62V18.2H111.62V14.2Z" fill="#1E458C"/>
+                <path d="M55.26 18.2H51.26V22.2H55.26V18.2Z" fill="#1E458C"/>
+                <path d="M63.26 18.2H59.26V22.2H63.26V18.2Z" fill="#1E458C"/>
+                <path d="M59.26 14.2H55.26V18.2H59.26V14.2Z" fill="#1E458C"/>
+                <path d="M65.26 4.60999H61.26V8.60998H65.26V12.61H63.26V16.61H67.26V12.61H69.26V8.60998V4.60999H65.26Z" fill="#1E458C"/>
             </svg>
         </div>
     </div>
@@ -5543,7 +5551,7 @@
         return res.data.data.map(
             (item,index) => ({
                 "id": index+1,
-                "client_name": "<span style='font-weight: 500;text-transform: capitalize;'>" + item.client_name.toLocaleLowerCase() + "</span>" + "<br/>" + item.client_id,
+                "client_name": "<div style='min-height:32px;display: flex;flex-direction: column;justify-content: center;align-items: center'>"+"<div style='font-weight: 500;text-transform: capitalize;'>" + item.client_name.toLocaleLowerCase() +"</div>" + item.client_id + "</div>",
                 "award_name": item.award_name,
                 "won_date":item.won_date
             })
@@ -6783,7 +6791,7 @@
             pagination: true,
             alwaysShowAllButtons: true,
             paginationLoop:false,
-            pageSize: 12,
+            pageSize: 10,
             formatNoMatches: function () {
                 return "Không có dữ liệu"
             },
