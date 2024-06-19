@@ -5247,21 +5247,7 @@
         isHitTheBox = false;
 </script>
 <script>
-    function handleEnvironment(baseapi) {
-        const url = window.location.hostname;
-        const prod = "cdn.acbs.com.vn";
-        const devtest = "cdn-devtest.acbs.tech";
-        const github = "dtn104.github.io"
-        if (url === prod) {
-            baseapi = "https://dapi-staging.acbs.tech/quay-so-trung-thuong"
-        }
-        if (url === devtest) {
-            baseapi = "https://dapi.acbs.com.vn/quay-so-trung-thuong"
-        }
-        if (url === github) {
-            baseapi = "https://dapi.acbs.com.vn/quay-so-trung-thuong"
-        }
-    }
+
 </script>
 <script>
     //Api
@@ -6858,7 +6844,19 @@
         //handler for input acc id and event id
         // You can get url_string from window.location.href if you want to work with
         // the URL of the current page
-        handleEnvironment(baseUrl)
+        const urlhost = window.location.hostname;
+        const prod = "cdn.acbs.com.vn";
+        const devtest = "cdn-devtest.acbs.tech";
+        const github = "dtn104.github.io"
+        if (urlhost === prod) {
+            baseapi = "https://dapi-staging.acbs.tech/quay-so-trung-thuong"
+        }
+        if (urlhost === devtest) {
+            baseapi = "https://dapi.acbs.com.vn/quay-so-trung-thuong"
+        }
+        if (urlhost === github) {
+            baseapi = "https://dapi.acbs.com.vn/quay-so-trung-thuong"
+        }
         var url = new URL(window.location.href);
         sessionAPI = url.searchParams.get("sessionID");
         accountID = url.searchParams.get("accountID");
